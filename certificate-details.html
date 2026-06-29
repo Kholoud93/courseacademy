@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>عرض الشهادة — أكاديمية الدورات</title>
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+</head>
+<body class="layout-dashboard" data-layout="dashboard" data-page="certificate-details">
+  <div id="dashboard-shell"></div>
+  <div class="layout-dashboard__body">
+    <header class="dashboard-header layout-dashboard__header"><button type="button" class="btn btn--icon" data-drawer-open="sidebar">☰</button></header>
+    <main class="layout-dashboard__content">
+      <div class="certificate-view">
+        <h2 class="certificate-view__title">شهادة إتمام</h2>
+        <p>نشهد بأن</p>
+        <div class="certificate-view__name">محمد العتيبي</div>
+        <p class="certificate-view__course">قد أتم بنجاح دورة: <span id="cert-course"></span></p>
+        <p class="certificate-details__meta">رقم الشهادة: <span id="cert-number"></span></p>
+        <p class="certificate-details__meta" id="cert-date"></p>
+        <a href="#" class="btn btn--primary">تحميل PDF</a>
+      </div>
+    </main>
+  </div>
+  <script type="module" src="js/app.js"></script>
+  <script type="module" src="js/pages/learning.js"></script>
+</body>
+</html>

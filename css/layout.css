@@ -1,0 +1,194 @@
+/* ==========================================================================
+   Course Academy — Layout
+   Breakpoints: Mobile 430px | Tablet 786px | Desktop 1440px
+   ========================================================================== */
+
+.layout-main {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.layout-main__content {
+  flex: 1;
+}
+
+/* Dashboard */
+.layout-dashboard {
+  display: flex;
+  min-height: 100vh;
+}
+
+.layout-dashboard__sidebar {
+  width: var(--sidebar-width);
+  flex-shrink: 0;
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  z-index: var(--z-sticky);
+}
+
+.layout-dashboard__body {
+  flex: 1;
+  margin-right: var(--sidebar-width);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.layout-dashboard__header {
+  position: sticky;
+  top: 0;
+  z-index: var(--z-sticky);
+}
+
+.layout-dashboard__content {
+  flex: 1;
+  padding: var(--space-6);
+}
+
+/* Auth */
+.layout-auth {
+  display: flex;
+  min-height: 100vh;
+}
+
+.layout-auth__sidebar {
+  flex: 1;
+  display: none;
+}
+
+.layout-auth__form {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-6);
+  background: var(--color-white);
+}
+
+/* Learning */
+.layout-learning {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.layout-learning__body {
+  display: flex;
+  flex: 1;
+}
+
+.layout-learning__player {
+  flex: 1;
+  padding: var(--space-6);
+}
+
+.layout-learning__curriculum {
+  width: 360px;
+  flex-shrink: 0;
+  border-right: 1px solid var(--color-border-default);
+  background: var(--color-white);
+  overflow-y: auto;
+}
+
+/* Tablet (431px+) — auth form padding only; sidebar stays hidden until desktop */
+@media (min-width: 431px) {
+  .layout-auth__form {
+    padding: var(--space-8);
+  }
+}
+
+/* Desktop (787px+) — show auth sidebar */
+@media (min-width: 787px) {
+  .layout-auth__sidebar {
+    display: flex;
+  }
+}
+
+/* Tablet and below (786px) — collapsible dashboard & stacked learning */
+@media (max-width: 786px) {
+  .layout-dashboard__sidebar {
+    transform: translateX(100%);
+    transition: transform var(--transition-slow);
+  }
+
+  .layout-dashboard__sidebar.is-open {
+    transform: translateX(0);
+  }
+
+  .layout-dashboard__body {
+    margin-right: 0;
+  }
+
+  .layout-learning__body {
+    flex-direction: column;
+  }
+
+  .layout-learning__curriculum {
+    width: 100%;
+    border-right: none;
+    border-top: 1px solid var(--color-border-default);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Page listing grids
+   -------------------------------------------------------------------------- */
+
+.courses-list__grid,
+.my-courses__grid,
+.blog-list__grid,
+.instructors-list__grid,
+.certificates-list__grid {
+  display: grid;
+  gap: var(--grid-gap);
+  grid-template-columns: 1fr;
+}
+
+.dashboard__stats-grid,
+.dashboard__learning-grid,
+.blog-article__related-grid {
+  display: grid;
+  gap: var(--grid-gap);
+  grid-template-columns: 1fr;
+}
+
+.my-courses__grid {
+  margin-top: var(--space-6);
+}
+
+.dashboard__stats-grid {
+  margin-bottom: var(--space-8);
+}
+
+@media (min-width: 431px) {
+  .blog-article__related-grid,
+  .dashboard__learning-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .courses-list__grid,
+  .my-courses__grid,
+  .blog-list__grid,
+  .instructors-list__grid,
+  .certificates-list__grid,
+  .dashboard__stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 787px) {
+  .courses-list__grid,
+  .my-courses__grid,
+  .blog-list__grid,
+  .certificates-list__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .instructors-list__grid,
+  .dashboard__stats-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

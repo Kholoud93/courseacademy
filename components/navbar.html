@@ -1,0 +1,38 @@
+<nav class="navbar">
+  <div class="container navbar__inner">
+    <a href="index.html" class="navbar__logo">أكاديمية الدورات</a>
+
+    <div class="navbar__nav">
+      <a href="index.html" class="navbar__link" data-nav="home">الرئيسية</a>
+      <a href="courses.html" class="navbar__link" data-nav="courses">الدورات</a>
+      <a href="blog.html" class="navbar__link" data-nav="blog">المدونة</a>
+      <a href="about.html" class="navbar__link" data-nav="about">من نحن</a>
+      <a href="contact.html" class="navbar__link" data-nav="contact">تواصل معنا</a>
+    </div>
+
+    <div class="navbar__actions">
+      <a href="login.html" class="btn btn--primary">تسجيل الدخول</a>
+      <button type="button" class="btn btn--icon navbar__toggle" data-drawer-open="mobile-menu" aria-label="القائمة">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<div class="drawer-overlay" data-drawer-overlay="mobile-menu"></div>
+<aside class="drawer mobile-menu" data-drawer="mobile-menu">
+  <div class="drawer__head">
+    <span class="navbar__logo">أكاديمية الدورات</span>
+    <button type="button" class="btn btn--icon" data-drawer-close="mobile-menu" aria-label="إغلاق">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
+    </button>
+  </div>
+  <nav class="mobile-menu__nav">
+    <a href="index.html" class="mobile-menu__link">الرئيسية</a>
+    <a href="courses.html" class="mobile-menu__link">الدورات</a>
+    <a href="blog.html" class="mobile-menu__link">المدونة</a>
+    <a href="about.html" class="mobile-menu__link">من نحن</a>
+    <a href="contact.html" class="mobile-menu__link">تواصل معنا</a>
+    <a href="login.html" class="mobile-menu__link">تسجيل الدخول</a>
+  </nav>
+</aside>

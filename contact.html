@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>تواصل معنا — أكاديمية الدورات</title>
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+</head>
+<body data-layout="main" data-page="contact">
+  <div id="site-header"></div>
+  <main class="layout-main__content">
+    <section class="page-banner"><div class="container"><h1 class="page-banner__title">تواصل معنا</h1></div></section>
+    <section class="section"><div class="container contact-page__layout">
+      <form data-prevent>
+        <div class="form-group"><label class="form-label">الاسم</label><input type="text" class="input input--default" required></div>
+        <div class="form-group"><label class="form-label">البريد</label><input type="email" class="input input--default" required></div>
+        <div class="form-group"><label class="form-label">الرسالة</label><textarea class="textarea textarea--default" rows="5" required></textarea></div>
+        <button type="submit" class="btn btn--primary">إرسال</button>
+      </form>
+      <div class="card contact-page__info">
+        <h3 class="contact-page__info-title">معلومات التواصل</h3>
+        <p class="contact-page__detail">📧 info@courseacademy.com</p>
+        <p class="contact-page__detail">📞 +966 50 123 4567</p>
+      </div>
+    </div></section>
+  </main>
+  <div id="site-footer"></div>
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

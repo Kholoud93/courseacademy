@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>دوراتي — أكاديمية الدورات</title>
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+</head>
+<body class="layout-dashboard" data-layout="dashboard" data-page="my-courses">
+  <div id="dashboard-shell"></div>
+  <div class="layout-dashboard__body">
+    <header class="dashboard-header layout-dashboard__header">
+      <button type="button" class="btn btn--icon" data-drawer-open="sidebar">☰</button>
+      <div class="dashboard-header__search"><input type="search" class="input input--search" placeholder="ابحث..."></div>
+      <div class="dashboard-header__actions"><a href="profile.html"><img src="https://picsum.photos/seed/user1/64/64" class="dashboard-header__avatar" alt=""></a></div>
+    </header>
+    <main class="layout-dashboard__content">
+      <h1 class="dashboard-page__title">دوراتي</h1>
+      <div data-tabs="my-courses">
+        <div class="tabs"><div class="tabs__list">
+          <button type="button" class="tabs__btn is-active" data-tabs="my-courses" data-tab="all">جميع الدورات</button>
+          <button type="button" class="tabs__btn" data-tabs="my-courses" data-tab="progress">قيد التقدم</button>
+          <button type="button" class="tabs__btn" data-tabs="my-courses" data-tab="completed">مكتملة</button>
+        </div></div>
+        <div id="course-grid" class="my-courses__grid"></div>
+      </div>
+    </main>
+  </div>
+  <script type="module" src="js/app.js"></script>
+  <script type="module" src="js/pages/dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>المحفظة — أكاديمية الدورات</title>
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+</head>
+<body class="layout-dashboard" data-layout="dashboard" data-page="wallet">
+  <div id="dashboard-shell"></div>
+  <div class="layout-dashboard__body">
+    <header class="dashboard-header layout-dashboard__header"><button type="button" class="btn btn--icon" data-drawer-open="sidebar">☰</button></header>
+    <main class="layout-dashboard__content">
+      <h1 class="dashboard-page__title">المحفظة</h1>
+      <div class="card card--stat wallet-page__balance"><div class="card__value">750 ر.س</div><div class="card__label">الرصيد الحالي</div></div>
+      <table id="transactions" class="table"><thead><tr><th>التاريخ</th><th>الوصف</th><th>المبلغ</th><th>الحالة</th></tr></thead><tbody></tbody></table>
+    </main>
+  </div>
+  <script type="module" src="js/app.js"></script>
+  <script type="module" src="js/pages/dashboard.js"></script>
+</body>
+</html>

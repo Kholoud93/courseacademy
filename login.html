@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>تسجيل الدخول — أكاديمية الدورات</title>
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+</head>
+<body data-layout="auth" data-page="login">
+  <div class="layout-auth">
+    <aside class="auth-sidebar layout-auth__sidebar">
+      <h2 class="auth-sidebar__title">مرحباً بعودتك!</h2>
+      <p class="auth-sidebar__desc">سجّل دخولك للوصول إلى دوراتك.</p>
+      <div class="auth-sidebar__features">
+        <article class="card card--feature-auth"><span class="card__icon">📚</span><div><h3 class="card__title">500+ دورة</h3><p class="card__desc">محتوى تعليمي متنوع</p></div></article>
+        <article class="card card--feature-auth"><span class="card__icon">👨‍🏫</span><div><h3 class="card__title">50+ مدرب</h3><p class="card__desc">خبراء في مجالاتهم</p></div></article>
+      </div>
+    </aside>
+
+    <div class="layout-auth__form">
+      <div class="auth-form">
+        <div class="auth-form__logo">أكاديمية الدورات</div>
+        <h1 class="auth-form__title">تسجيل الدخول</h1>
+        <p class="auth-form__subtitle">أدخل بياناتك للمتابعة</p>
+
+        <form data-auth-form>
+          <div class="form-group">
+            <label class="form-label">البريد الإلكتروني</label>
+            <input type="email" class="input input--bordered" placeholder="example@email.com" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label">كلمة المرور</label>
+            <div class="input-group input-group--icon">
+              <input type="password" class="input input--bordered" placeholder="••••••••" required>
+              <button type="button" class="input-group__toggle" data-password-toggle aria-label="إظهار">👁</button>
+            </div>
+          </div>
+          <div class="form-row">
+            <label class="checkbox-group"><input type="checkbox" class="checkbox"><span>تذكرني</span></label>
+            <a href="forgot-password.html" class="auth-form__forgot-link">نسيت كلمة المرور؟</a>
+          </div>
+          <button type="submit" class="btn btn--primary btn--full">تسجيل الدخول</button>
+        </form>
+
+        <p class="auth-form__footer">ليس لديك حساب؟ <a href="register.html" class="auth-form__footer-link">إنشاء حساب</a></p>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="js/app.js"></script>
+  <script type="module" src="js/pages/auth.js"></script>
+</body>
+</html>
