@@ -7,16 +7,17 @@ import { initForms } from "./forms.js";
 export async function initApp() {
   const layout = document.body.dataset.layout;
 
-  if (layout === "main") {
+  if (document.getElementById("site-header")) {
     await loadComponent("#site-header", "components/navbar.html");
+  }
+
+  if (document.getElementById("site-footer")) {
     await loadComponent("#site-footer", "components/footer.html");
   }
 
   if (layout === "dashboard" || layout === "learning") {
     await loadComponent("#dashboard-shell", "components/sidebar.html");
   }
-
-  // layout "home" uses inline navbar/footer in index.html
 
   setActiveNav();
   initNavigation();

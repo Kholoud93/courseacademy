@@ -1,38 +1,52 @@
-<nav class="navbar">
-  <div class="container navbar__inner">
-    <a href="index.html" class="navbar__logo">أكاديمية الدورات</a>
+<header class="home-nav">
+  <div class="container home-nav__inner">
+    <a href="index.html" class="home-nav__logo">
+      <img src="assets/images/logo.png" alt="coursacademy" class="home-nav__logo-img" width="140" height="48">
+    </a>
 
-    <div class="navbar__nav">
-      <a href="index.html" class="navbar__link" data-nav="home">الرئيسية</a>
-      <a href="courses.html" class="navbar__link" data-nav="courses">الدورات</a>
-      <a href="blog.html" class="navbar__link" data-nav="blog">المدونة</a>
-      <a href="about.html" class="navbar__link" data-nav="about">من نحن</a>
-      <a href="contact.html" class="navbar__link" data-nav="contact">تواصل معنا</a>
-    </div>
+    <nav class="home-nav__links">
+      <a href="index.html" class="home-nav__link" data-nav="home">الرئيسية</a>
+      <a href="courses.html" class="home-nav__link" data-nav="courses">الدورات</a>
+      <a href="courses.html" class="home-nav__link" data-nav="paths">المسارات</a>
+      <a href="blog.html" class="home-nav__link" data-nav="blog">المدونة</a>
+      <a href="about.html" class="home-nav__link" data-nav="about">حولنا</a>
+      <a href="contact.html" class="home-nav__link" data-nav="contact">تواصل معنا</a>
+    </nav>
 
-    <div class="navbar__actions">
-      <a href="login.html" class="btn btn--primary">تسجيل الدخول</a>
-      <button type="button" class="btn btn--icon navbar__toggle" data-drawer-open="mobile-menu" aria-label="القائمة">
-        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+    <div class="home-nav__actions">
+      <button type="button" class="home-nav__lang" aria-label="English">EN</button>
+      <a href="courses.html" class="home-nav__icon-btn" aria-label="المفضلة">
+        <i class="ri-heart-line"></i>
+      </a>
+      <a href="courses.html" class="home-nav__icon-btn home-nav__cart" aria-label="السلة">
+        <i class="ri-shopping-cart-2-line"></i>
+        <span class="home-nav__cart-badge">2</span>
+      </a>
+      <a href="login.html" class="home-nav__login">تسجيل الدخول</a>
+      <a href="dashboard.html" class="btn btn--primary home-nav__cta">لوحة التحكم</a>
+      <button type="button" class="home-nav__toggle" data-drawer-open="mobile-menu" aria-label="القائمة">
+        <span class="home-nav__hamburger"><span></span><span></span><span></span></span>
       </button>
     </div>
   </div>
-</nav>
+</header>
 
 <div class="drawer-overlay" data-drawer-overlay="mobile-menu"></div>
-<aside class="drawer mobile-menu" data-drawer="mobile-menu">
+<aside class="drawer" data-drawer="mobile-menu">
   <div class="drawer__head">
-    <span class="navbar__logo">أكاديمية الدورات</span>
-    <button type="button" class="btn btn--icon" data-drawer-close="mobile-menu" aria-label="إغلاق">
-      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
-    </button>
+    <a href="index.html" class="home-nav__logo">
+      <img src="assets/images/logo.png" alt="coursacademy" class="home-nav__logo-img" width="120" height="40">
+    </a>
+    <button type="button" class="btn btn--icon" data-drawer-close="mobile-menu" aria-label="إغلاق">✕</button>
   </div>
   <nav class="mobile-menu__nav">
     <a href="index.html" class="mobile-menu__link">الرئيسية</a>
     <a href="courses.html" class="mobile-menu__link">الدورات</a>
+    <a href="courses.html" class="mobile-menu__link">المسارات</a>
     <a href="blog.html" class="mobile-menu__link">المدونة</a>
-    <a href="about.html" class="mobile-menu__link">من نحن</a>
+    <a href="about.html" class="mobile-menu__link">حولنا</a>
     <a href="contact.html" class="mobile-menu__link">تواصل معنا</a>
     <a href="login.html" class="mobile-menu__link">تسجيل الدخول</a>
+    <a href="dashboard.html" class="btn btn--primary btn--full">لوحة التحكم</a>
   </nav>
 </aside>

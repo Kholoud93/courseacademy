@@ -277,9 +277,9 @@ p:not([class]) {
   color: var(--color-danger-500);
 }
 
-.footer__desc,
-.footer__link,
-.footer__bottom {
+.home-footer__desc,
+.home-footer__links a,
+.home-footer__copyright {
   font-family: var(--type-footer-font);
   font-size: var(--type-footer-size);
   font-weight: var(--type-footer-weight);
@@ -287,7 +287,7 @@ p:not([class]) {
   letter-spacing: var(--type-footer-ls);
 }
 
-.footer__heading {
+.home-footer__heading {
   font-family: var(--type-footer-font);
   font-size: var(--type-footer-heading-size);
   font-weight: var(--type-footer-heading-weight);

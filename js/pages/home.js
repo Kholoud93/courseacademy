@@ -1,12 +1,13 @@
 import { renderList } from "../common.js";
-import { homeCourseCard, homeFeatureCard, homeTestimonialSlide } from "../render.js";
+import { homeFeaturedTrackCard, homeTestimonialSlide, homeTrackCard, homeWhyCard } from "../render.js";
 import { engineeringTracks, featuredCourses, homeFeatures, homeTestimonials } from "../data/home.js";
 
 document.addEventListener("DOMContentLoaded", () => {
-  renderList(document.getElementById("tracks-grid"), engineeringTracks, homeCourseCard);
-  renderList(document.getElementById("featured-courses"), featuredCourses, homeCourseCard);
-  renderList(document.getElementById("features-grid"), homeFeatures, homeFeatureCard);
-  renderList(document.getElementById("testimonials-track"), homeTestimonials, homeTestimonialSlide);
+  renderList(document.getElementById("tracks-grid"), engineeringTracks, homeTrackCard);
+  renderList(document.getElementById("featured-courses"), featuredCourses, homeFeaturedTrackCard);
+  renderList(document.getElementById("features-grid"), homeFeatures, homeWhyCard);
+  const repeatedTestimonials = [homeTestimonials[0], homeTestimonials[0], homeTestimonials[0]];
+  renderList(document.getElementById("testimonials-track"), repeatedTestimonials, homeTestimonialSlide);
   initTestimonialSlider();
 });
 

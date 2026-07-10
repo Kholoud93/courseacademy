@@ -1,40 +1,128 @@
 import { formatPrice, formatDate, formatDuration } from "./common.js";
 
-/** Unified homepage course card — used for tracks & featured sections */
+/** Engineering track card — homepage tracks section */
+export function homeTrackCard(track) {
+  const currency = track.currency || "د.أ";
+  const formatTrackPrice = (amount) => `${Number(amount).toLocaleString("ar-SA")} ${currency}`;
+  const oldPrice = track.oldPrice
+    ? `<span class="home-track-card__old-price">${formatTrackPrice(track.oldPrice)}</span>`
+    : "";
+
+  return `
+    <article class="home-track-card hover-lift">
+      <a href="courses.html?path=${track.slug}" class="home-track-card__image-wrap">
+        <img class="home-track-card__image" src="${track.image}" alt="${track.title}">
+        <span class="home-track-card__badge home-track-card__badge--duration">${track.duration}</span>
+        <span class="home-track-card__badge home-track-card__badge--courses">${track.courseCount.toLocaleString("ar-SA")} دورات</span>
+      </a>
+      <div class="home-track-card__body">
+        <h3 class="home-track-card__title"><a href="courses.html?path=${track.slug}">${track.title}</a></h3>
+        <p class="home-track-card__desc">${track.description}</p>
+        <div class="home-track-card__stats">
+          <span class="home-track-card__stat"><i class="ri-time-line"></i> ${track.hours.toLocaleString("ar-SA")} ساعة</span>
+          <span class="home-track-card__stat"><i class="ri-team-line"></i> ${track.studentCount.toLocaleString("ar-SA")} طالب</span>
+          <span class="home-track-card__stat"><i class="ri-star-line"></i> ${track.rating.toLocaleString("ar-SA")}</span>
+        </div>
+        <div class="home-track-card__footer">
+          <span class="home-track-card__level">${track.level}</span>
+          <div class="home-track-card__prices">
+            <span class="home-track-card__price">${formatTrackPrice(track.price)}</span>
+            ${oldPrice}
+          </div>
+        </div>
+      </div>
+    </article>`;
+}
+
+export function homeFeaturedTrackCard(course) {
+  const discountBadge = course.discount
+    ? `<span class="home-track-card__badge home-track-card__badge--discount">-${course.discount}%</span>`
+    : "";
+  const categoryBadge = course.category
+    ? `<span class="home-track-card__badge home-track-card__badge--category">${course.category}</span>`
+    : "";
+  const oldPrice = course.oldPrice
+    ? `<span class="home-track-card__old-price">${formatPrice(course.oldPrice)}</span>`
+    : "";
+  const levelBadge = course.level
+    ? `<span class="home-track-card__level">${course.level}</span>`
+    : "";
+
+  return `
+    <article class="home-track-card home-track-card--featured hover-lift">
+      <a href="course-details.html?id=${course.id}" class="home-track-card__image-wrap">
+        <img class="home-track-card__image" src="${course.image}" alt="${course.title}">
+        ${discountBadge}
+        ${categoryBadge}
+        <span class="home-track-card__image-rating">(${course.reviewCount.toLocaleString("ar-SA")}) ${course.rating.toLocaleString("ar-SA")} <i class="ri-star-fill"></i></span>
+      </a>
+      <div class="home-track-card__body">
+        <h3 class="home-track-card__title"><a href="course-details.html?id=${course.id}">${course.title}</a></h3>
+        <p class="home-track-card__desc">${course.description}</p>
+        <div class="home-track-card__instructor">
+          <img src="${course.instructorAvatar}" alt="${course.instructorName}">
+          ${course.instructorName}
+        </div>
+        <div class="home-track-card__stats">
+          <span class="home-track-card__stat"><i class="ri-time-line"></i> ${course.hours.toLocaleString("ar-SA")} ساعة</span>
+          <span class="home-track-card__stat"><i class="ri-book-open-line"></i> ${course.lessonCount.toLocaleString("ar-SA")} درس</span>
+          <span class="home-track-card__stat"><i class="ri-group-line"></i> ${course.studentCount.toLocaleString("ar-SA")} طالب</span>
+        </div>
+        <div class="home-track-card__footer">
+          ${levelBadge}
+          <div class="home-track-card__prices">
+            <span class="home-track-card__price">${formatPrice(course.price)}</span>
+            ${oldPrice}
+          </div>
+        </div>
+      </div>
+    </article>`;
+}
+
 export function homeCourseCard(course) {
-  const badges = [
-    course.isNew ? `<span class="badge badge--bestseller home-course-card__badge">جديد</span>` : "",
-    course.isBestseller ? `<span class="badge badge--new home-course-card__badge">الأكثر مبيعاً</span>` : "",
-  ].join("");
+  const discountBadge = course.discount
+    ? `<span class="home-course-card__badge home-course-card__badge--discount">-${course.discount}%</span>`
+    : "";
+  const categoryBadge = course.category
+    ? `<span class="home-course-card__badge home-course-card__badge--category">${course.category}</span>`
+    : "";
 
   return `
     <article class="home-course-card hover-lift">
       <a href="course-details.html?id=${course.id}" class="home-course-card__image-wrap">
         <img class="home-course-card__image" src="${course.image}" alt="${course.title}">
-        ${badges ? `<div class="home-course-card__badges">${badges}</div>` : ""}
+        ${discountBadge}
+        ${categoryBadge}
+        <span class="home-course-card__image-rating">(${course.reviewCount.toLocaleString("ar-SA")}) ${course.rating.toLocaleString("ar-SA")} <i class="ri-star-fill"></i></span>
       </a>
       <div class="home-course-card__body">
-        <div class="home-course-card__rating"><span class="home-course-card__stars">★★★★★</span> <span>${course.rating}</span></div>
         <h3 class="home-course-card__title"><a href="course-details.html?id=${course.id}">${course.title}</a></h3>
         <p class="home-course-card__desc">${course.description}</p>
-        <div class="home-course-card__meta">
-          <span class="home-course-card__instructor">
-            <img src="${course.instructorAvatar}" alt="">
-            ${course.instructorName}
-          </span>
-          <span class="home-course-card__stat">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>
-            ${course.lessonCount} درس
-          </span>
-          <span class="home-course-card__stat">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
-            ${course.studentCount} طالب
-          </span>
+        <div class="home-course-card__instructor">
+          <img src="${course.instructorAvatar}" alt="">
+          ${course.instructorName}
         </div>
         <div class="home-course-card__footer">
-          <a href="course-details.html?id=${course.id}" class="home-course-card__cta">عرض التفاصيل</a>
+          <div class="home-course-card__stats">
+            ${course.hours ? `<span class="home-course-card__stat"><i class="ri-time-line"></i> ${course.hours.toLocaleString("ar-SA")} ساعة</span>` : ""}
+            <span class="home-course-card__stat"><i class="ri-book-open-line"></i> ${course.lessonCount.toLocaleString("ar-SA")} درس</span>
+            <span class="home-course-card__stat"><i class="ri-group-line"></i> ${course.studentCount.toLocaleString("ar-SA")} طالب</span>
+          </div>
           <span class="home-course-card__price">${formatPrice(course.price)}</span>
         </div>
+      </div>
+    </article>`;
+}
+
+export function homeWhyCard(item) {
+  return `
+    <article class="home-track-card home-track-card--why hover-lift">
+      <div class="home-track-card__image-wrap home-track-card__icon-wrap">
+        <span class="home-track-card__icon-badge"><i class="${item.icon}"></i></span>
+      </div>
+      <div class="home-track-card__body">
+        <h3 class="home-track-card__title">${item.title}</h3>
+        <p class="home-track-card__desc">${item.description}</p>
       </div>
     </article>`;
 }
@@ -49,17 +137,26 @@ export function homeFeatureCard(item) {
 }
 
 export function homeTestimonialSlide(item) {
-  const stars = "★".repeat(item.rating || 5);
+  const stars = Array.from({ length: item.rating || 5 }, () =>
+    `<i class="ri-star-fill"></i>`
+  ).join("");
+
   return `
     <div class="home-testimonial-card">
-      <div class="home-testimonial-card__quote-icon">"</div>
-      <p class="home-testimonial-card__text">${item.quote}</p>
-      <div class="home-testimonial-card__author">
-        <img src="${item.userAvatar}" alt="${item.userName}">
-        <div>
+      <div class="home-testimonial-card__content">
+        <div class="home-testimonial-card__quote">
+          <span class="home-testimonial-card__quote-icon" aria-hidden="true">
+            <img src="assets/svgs/Vector.svg" alt="" width="28" height="20">
+          </span>
+          <p class="home-testimonial-card__text">${item.quote}</p>
+        </div>
+        <div class="home-testimonial-card__author">
+          <div class="home-testimonial-card__avatar">
+            <img src="${item.userAvatar}" alt="${item.userName}">
+          </div>
           <strong>${item.userName}</strong>
           <span>${item.role}</span>
-          <div class="home-testimonial-card__stars">${stars}</div>
+          <div class="home-testimonial-card__stars" aria-label="تقييم ${item.rating} من 5">${stars}</div>
         </div>
       </div>
     </div>`;

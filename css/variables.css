@@ -81,8 +81,8 @@
   /* --------------------------------------------------------------------------
      Typography — Font Family
      -------------------------------------------------------------------------- */
-  --font-primary: "Tajawal", "Segoe UI", sans-serif;
-  --font-display: "Tajawal", sans-serif;
+  --font-primary: "IBM Plex Sans Arabic", "IBM Plex Sans", sans-serif;
+  --font-display: "IBM Plex Sans Arabic", "IBM Plex Sans", sans-serif;
 
   /* --------------------------------------------------------------------------
      Typography — Raw Scale (compact — matches Figma proportions)
@@ -134,6 +134,47 @@
   --type-section-title-lh: var(--lh-snug);
   --type-section-title-ls: var(--ls-normal);
 
+  --type-home-tag-font: var(--font-primary);
+  --type-home-tag-size: var(--fs-lg);
+  --type-home-tag-weight: var(--fw-semibold);
+  --type-home-tag-color: #0050d5;
+  --type-home-tag-line-width: 2.5rem;
+  --type-home-tag-line-color: rgba(0, 80, 213, 0.35);
+
+  --type-home-section-title-font: var(--font-primary);
+  --type-home-section-title-size: 2rem;
+  --type-home-section-title-weight: var(--fw-bold);
+  --type-home-section-title-lh: 1.35;
+  --type-home-section-title-color: #0a2e8b;
+
+  --type-home-section-subtitle-font: var(--font-primary);
+  --type-home-section-subtitle-size: var(--fs-lg);
+  --type-home-section-subtitle-weight: var(--fw-regular);
+  --type-home-section-subtitle-lh: 1.625rem;
+  --type-home-section-subtitle-color: #6b7280;
+
+  --type-home-section-link-font: var(--font-primary);
+  --type-home-section-link-size: var(--fs-lg);
+  --type-home-section-link-weight: var(--fw-semibold);
+  --type-home-section-link-color: #0050d5;
+
+  --type-home-card-badge-font: var(--font-primary);
+  --type-home-card-badge-size: 0.6875rem;
+  --type-home-card-badge-weight: var(--fw-semibold);
+  --type-home-card-badge-lh: 1;
+
+  --type-home-card-stat-font: var(--font-primary);
+  --type-home-card-stat-size: 0.8125rem;
+  --type-home-card-stat-weight: var(--fw-regular);
+
+  --type-home-card-meta-font: var(--font-primary);
+  --type-home-card-meta-size: 0.75rem;
+  --type-home-card-meta-weight: var(--fw-medium);
+
+  --type-home-card-price-font: var(--font-primary);
+  --type-home-card-price-size: 1.125rem;
+  --type-home-card-price-weight: var(--fw-bold);
+
   --type-subsection-title-font: var(--font-primary);
   --type-subsection-title-size: var(--fs-md);
   --type-subsection-title-weight: var(--fw-semibold);
@@ -141,16 +182,16 @@
   --type-subsection-title-ls: var(--ls-normal);
 
   --type-card-title-font: var(--font-primary);
-  --type-card-title-size: var(--fs-xs);
-  --type-card-title-weight: var(--fw-semibold);
-  --type-card-title-lh: var(--lh-snug);
-  --type-card-title-ls: var(--ls-normal);
+  --type-card-title-size: 1.125rem;
+  --type-card-title-weight: var(--fw-bold);
+  --type-card-title-lh: 1.6875rem;
+  --type-card-title-ls: 0;
 
   --type-card-subtitle-font: var(--font-primary);
-  --type-card-subtitle-size: var(--fs-sm);
+  --type-card-subtitle-size: 0.875rem;
   --type-card-subtitle-weight: var(--fw-regular);
-  --type-card-subtitle-lh: var(--lh-normal);
-  --type-card-subtitle-ls: var(--ls-normal);
+  --type-card-subtitle-lh: 1.421875rem;
+  --type-card-subtitle-ls: 0;
 
   --type-body-font: var(--font-primary);
   --type-body-size: var(--fs-sm);
@@ -244,6 +285,8 @@
   --grid-gap: var(--space-2);
   --grid-gap-sm: var(--space-1);
   --navbar-height: 2.5rem;
+  --home-nav-height: 87.62px;
+  --home-nav-container-max: 75rem;
   --sidebar-width: 15rem;
   --dashboard-header-height: 3.25rem;
 
