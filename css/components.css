@@ -1035,6 +1035,113 @@ body.drawer-open .home-nav__hamburger span:nth-child(3) {
   transform: translateY(-7px) rotate(-45deg);
 }
 
+/* Navbar — tablet / narrow desktop: scale down so all items stay visible */
+@media (max-width: 1279px) {
+  :root {
+    --home-nav-height: 4.25rem;
+  }
+
+  .home-nav__inner {
+    gap: 1.25rem;
+  }
+
+  .home-nav__logo-img {
+    height: 2.5rem;
+  }
+
+  .home-nav__links {
+    gap: 1.125rem;
+  }
+
+  .home-nav__link,
+  .home-nav__login {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+
+  .home-nav__actions {
+    gap: 0.625rem;
+  }
+
+  .home-nav__cta {
+    width: auto;
+    height: 2.375rem;
+    padding-inline: 1rem;
+    font-size: 0.875rem;
+    border-radius: 12px;
+  }
+}
+
+@media (max-width: 1011px) {
+  :root {
+    --home-nav-height: 3.625rem;
+  }
+
+  .home-nav > .container {
+    padding-inline: 0.75rem;
+  }
+
+  .home-nav__inner {
+    gap: 0.625rem;
+  }
+
+  .home-nav__logo-img {
+    height: 2rem;
+  }
+
+  .home-nav__links {
+    gap: 0.5rem;
+  }
+
+  .home-nav__link,
+  .home-nav__login {
+    font-size: 0.75rem;
+    line-height: 1.125rem;
+  }
+
+  .home-nav__actions {
+    gap: 0.375rem;
+  }
+
+  .home-nav__lang,
+  .home-nav__icon-btn {
+    width: 1.75rem;
+    height: 1.75rem;
+  }
+
+  .home-nav__icon-btn {
+    font-size: 1.0625rem;
+  }
+
+  .home-nav__lang {
+    font-size: 0.5625rem;
+  }
+
+  .home-nav__cta {
+    height: 2rem;
+    padding-inline: 0.75rem;
+    font-size: 0.75rem;
+    border-radius: 10px;
+  }
+}
+
+@media (max-width: 900px) and (min-width: 787px) {
+  .home-nav__links {
+    gap: 0.375rem;
+  }
+
+  .home-nav__link,
+  .home-nav__login {
+    font-size: 0.6875rem;
+    line-height: 1rem;
+  }
+
+  .home-nav__cta {
+    padding-inline: 0.625rem;
+    font-size: 0.6875rem;
+  }
+}
+
 @media (max-width: 786px) {
   .home-nav__links {
     display: none;
