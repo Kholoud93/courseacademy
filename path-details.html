@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>تفاصيل المسار — coursacademy</title>
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages/course-details.css">
+  <link rel="stylesheet" href="css/pages/path-details.css">
+</head>
+<body data-layout="main" data-page="paths">
+
+  <div id="site-header"></div>
+
+  <main>
+    <section class="cd-hero">
+      <div class="container cd-hero__inner">
+        <nav class="cd-breadcrumb" aria-label="مسار التنقل">
+          <a href="index.html">الرئيسية</a>
+          <span class="cd-breadcrumb__sep" aria-hidden="true">&gt;</span>
+          <a href="paths.html">المسارات</a>
+          <span class="cd-breadcrumb__sep" aria-hidden="true">&gt;</span>
+          <span id="pd-breadcrumb-title">مسار مهندس BIM المحترف</span>
+        </nav>
+
+        <div class="cd-hero__grid">
+          <div class="cd-hero__content">
+            <div class="cd-hero__badges" id="pd-hero-badges"></div>
+            <h1 class="cd-hero__title" id="pd-hero-title"></h1>
+            <p class="cd-hero__desc" id="pd-hero-desc"></p>
+
+            <div class="cd-hero__stats" id="pd-hero-stats"></div>
+
+            <div class="pd-hero__meta" id="pd-hero-meta"></div>
+          </div>
+
+          <div class="cd-hero__media">
+            <div class="cd-hero__video">
+              <img id="pd-hero-image" src="" alt="" class="cd-hero__video-img">
+              <button type="button" class="cd-hero__play" aria-label="تشغيل مقدمة المسار">
+                <i class="ri-play-fill"></i>
+              </button>
+              <span class="cd-hero__video-caption">6 دورات تدريبية متكاملة</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cd-body">
+      <div class="container cd-layout">
+        <div class="cd-main">
+          <div data-tabs="path-detail" class="cd-tabs-wrap">
+            <div class="cd-tabs">
+              <button type="button" class="cd-tabs__btn is-active" data-tabs="path-detail" data-tab="overview">نظرة عامة <i class="ri-eye-line"></i></button>
+              <button type="button" class="cd-tabs__btn" data-tabs="path-detail" data-tab="curriculum">المنهج التعليمي <i class="ri-list-check-2"></i></button>
+              <button type="button" class="cd-tabs__btn" data-tabs="path-detail" data-tab="instructors">المدربون <i class="ri-team-line"></i></button>
+              <button type="button" class="cd-tabs__btn" data-tabs="path-detail" data-tab="reviews">التقييمات <i class="ri-star-line"></i></button>
+            </div>
+
+            <div id="tab-panel" class="cd-tab-panel">
+              <section class="cd-section">
+                <h2 class="cd-section__title cd-section__title--blue">ما ستتعلمه في هذا المسار</h2>
+                <ul class="cd-learn" id="pd-learn-list"></ul>
+              </section>
+
+              <section class="cd-section">
+                <h2 class="cd-section__title cd-section__title--green">يشمل المسار</h2>
+                <ul class="pd-includes" id="pd-includes-list"></ul>
+              </section>
+
+              <section class="cd-section">
+                <h2 class="cd-section__title cd-section__title--orange">المتطلبات الأساسية</h2>
+                <p class="pd-requirements" id="pd-requirements-text"></p>
+              </section>
+
+              <section class="cd-section">
+                <h2 class="cd-section__title cd-section__title--blue">تفاصيل المسار</h2>
+                <div class="cd-meta-grid" id="pd-meta-grid"></div>
+              </section>
+
+              <section class="cd-certificate">
+                <span class="cd-certificate__icon"><i class="ri-award-fill"></i></span>
+                <div>
+                  <h3>شهادة مهندس BIM محترف معتمدة</h3>
+                  <p>تحصل على شهادة معتمدة بعد إتمام المسار بنجاح مقبولة لدى كبرى الشركات في مصر والخليج.</p>
+                </div>
+              </section>
+            </div>
+
+            <div id="curriculum-panel" class="cd-tab-panel" hidden>
+              <div class="pd-curriculum-plan">
+                <div class="pd-curriculum-plan__head">
+                  <h2 class="pd-curriculum-plan__title">مخطط المسار التعليمي</h2>
+                  <span class="cd-curriculum__summary" id="pd-curriculum-summary"></span>
+                </div>
+                <div id="pd-phases-accordion" class="cd-curriculum"></div>
+              </div>
+
+              <div class="pd-included-courses">
+                <h2 class="pd-included-courses__title" id="pd-included-courses-title">الدورات المتضمنة</h2>
+                <div id="pd-included-courses-list" class="pd-included-courses__list"></div>
+              </div>
+            </div>
+
+            <div id="instructors-panel" class="cd-tab-panel" hidden>
+              <div id="pd-instructors-list" class="pd-instructors"></div>
+            </div>
+
+            <div id="reviews-panel" class="cd-tab-panel" hidden>
+              <div id="reviews-list" class="cd-reviews"></div>
+            </div>
+          </div>
+        </div>
+
+        <aside class="cd-sidebar">
+          <div class="cd-buy-card">
+            <div class="cd-buy-card__video">
+              <img id="pd-sidebar-image" src="" alt="">
+              <span class="cd-buy-card__discount" id="pd-sidebar-discount">خصم 44%</span>
+              <button type="button" class="cd-buy-card__play" aria-label="تشغيل">
+                <i class="ri-play-fill"></i>
+              </button>
+            </div>
+
+            <div class="cd-buy-card__price">
+              <div class="cd-buy-card__price-row">
+                <span class="cd-buy-card__price-current" id="pd-price-current"></span>
+                <span class="cd-buy-card__price-old" id="pd-price-old"></span>
+              </div>
+              <p class="cd-buy-card__offer" id="pd-price-offer">
+                ينتهي العرض قريباً — لا تفوّت الفرصة!
+                <i class="ri-time-line"></i>
+              </p>
+            </div>
+
+            <div class="cd-buy-card__actions">
+              <a href="login.html" class="cd-buy-card__btn cd-buy-card__btn--primary">اشترك الآن</a>
+              <button type="button" class="cd-buy-card__btn cd-buy-card__btn--cart">أضف للسلة <i class="ri-shopping-cart-2-line"></i></button>
+              <button type="button" class="cd-buy-card__btn cd-buy-card__btn--wish">أضف للمفضلة <i class="ri-heart-line"></i></button>
+            </div>
+
+            <p class="cd-buy-card__guarantee">
+              ضمان استرداد المال خلال ٣٠ يوم — بدون شروط
+              <i class="ri-shield-check-line"></i>
+            </p>
+
+            <ul class="cd-buy-card__features" id="pd-sidebar-features"></ul>
+
+            <div class="cd-buy-card__share">
+              <span>شارك المسار:</span>
+              <div class="cd-buy-card__share-icons">
+                <a href="#" aria-label="فيسبوك"><i class="ri-facebook-fill"></i></a>
+                <a href="#" aria-label="لينكدإن"><i class="ri-linkedin-fill"></i></a>
+                <a href="#" aria-label="تويتر"><i class="ri-twitter-x-line"></i></a>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script type="module" src="js/app.js"></script>
+  <script type="module" src="js/pages/path-details.js"></script>
+</body>
+</html>

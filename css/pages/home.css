@@ -2371,11 +2371,51 @@ body[data-layout="home"] {
 
   .home-consult__inner {
     grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
 
   .home-consult__graphic {
-    width: min(21rem, 100%);
-    height: min(21rem, 80vw);
+    order: 1;
+    width: min(16.5rem, 78vw);
+    height: min(16.5rem, 78vw);
+    margin-inline: auto;
+    margin-top: 0;
+    margin-bottom: 0.25rem;
+  }
+
+  .home-consult__content {
+    order: 2;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .home-consult__desc {
+    max-width: 100%;
+  }
+
+  .home-consult__stars {
+    justify-content: center;
+  }
+
+  .home-consult__buttons {
+    flex-direction: column;
+    width: 100%;
+    max-width: 20rem;
+  }
+
+  .home-consult__buttons .btn {
+    width: 100%;
+  }
+
+  .home-consult__avatar {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .home-consult__avatar img {
+    transform: scale(1.5);
   }
 
   .home-features__grid {
@@ -2483,6 +2523,11 @@ body[data-layout="home"] {
 
   .home-consult__buttons .btn {
     width: 100%;
+  }
+
+  .home-consult__title {
+    font-size: 1.5rem;
+    line-height: 1.3;
   }
 
   .home-testimonial-card__content {
@@ -2743,12 +2788,35 @@ body[data-layout="home"] {
   }
 
   .home-consult {
-    padding-top: 4rem;
-    padding-bottom: 2.5rem;
+    padding-block: 2rem;
   }
 
   .home-consult__graphic {
-    margin-top: 1.25rem;
+    width: min(15rem, 72vw);
+    height: min(15rem, 72vw);
+    margin-top: 0;
+  }
+
+  .home-consult__center {
+    width: 3.25rem;
+    height: 3.25rem;
+  }
+
+  .home-consult__avatar {
+    width: 2.75rem;
+    height: 2.75rem;
+  }
+
+  .home-consult__avatar img {
+    transform: scale(1.35);
+  }
+
+  .home-consult__title {
+    font-size: 1.375rem;
+  }
+
+  .home-consult__desc {
+    font-size: 0.8125rem;
   }
 }
 
@@ -2871,12 +2939,35 @@ body[data-layout="home"] {
   }
 
   .home-consult {
-    padding-top: 4rem;
-    padding-bottom: 2.5rem;
+    padding-block: 2rem;
   }
 
   .home-consult__graphic {
-    margin-top: 1.25rem;
+    width: min(15rem, 72vw);
+    height: min(15rem, 72vw);
+    margin-top: 0;
+  }
+
+  .home-consult__center {
+    width: 3.25rem;
+    height: 3.25rem;
+  }
+
+  .home-consult__avatar {
+    width: 2.75rem;
+    height: 2.75rem;
+  }
+
+  .home-consult__avatar img {
+    transform: scale(1.35);
+  }
+
+  .home-consult__title {
+    font-size: 1.375rem;
+  }
+
+  .home-consult__desc {
+    font-size: 0.8125rem;
   }
 
   .home-tracks__inner,
