@@ -1,11 +1,11 @@
 import { formatPrice, formatDate, formatDuration } from "./common.js";
 
-/** صفحة تفاصيل الدورة الثابتة (تصميم Revit) */
+
 const COURSE_DETAILS_PAGE = "course-details.html?id=202";
-/** صفحة تفاصيل المسار الثابتة (تصميم BIM) */
+
 const PATH_DETAILS_PAGE = "path-details.html?id=101";
 
-/** Engineering track card — homepage tracks section */
+
 export function homeTrackCard(track) {
   const currency = track.currency || "د.أ";
   const formatTrackPrice = (amount) => `${Number(amount).toLocaleString("ar-SA")} ${currency}`;
@@ -281,16 +281,59 @@ export function categoryCard(cat) {
 }
 
 export function blogCard(post) {
+  const tags = (post.tags || [])
+    .map((tag) => `<span class="blog-card__tag">${tag}</span>`)
+    .join("");
+
   return `
-    <a href="blog-details.html?slug=${post.slug}">
-      <article class="card card--blog hover-lift">
-        <img class="card__image" src="${post.image}" alt="${post.title}">
-        <div class="card__body">
-          <time class="card__date">${formatDate(post.publishedAt)}</time>
-          <h3 class="card__title">${post.title}</h3>
-          <p class="card__excerpt">${post.excerpt}</p>
+    <a href="blog-details.html?slug=${post.slug}" class="blog-card hover-lift">
+      <div class="home-track-card__image-wrap blog-card__media">
+        <img class="home-track-card__image" src="${post.image}" alt="${post.title}">
+        <span class="blog-card__category">${post.category}</span>
+        <span class="blog-card__views"><i class="ri-eye-line"></i> ${post.views.toLocaleString("ar-SA")}</span>
+      </div>
+      <div class="blog-card__body">
+        <h3 class="blog-card__title">${post.title}</h3>
+        <p class="blog-card__excerpt">${post.excerpt}</p>
+        ${tags ? `<div class="blog-card__tags">${tags}</div>` : ""}
+      </div>
+      <div class="blog-card__foot">
+        <div class="blog-card__author">
+          <img src="${post.authorAvatar}" alt="${post.author}">
+          <div class="blog-card__author-text">
+            <strong>${post.author}</strong>
+            <time>${formatDate(post.publishedAt)}</time>
+          </div>
         </div>
-      </article>
+        <span class="blog-card__time"><i class="ri-time-line"></i> ${post.readTime.toLocaleString("ar-SA")} دقائق</span>
+      </div>
+    </a>`;
+}
+
+export function blogFeaturedCard(post) {
+  return `
+    <a href="blog-details.html?slug=${post.slug}" class="blog-featured hover-lift">
+      <div class="blog-featured__body">
+        <span class="blog-featured__category">${post.category}</span>
+        <h3 class="blog-featured__title">${post.title}</h3>
+        <p class="blog-featured__excerpt">${post.excerpt}</p>
+        <div class="blog-featured__foot">
+          <div class="blog-featured__author">
+            <img src="${post.authorAvatar}" alt="${post.author}" class="blog-featured__avatar">
+            <div class="blog-featured__author-text">
+              <strong>${post.author}</strong>
+              <time>${formatDate(post.publishedAt)}</time>
+            </div>
+          </div>
+          <div class="blog-featured__meta">
+            <span><i class="ri-eye-line"></i> ${post.views.toLocaleString("ar-SA")} مشاهدة</span>
+            <span><i class="ri-time-line"></i> ${post.readTime.toLocaleString("ar-SA")} دقائق</span>
+          </div>
+        </div>
+      </div>
+      <div class="blog-featured__media">
+        <img src="${post.image}" alt="${post.title}" class="blog-featured__image">
+      </div>
     </a>`;
 }
 
