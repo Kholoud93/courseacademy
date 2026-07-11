@@ -1,5 +1,10 @@
 import { formatPrice, formatDate, formatDuration } from "./common.js";
 
+/** صفحة تفاصيل الدورة الثابتة (تصميم Revit) */
+const COURSE_DETAILS_PAGE = "course-details.html?id=202";
+/** صفحة تفاصيل المسار الثابتة (تصميم BIM) */
+const PATH_DETAILS_PAGE = "path-details.html?id=101";
+
 /** Engineering track card — homepage tracks section */
 export function homeTrackCard(track) {
   const currency = track.currency || "د.أ";
@@ -10,13 +15,13 @@ export function homeTrackCard(track) {
 
   return `
     <article class="home-track-card hover-lift">
-      <a href="courses.html?path=${track.slug}" class="home-track-card__image-wrap">
+      <a href="${PATH_DETAILS_PAGE}" class="home-track-card__image-wrap">
         <img class="home-track-card__image" src="${track.image}" alt="${track.title}">
         <span class="home-track-card__badge home-track-card__badge--duration">${track.duration}</span>
         <span class="home-track-card__badge home-track-card__badge--courses">${track.courseCount.toLocaleString("ar-SA")} دورات</span>
       </a>
       <div class="home-track-card__body">
-        <h3 class="home-track-card__title"><a href="courses.html?path=${track.slug}">${track.title}</a></h3>
+        <h3 class="home-track-card__title"><a href="${PATH_DETAILS_PAGE}">${track.title}</a></h3>
         <p class="home-track-card__desc">${track.description}</p>
         <div class="home-track-card__stats">
           <span class="home-track-card__stat"><i class="ri-time-line"></i> ${track.hours.toLocaleString("ar-SA")} ساعة</span>
@@ -50,14 +55,14 @@ export function homeFeaturedTrackCard(course) {
 
   return `
     <article class="home-track-card home-track-card--featured hover-lift">
-      <a href="course-details.html?id=${course.id}" class="home-track-card__image-wrap">
+      <a href="${COURSE_DETAILS_PAGE}" class="home-track-card__image-wrap">
         <img class="home-track-card__image" src="${course.image}" alt="${course.title}">
         ${discountBadge}
         ${categoryBadge}
         <span class="home-track-card__image-rating">(${course.reviewCount.toLocaleString("ar-SA")}) ${course.rating.toLocaleString("ar-SA")} <i class="ri-star-fill"></i></span>
       </a>
       <div class="home-track-card__body">
-        <h3 class="home-track-card__title"><a href="course-details.html?id=${course.id}">${course.title}</a></h3>
+        <h3 class="home-track-card__title"><a href="${COURSE_DETAILS_PAGE}">${course.title}</a></h3>
         <p class="home-track-card__desc">${course.description}</p>
         <div class="home-track-card__instructor">
           <img src="${course.instructorAvatar}" alt="${course.instructorName}">
@@ -89,14 +94,14 @@ export function homeCourseCard(course) {
 
   return `
     <article class="home-course-card hover-lift">
-      <a href="course-details.html?id=${course.id}" class="home-course-card__image-wrap">
+      <a href="${COURSE_DETAILS_PAGE}" class="home-course-card__image-wrap">
         <img class="home-course-card__image" src="${course.image}" alt="${course.title}">
         ${discountBadge}
         ${categoryBadge}
         <span class="home-course-card__image-rating">(${course.reviewCount.toLocaleString("ar-SA")}) ${course.rating.toLocaleString("ar-SA")} <i class="ri-star-fill"></i></span>
       </a>
       <div class="home-course-card__body">
-        <h3 class="home-course-card__title"><a href="course-details.html?id=${course.id}">${course.title}</a></h3>
+        <h3 class="home-course-card__title"><a href="${COURSE_DETAILS_PAGE}">${course.title}</a></h3>
         <p class="home-course-card__desc">${course.description}</p>
         <div class="home-course-card__instructor">
           <img src="${course.instructorAvatar}" alt="">
@@ -111,6 +116,15 @@ export function homeCourseCard(course) {
           <span class="home-course-card__price">${formatPrice(course.price)}</span>
         </div>
       </div>
+    </article>`;
+}
+
+export function pathsWhyCard(item) {
+  return `
+    <article class="paths-why-card">
+      <span class="paths-why-card__icon" aria-hidden="true"><i class="${item.icon}"></i></span>
+      <h3 class="paths-why-card__title">${item.title}</h3>
+      <p class="paths-why-card__desc">${item.description}</p>
     </article>`;
 }
 
@@ -187,13 +201,13 @@ export function featuredCourseCard(course) {
   const oldPrice = course.oldPrice ? `<span class="featured-card__old-price">${formatPrice(course.oldPrice)}</span>` : "";
   return `
     <article class="featured-card hover-lift">
-      <a href="course-details.html?id=${course.id}" class="featured-card__image-wrap">
+      <a href="${COURSE_DETAILS_PAGE}" class="featured-card__image-wrap">
         <img class="featured-card__image" src="${course.image}" alt="${course.title}">
         ${discount}
         <span class="featured-card__rating-badge">★ ${course.rating}</span>
       </a>
       <div class="featured-card__body">
-        <h3 class="featured-card__title"><a href="course-details.html?id=${course.id}">${course.title}</a></h3>
+        <h3 class="featured-card__title"><a href="${COURSE_DETAILS_PAGE}">${course.title}</a></h3>
         <div class="featured-card__instructor">
           <img src="${course.instructorAvatar}" alt="">
           <span>${course.instructorName}</span>
@@ -214,7 +228,7 @@ export function featuredCourseCard(course) {
 export function courseCard(course) {
   const price = course.isFree ? "مجاني" : formatPrice(course.price);
   return `
-    <a href="course-details.html?id=${course.id}">
+    <a href="${COURSE_DETAILS_PAGE}">
       <article class="card card--course hover-lift">
         <div class="card__image-wrap">
           <img class="card__image" src="${course.image}" alt="${course.title}">

@@ -66,3 +66,24 @@ export const paths = [
     slug: "project-management",
   },
 ];
+
+export const pathsWhy = [
+  {
+    id: 1,
+    icon: "ri-focus-3-line",
+    title: "مسار واضح",
+    description: "منهج متكامل ومرتب بشكل منطقي",
+  },
+  {
+    id: 2,
+    icon: "ri-award-line",
+    title: "شهادة معتمدة",
+    description: "احصل على شهادة إتمام المسار",
+  },
+  {
+    id: 3,
+    icon: "ri-money-dollar-circle-line",
+    title: "سعر مخفض",
+    description: "وفر المال مع باقة المسار الكاملة",
+  },
+];
