@@ -1,28 +1,10 @@
-import { renderList, getQueryParam, formatDate } from "../common.js";
-import { blogCard, blogFeaturedCard, homeFeaturedTrackCard } from "../render.js";
-import { blogPosts, blogCategories, blogGridPosts, getBlogBySlug, getFeaturedPost } from "../data/blogs.js";
-import { featuredCourses } from "../data/home.js";
+import { getQueryParam, formatDate } from "../common.js";
+import { getBlogBySlug, blogPosts } from "../data/blogs.js";
 
 const page = document.body.dataset.page;
 
 let activeCategory = getQueryParam("category") || "all";
 let searchQuery = getQueryParam("q") || "";
-
-function renderCategoryFilters() {
-  const container = document.getElementById("blog-filters");
-  if (!container) return;
-
-  container.innerHTML = blogCategories
-    .map(
-      (cat) => `
-    <button
-      type="button"
-      class="blog-filters__pill${cat.id === activeCategory ? " is-active" : ""}"
-      data-category="${cat.id}"
-    >${cat.label}</button>`
-    )
-    .join("");
-}
 
 function updateBlogUrl() {
   const url = new URL(window.location.href);
@@ -35,33 +17,20 @@ function updateBlogUrl() {
 
 function renderBlogPage() {
   const featuredEl = document.getElementById("blog-featured");
-  const grid = document.getElementById("blog-grid");
-  const countEl = document.getElementById("blog-count");
+  const wrap = featuredEl?.closest(".blog-featured-wrap");
   const searchInput = document.querySelector(".blog-hero__search-input");
   const showFeatured = !searchQuery.trim() && activeCategory === "all";
 
-  if (featuredEl) {
-    const wrap = featuredEl.closest(".blog-featured-wrap");
-    if (showFeatured) {
-      featuredEl.innerHTML = blogFeaturedCard(getFeaturedPost());
-      if (wrap) wrap.hidden = false;
-    } else {
-      featuredEl.innerHTML = "";
-      if (wrap) wrap.hidden = true;
-    }
-  }
-
-  renderList(grid, blogGridPosts, blogCard);
-
-  if (countEl) {
-    countEl.textContent = `عرض ${blogGridPosts.length.toLocaleString("ar-SA")} مقال`;
-  }
+  if (wrap) wrap.hidden = !showFeatured;
 
   if (searchInput && searchInput.value !== searchQuery) {
     searchInput.value = searchQuery;
   }
 
-  renderCategoryFilters();
+  document.querySelectorAll("#blog-filters [data-category]").forEach((btn) => {
+    btn.classList.toggle("is-active", btn.dataset.category === activeCategory);
+  });
+
   updateBlogUrl();
 }
 
@@ -221,9 +190,6 @@ function renderBlogDetails() {
       "href",
       `https://wa.me/?text=${encodeURIComponent(`${post.title} ${window.location.href}`)}`
     );
-
-  const relatedCourses = featuredCourses.slice(0, 3);
-  renderList(document.getElementById("related-posts"), relatedCourses, homeFeaturedTrackCard);
 
   const copyBtn = document.querySelector(".blog-detail-share__pill--copy");
   copyBtn?.addEventListener("click", async () => {

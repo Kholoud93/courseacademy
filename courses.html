@@ -59,12 +59,48 @@
         <aside class="courses-sidebar" aria-label="تصفية الدورات">
           <div class="courses-filters-card">
             <h2 class="courses-filters-card__title"><i class="ri-book-open-line"></i> التصنيف</h2>
-            <div class="courses-filters-card__list" id="category-filters"></div>
+            <div class="courses-filters-card__list" id="category-filters">
+<button type="button" class="courses-filters__pill is-active" data-category="all">الكل</button>
+
+  
+
+    <button type="button" class="courses-filters__pill" data-category="bim">BIM</button>
+
+  
+
+    <button type="button" class="courses-filters__pill" data-category="interior">التصميم الداخلي</button>
+
+  
+
+    <button type="button" class="courses-filters__pill" data-category="construction">إدارة البناء</button>
+
+  
+
+    <button type="button" class="courses-filters__pill" data-category="structural">الهندسة الإنشائية</button>
+
+  
+
+    <button type="button" class="courses-filters__pill" data-category="software">برامج هندسية</button>
+</div>
           </div>
 
           <div class="courses-filters-card">
             <h2 class="courses-filters-card__title"><i class="ri-bar-chart-grouped-line"></i> المستوى</h2>
-            <div class="courses-filters-card__list" id="level-filters"></div>
+            <div class="courses-filters-card__list" id="level-filters">
+<button type="button" class="courses-filters__pill is-active" data-level="all">الكل</button>
+
+  
+
+    <button type="button" class="courses-filters__pill" data-level="beginner">مبتدئ</button>
+
+  
+
+    <button type="button" class="courses-filters__pill" data-level="intermediate">متوسط</button>
+
+  
+
+    <button type="button" class="courses-filters__pill" data-level="advanced">متقدم</button>
+</div>
           </div>
 
           <div class="courses-filters-promo">
@@ -77,7 +113,7 @@
 
         <div class="courses-page__main">
           <div class="courses-page__toolbar">
-            <p id="course-count" class="courses-page__count"></p>
+            <p id="course-count" class="courses-page__count">عرض ٤ دورة</p>
             <label class="courses-page__sort">
               <span class="courses-page__sort-label">ترتيب الدورات</span>
               <select id="course-sort" class="courses-page__sort-select">
@@ -90,7 +126,120 @@
             </label>
           </div>
 
-          <div id="course-grid" class="home-featured__grid courses-page__grid"></div>
+          <div id="course-grid" class="home-featured__grid courses-page__grid">
+<article class="home-track-card home-track-card--featured hover-lift" data-category="structural" data-level="advanced" data-price="3499" data-rating="4.8" data-students="1245" data-id="204">
+      <a href="course-details.html?id=202" class="home-track-card__image-wrap">
+        <img class="home-track-card__image" src="assets/images/track-bim.png" alt="SAP2000 Structural">
+        <span class="home-track-card__badge home-track-card__badge--discount">-44%</span>
+        <span class="home-track-card__badge home-track-card__badge--category">هندسة إنشائية</span>
+        <span class="home-track-card__image-rating">(٩٨) ٤٫٨ <i class="ri-star-fill"></i></span>
+      </a>
+      <div class="home-track-card__body">
+        <h3 class="home-track-card__title"><a href="course-details.html?id=202">SAP2000 Structural</a></h3>
+        <p class="home-track-card__desc">تحليل وتصميم المنشآت الخرسانية والفولاذية باحترافية باستخدام SAP2000 مع أمثلة تطبيقية واقعية.</p>
+        <div class="home-track-card__instructor">
+          <img src="assets/images/consult-avatar-4.png" alt="م. يوسف الحربي">
+          م. يوسف الحربي
+        </div>
+        <div class="home-track-card__stats">
+          <span class="home-track-card__stat"><i class="ri-time-line"></i> ٥٠ ساعة</span>
+          <span class="home-track-card__stat"><i class="ri-book-open-line"></i> ٥٥ درس</span>
+          <span class="home-track-card__stat"><i class="ri-group-line"></i> ١٬٢٤٥ طالب</span>
+        </div>
+        <div class="home-track-card__footer">
+          <span class="home-track-card__level">متقدم</span>
+          <div class="home-track-card__prices">
+            <span class="home-track-card__price">٣٬٤٩٩ ر.س</span>
+            <span class="home-track-card__old-price">٥٬٩٩٩ ر.س</span>
+          </div>
+        </div>
+      </div>
+    </article>
+    <article class="home-track-card home-track-card--featured hover-lift" data-category="construction" data-level="advanced" data-price="2499" data-rating="4.5" data-students="1876" data-id="203">
+      <a href="course-details.html?id=202" class="home-track-card__image-wrap">
+        <img class="home-track-card__image" src="assets/images/track-bim.png" alt="Primavera P6">
+        <span class="home-track-card__badge home-track-card__badge--discount">-41%</span>
+        <span class="home-track-card__badge home-track-card__badge--category">إدارة البناء</span>
+        <span class="home-track-card__image-rating">(١٤٢) ٤٫٥ <i class="ri-star-fill"></i></span>
+      </a>
+      <div class="home-track-card__body">
+        <h3 class="home-track-card__title"><a href="course-details.html?id=202">Primavera P6</a></h3>
+        <p class="home-track-card__desc">تعلم إدارة المشاريع الهندسية الكبرى باستخدام Primavera P6 من الجدولة الزمنية حتى تتبع التكاليف والموارد.</p>
+        <div class="home-track-card__instructor">
+          <img src="assets/images/consult-avatar-2.png" alt="م. خالد العمري">
+          م. خالد العمري
+        </div>
+        <div class="home-track-card__stats">
+          <span class="home-track-card__stat"><i class="ri-time-line"></i> ٢٥ ساعة</span>
+          <span class="home-track-card__stat"><i class="ri-book-open-line"></i> ٢٨ درس</span>
+          <span class="home-track-card__stat"><i class="ri-group-line"></i> ١٬٨٧٦ طالب</span>
+        </div>
+        <div class="home-track-card__footer">
+          <span class="home-track-card__level">متقدم</span>
+          <div class="home-track-card__prices">
+            <span class="home-track-card__price">٢٬٤٩٩ ر.س</span>
+            <span class="home-track-card__old-price">٤٬٢٩٩ ر.س</span>
+          </div>
+        </div>
+      </div>
+    </article>
+    <article class="home-track-card home-track-card--featured hover-lift" data-category="software" data-level="intermediate" data-price="1999" data-rating="4.6" data-students="3102" data-id="202">
+      <a href="course-details.html?id=202" class="home-track-card__image-wrap">
+        <img class="home-track-card__image" src="assets/images/track-bim.png" alt="إتقان Revit Architecture">
+        <span class="home-track-card__badge home-track-card__badge--discount">-33%</span>
+        <span class="home-track-card__badge home-track-card__badge--category">BIM</span>
+        <span class="home-track-card__image-rating">(٣٤٢) ٤٫٨ <i class="ri-star-fill"></i></span>
+      </a>
+      <div class="home-track-card__body">
+        <h3 class="home-track-card__title"><a href="course-details.html?id=202">إتقان Revit Architecture</a></h3>
+        <p class="home-track-card__desc">دورة شاملة في Revit Architecture تغطي كل ما تحتاجه لتصبح مهندس BIM محترف من الأساسيات حتى المشاريع المتقدمة في السوق السعودي</p>
+        <div class="home-track-card__instructor">
+          <img src="assets/images/instructor-ahmed-shamri.png" alt="م. أحمد الشمري">
+          م. أحمد الشمري
+        </div>
+        <div class="home-track-card__stats">
+          <span class="home-track-card__stat"><i class="ri-time-line"></i> ٤٠ ساعة</span>
+          <span class="home-track-card__stat"><i class="ri-book-open-line"></i> ٤٥ درس</span>
+          <span class="home-track-card__stat"><i class="ri-group-line"></i> ٢٬٤٥٦ طالب</span>
+        </div>
+        <div class="home-track-card__footer">
+          <span class="home-track-card__level">متقدم</span>
+          <div class="home-track-card__prices">
+            <span class="home-track-card__price">٣٬٩٩٩ ر.س</span>
+            <span class="home-track-card__old-price">٥٬٩٩٩ ر.س</span>
+          </div>
+        </div>
+      </div>
+    </article>
+    <article class="home-track-card home-track-card--featured hover-lift" data-category="software" data-level="beginner" data-price="2499" data-rating="4.6" data-students="4231" data-id="201">
+      <a href="course-details.html?id=202" class="home-track-card__image-wrap">
+        <img class="home-track-card__image" src="assets/images/track-bim.png" alt="AutoCAD للمهندسين">
+        <span class="home-track-card__badge home-track-card__badge--discount">-38%</span>
+        <span class="home-track-card__badge home-track-card__badge--category">برامج هندسية</span>
+        <span class="home-track-card__image-rating">(٢٥٦) ٤٫٦ <i class="ri-star-fill"></i></span>
+      </a>
+      <div class="home-track-card__body">
+        <h3 class="home-track-card__title"><a href="course-details.html?id=202">AutoCAD للمهندسين</a></h3>
+        <p class="home-track-card__desc">دورة شاملة لتعلم AutoCAD من الصفر حتى الاحتراف في الرسم الهندسي ثنائي وثلاثي الأبعاد مع تطبيقات عملية للمهندسين.</p>
+        <div class="home-track-card__instructor">
+          <img src="assets/images/consult-avatar-3.png" alt="م. سارة القحطاني">
+          م. سارة القحطاني
+        </div>
+        <div class="home-track-card__stats">
+          <span class="home-track-card__stat"><i class="ri-time-line"></i> ٣٠ ساعة</span>
+          <span class="home-track-card__stat"><i class="ri-book-open-line"></i> ٣٥ درس</span>
+          <span class="home-track-card__stat"><i class="ri-group-line"></i> ٤٬٢٣١ طالب</span>
+        </div>
+        <div class="home-track-card__footer">
+          <span class="home-track-card__level">مبتدئ</span>
+          <div class="home-track-card__prices">
+            <span class="home-track-card__price">٢٬٤٩٩ ر.س</span>
+            <span class="home-track-card__old-price">٣٬٩٩٩ ر.س</span>
+          </div>
+        </div>
+      </div>
+    </article>
+</div>
         </div>
       </div>
     </section>
