@@ -5,12 +5,56 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>المحفظة — أكاديمية الدورات</title>
   <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap">
   <link rel="stylesheet" href="css/global.css">
   <link rel="stylesheet" href="css/layout.css">
   <link rel="stylesheet" href="css/components.css">
 </head>
 <body class="layout-dashboard" data-layout="dashboard" data-page="wallet">
-  <div id="dashboard-shell"></div>
+  <div id="dashboard-shell">
+<aside class="sidebar layout-dashboard__sidebar" data-drawer="sidebar">
+  <a href="dashboard.html" class="sidebar__logo">أكاديمية الدورات</a>
+
+  <nav class="sidebar__nav">
+    <a href="dashboard.html" class="sidebar__link" data-nav="dashboard">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9.5L12 3l9 6.5V20a1 1 0 01-1 1H5a1 1 0 01-1-1V9.5z"/></svg>
+      <span>لوحة التحكم</span>
+    </a>
+    <a href="my-courses.html" class="sidebar__link" data-nav="my-courses">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>
+      <span>دوراتي</span>
+    </a>
+    <a href="certificates.html" class="sidebar__link" data-nav="certificates">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="6"/><path d="M8.21 13.89L7 22l5-3 5 3-1.21-8.11"/></svg>
+      <span>الشهادات</span>
+    </a>
+    <a href="notifications.html" class="sidebar__link" data-nav="notifications">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/></svg>
+      <span>الإشعارات</span>
+    </a>
+    <a href="messages.html" class="sidebar__link" data-nav="messages">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+      <span>الرسائل</span>
+    </a>
+    <a href="wallet.html" class="sidebar__link" data-nav="wallet">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="6" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>
+      <span>المحفظة</span>
+    </a>
+    <a href="profile.html" class="sidebar__link" data-nav="profile">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+      <span>الملف الشخصي</span>
+    </a>
+  </nav>
+
+  <div class="sidebar__footer">
+    <a href="login.html" class="sidebar__link">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 21H5a2 2 0 01-2-2V5a2 2 0 012-2h4M16 17l5-5-5-5M21 12H9"/></svg>
+      <span>تسجيل الخروج</span>
+    </a>
+  </div>
+</aside>
+  </div>
   <div class="layout-dashboard__body">
     <header class="dashboard-header layout-dashboard__header"><button type="button" class="btn btn--icon" data-drawer-open="sidebar">☰</button></header>
     <main class="layout-dashboard__content">

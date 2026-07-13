@@ -29,8 +29,11 @@ export function formatDuration(minutes) {
 export async function loadComponent(selector, file) {
   const el = $(selector);
   if (!el) return;
+  if (el.childElementCount > 0) return;
   try {
-    const res = await fetch(file);
+    const url = new URL(file, window.location.href);
+    const res = await fetch(url.href);
+    if (!res.ok) throw new Error(`${res.status} ${res.statusText}`);
     el.innerHTML = await res.text();
   } catch (err) {
     console.warn(`Could not load ${file}`, err);
