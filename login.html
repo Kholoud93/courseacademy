@@ -1,58 +1,97 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>تسجيل الدخول — أكاديمية الدورات</title>
-  <link rel="stylesheet" href="css/variables.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css">
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>تسجيل الدخول — coursacademy</title>
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap">
-  <link rel="stylesheet" href="css/global.css">
-  <link rel="stylesheet" href="css/layout.css">
-  <link rel="stylesheet" href="css/components.css">
-</head>
-<body data-layout="auth" data-page="login">
-  <div class="layout-auth">
-    <aside class="auth-sidebar layout-auth__sidebar">
-      <h2 class="auth-sidebar__title">مرحباً بعودتك!</h2>
-      <p class="auth-sidebar__desc">سجّل دخولك للوصول إلى دوراتك.</p>
-      <div class="auth-sidebar__features">
-        <article class="card card--feature-auth"><span class="card__icon">📚</span><div><h3 class="card__title">500+ دورة</h3><p class="card__desc">محتوى تعليمي متنوع</p></div></article>
-        <article class="card card--feature-auth"><span class="card__icon">👨‍🏫</span><div><h3 class="card__title">50+ مدرب</h3><p class="card__desc">خبراء في مجالاتهم</p></div></article>
-      </div>
-    </aside>
-
-    <div class="layout-auth__form">
-      <div class="auth-form">
-        <div class="auth-form__logo">أكاديمية الدورات</div>
-        <h1 class="auth-form__title">تسجيل الدخول</h1>
-        <p class="auth-form__subtitle">أدخل بياناتك للمتابعة</p>
-
-        <form data-auth-form>
-          <div class="form-group">
-            <label class="form-label">البريد الإلكتروني</label>
-            <input type="email" class="input input--bordered" placeholder="example@email.com" required>
-          </div>
-          <div class="form-group">
-            <label class="form-label">كلمة المرور</label>
-            <div class="input-group input-group--icon">
-              <input type="password" class="input input--bordered" placeholder="••••••••" required>
-              <button type="button" class="input-group__toggle" data-password-toggle aria-label="إظهار">👁</button>
-            </div>
-          </div>
-          <div class="form-row">
-            <label class="checkbox-group"><input type="checkbox" class="checkbox"><span>تذكرني</span></label>
-            <a href="forgot-password.html" class="auth-form__forgot-link">نسيت كلمة المرور؟</a>
-          </div>
-          <button type="submit" class="btn btn--primary btn--full">تسجيل الدخول</button>
-        </form>
-
-        <p class="auth-form__footer">ليس لديك حساب؟ <a href="register.html" class="auth-form__footer-link">إنشاء حساب</a></p>
-      </div>
-    </div>
-  </div>
-
-  <script type="module" src="js/app.js"></script>
-  <script type="module" src="js/pages/auth.js"></script>
-</body>
-</html>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages/auth.css">
+</head>
+<body class="auth-page auth-page--full" data-layout="auth" data-page="login">
+  <div class="auth-split">
+    <div class="auth-panel">
+      <div class="auth-form">
+        <div class="auth-form__hero">
+          <div class="auth-form__logo">
+            <img src="assets/images/logo.png" alt="coursacademy">
+          </div>
+          <div class="auth-form__intro">
+            <h2 class="auth-form__intro-title">ابدأ رحلتك التعليمية معنا</h2>
+            <p class="auth-form__intro-desc">منصة تعليمية متخصصة في العمارة والهندسة والتصميم لتطوير مهاراتك الاحترافية</p>
+          </div>
+        </div>
+        <h1 class="auth-form__title">مرحباً بعودتك</h1>
+        <p class="auth-form__subtitle">سجل دخولك لمتابعة رحلتك التعليمية</p>
+        <form data-auth-form>
+          <div class="auth-form__group">
+            <label class="auth-form__label" for="login-email">البريد الإلكتروني</label>
+            <div class="auth-form__field">
+              <i class="ri-mail-line" aria-hidden="true"></i>
+              <input id="login-email" type="email" class="auth-form__input" placeholder="example@email.com" required>
+            </div>
+          </div>
+          <div class="auth-form__group">
+            <label class="auth-form__label" for="login-password">كلمة المرور</label>
+            <div class="auth-form__field auth-form__field--password">
+              <i class="ri-lock-line" aria-hidden="true"></i>
+              <input id="login-password" type="password" class="auth-form__input" placeholder="••••••••" required>
+              <button type="button" class="auth-form__toggle" data-password-toggle aria-label="إظهار كلمة المرور"><i class="ri-eye-line"></i></button>
+            </div>
+          </div>
+          <div class="auth-form__row">
+            <label class="auth-form__check"><input type="checkbox"><span>تذكرني</span></label>
+            <a href="forgot-password.html" class="auth-form__link">نسيت كلمة المرور؟</a>
+          </div>
+          <button type="submit" class="auth-form__submit">تسجيل الدخول</button>
+        </form>
+        <div class="auth-form__divider">أو سجل دخولك عبر</div>
+        <div class="auth-form__social">
+          <a href="#" class="auth-form__social-btn auth-form__social-btn--facebook"><i class="ri-facebook-fill"></i> Facebook</a>
+          <a href="#" class="auth-form__social-btn auth-form__social-btn--google"><i class="ri-google-fill"></i> Google</a>
+        </div>
+        <p class="auth-form__footer">ليس لديك حساب؟ <a href="register.html">إنشاء حساب جديد</a></p>
+      </div>
+    </div>
+    <aside class="auth-brand">
+      <div class="auth-brand__inner">
+        <h2 class="auth-brand__title">ابدأ رحلتك التعليمية معنا</h2>
+        <p class="auth-brand__desc">منصة تعليمية متخصصة في العمارة والهندسة والتصميم لتطوير مهاراتك الاحترافية</p>
+        <div class="auth-brand__stats">
+          <div class="auth-brand__stat">
+            <i class="ri-book-open-line"></i>
+            <strong>+150</strong>
+            <span>دورة تدريبية</span>
+          </div>
+          <div class="auth-brand__stat">
+            <i class="ri-group-line"></i>
+            <strong>+10k</strong>
+            <span>طالب نشط</span>
+          </div>
+          <div class="auth-brand__stat">
+            <i class="ri-star-fill"></i>
+            <strong>4.8</strong>
+            <span>تقييم المنصة</span>
+          </div>
+          <div class="auth-brand__stat">
+            <i class="ri-medal-line"></i>
+            <strong>+5k</strong>
+            <span>شهادة معتمدة</span>
+          </div>
+        </div>
+        <ul class="auth-brand__checks">
+          <li><i class="ri-checkbox-circle-fill"></i> محتوى تعليمي عالي الجودة</li>
+          <li><i class="ri-checkbox-circle-fill"></i> مدربون معتمدون وخبراء</li>
+          <li><i class="ri-checkbox-circle-fill"></i> شهادات معتمدة ومعترف بها</li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+  <script type="module" src="js/app.js"></script>
+  <script type="module" src="js/pages/auth.js"></script>
+</body>
+</html>

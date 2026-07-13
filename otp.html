@@ -1,35 +1,87 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>رمز التحقق — أكاديمية الدورات</title>
-  <link rel="stylesheet" href="css/variables.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css">
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>رمز التحقق — coursacademy</title>
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap">
-  <link rel="stylesheet" href="css/global.css">
-  <link rel="stylesheet" href="css/layout.css">
-  <link rel="stylesheet" href="css/components.css">
-</head>
-<body data-layout="auth" data-page="otp">
-  <div class="layout-auth">
-    <aside class="auth-sidebar layout-auth__sidebar"><h2 class="auth-sidebar__title">تحقق من هويتك</h2></aside>
-    <div class="layout-auth__form">
-      <div class="auth-form">
-        <h1 class="auth-form__title">رمز التحقق</h1>
-        <form data-auth-form>
-          <div class="otp-group">
-            <input class="input input--otp" type="text" maxlength="1" data-otp-index="0">
-            <input class="input input--otp" type="text" maxlength="1" data-otp-index="1">
-            <input class="input input--otp" type="text" maxlength="1" data-otp-index="2">
-            <input class="input input--otp" type="text" maxlength="1" data-otp-index="3">
-          </div>
-          <button type="submit" class="btn btn--primary btn--full auth-form__submit">تحقق</button>
-        </form>
-      </div>
-    </div>
-  </div>
-  <script type="module" src="js/app.js"></script>
-  <script type="module" src="js/pages/auth.js"></script>
-</body>
-</html>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages/auth.css">
+</head>
+<body class="auth-page auth-page--full auth-page--forgot auth-page--otp" data-layout="auth" data-page="otp">
+  <div class="auth-split">
+    <div class="auth-panel">
+      <div class="auth-form auth-form--otp auth-form--flow">
+        <div class="auth-form__hero">
+          <div class="auth-form__logo">
+            <img src="assets/images/logo.png" alt="coursacademy">
+          </div>
+          <div class="auth-form__intro">
+            <h2 class="auth-form__intro-title">أمان حسابك مهم بالنسبة لنا</h2>
+            <p class="auth-form__intro-desc">نحن نستخدم أحدث تقنيات الأمان لحماية بياناتك الشخصية والتعليمية</p>
+          </div>
+        </div>
+        <a href="forgot-password.html" class="auth-form__back"><i class="ri-arrow-right-s-line"></i> رجوع</a>
+        <div class="auth-form__badge auth-form__badge--mail">
+          <i class="ri-mail-line"></i>
+        </div>
+        <h1 class="auth-form__title">أدخل رمز التحقق</h1>
+        <p class="auth-form__subtitle">أرسلنا رمزاً مكوناً من 6 أرقام إلى</p>
+        <p class="auth-form__email">example@email.com</p>
+        <form data-auth-form>
+          <div class="auth-otp">
+            <input class="auth-otp__input" type="text" inputmode="numeric" maxlength="1" data-otp-index="0" required aria-label="الرقم 1">
+            <input class="auth-otp__input" type="text" inputmode="numeric" maxlength="1" data-otp-index="1" required aria-label="الرقم 2">
+            <input class="auth-otp__input" type="text" inputmode="numeric" maxlength="1" data-otp-index="2" required aria-label="الرقم 3">
+            <input class="auth-otp__input" type="text" inputmode="numeric" maxlength="1" data-otp-index="3" required aria-label="الرقم 4">
+            <input class="auth-otp__input" type="text" inputmode="numeric" maxlength="1" data-otp-index="4" required aria-label="الرقم 5">
+            <input class="auth-otp__input" type="text" inputmode="numeric" maxlength="1" data-otp-index="5" required aria-label="الرقم 6">
+          </div>
+          <button type="submit" class="auth-form__submit">تأكيد الرمز</button>
+        </form>
+        <p class="auth-otp__timer">يمكنك إعادة الإرسال بعد <span data-otp-timer>54 ثانية</span></p>
+      </div>
+    </div>
+    <aside class="auth-brand">
+      <div class="auth-brand__inner">
+        <h2 class="auth-brand__title">أمان حسابك مهم بالنسبة لنا</h2>
+        <p class="auth-brand__desc">نحن نستخدم أحدث تقنيات الأمان لحماية بياناتك الشخصية والتعليمية</p>
+        <div class="auth-brand__features auth-brand__features--glass auth-brand__features--security">
+          <div class="auth-brand__feature">
+            <span class="auth-brand__feature-icon"><i class="ri-shield-line"></i></span>
+            <div>
+              <div class="auth-brand__feature-title">تشفير متقدم</div>
+              <div class="auth-brand__feature-text">جميع بياناتك محمية بتشفير 256-bit SSL</div>
+            </div>
+          </div>
+          <div class="auth-brand__feature">
+            <span class="auth-brand__feature-icon"><i class="ri-lock-2-line"></i></span>
+            <div>
+              <div class="auth-brand__feature-title">كلمات مرور آمنة</div>
+              <div class="auth-brand__feature-text">نظام إعادة تعيين آمن ومشفر</div>
+            </div>
+          </div>
+          <div class="auth-brand__feature">
+            <span class="auth-brand__feature-icon"><i class="ri-checkbox-circle-line"></i></span>
+            <div>
+              <div class="auth-brand__feature-title">حماية على مدار الساعة</div>
+              <div class="auth-brand__feature-text">مراقبة مستمرة لأي نشاط مشبوه</div>
+            </div>
+          </div>
+        </div>
+        <div class="auth-brand__help">
+          <div class="auth-brand__feature-title">هل تحتاج مساعدة؟</div>
+          <div class="auth-brand__feature-text">فريق الدعم متاح 24/7 لمساعدتك</div>
+          <a href="contact.html" class="auth-brand__help-link">تواصل معنا <i class="ri-arrow-left-s-line"></i></a>
+        </div>
+      </div>
+    </aside>
+  </div>
+  <script type="module" src="js/app.js"></script>
+  <script type="module" src="js/pages/auth.js"></script>
+</body>
+</html>

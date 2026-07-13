@@ -1,37 +1,128 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>إنشاء حساب — أكاديمية الدورات</title>
-  <link rel="stylesheet" href="css/variables.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css">
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>إنشاء حساب — coursacademy</title>
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap">
-  <link rel="stylesheet" href="css/global.css">
-  <link rel="stylesheet" href="css/layout.css">
-  <link rel="stylesheet" href="css/components.css">
-</head>
-<body data-layout="auth" data-page="register">
-  <div class="layout-auth">
-    <aside class="auth-sidebar layout-auth__sidebar">
-      <h2 class="auth-sidebar__title">ابدأ رحلتك التعليمية</h2>
-      <p class="auth-sidebar__desc">انضم إلى آلاف الطلاب اليوم.</p>
-    </aside>
-    <div class="layout-auth__form">
-      <div class="auth-form">
-        <div class="auth-form__logo">أكاديمية الدورات</div>
-        <h1 class="auth-form__title">إنشاء حساب جديد</h1>
-        <form data-auth-form>
-          <div class="form-group"><label class="form-label">الاسم الكامل</label><input type="text" class="input input--bordered" required></div>
-          <div class="form-group"><label class="form-label">البريد الإلكتروني</label><input type="email" class="input input--bordered" required></div>
-          <div class="form-group"><label class="form-label">كلمة المرور</label><input type="password" class="input input--bordered" required></div>
-          <button type="submit" class="btn btn--primary btn--full">إنشاء حساب</button>
-        </form>
-        <p class="auth-form__footer">لديك حساب؟ <a href="login.html" class="auth-form__footer-link">تسجيل الدخول</a></p>
-      </div>
-    </div>
-  </div>
-  <script type="module" src="js/app.js"></script>
-  <script type="module" src="js/pages/auth.js"></script>
-</body>
-</html>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages/auth.css">
+</head>
+<body class="auth-page auth-page--full" data-layout="auth" data-page="register">
+  <div class="auth-split">
+    <div class="auth-panel">
+      <div class="auth-form">
+        <div class="auth-form__hero">
+          <div class="auth-form__logo">
+            <img src="assets/images/logo.png" alt="coursacademy">
+          </div>
+          <div class="auth-form__intro">
+            <h2 class="auth-form__intro-title">انضم إلى أكبر منصة تعليمية</h2>
+            <p class="auth-form__intro-desc">طور مهاراتك في العمارة والهندسة والتصميم مع أفضل المدربين</p>
+          </div>
+        </div>
+        <h1 class="auth-form__title">إنشاء حساب جديد</h1>
+        <p class="auth-form__subtitle">انضم إلى أكثر من ١٠ آلاف طالب</p>
+        <form data-auth-form>
+          <div class="auth-form__cols">
+            <div class="auth-form__group">
+              <label class="auth-form__label" for="register-name">الاسم الكامل</label>
+              <div class="auth-form__field">
+                <i class="ri-user-line" aria-hidden="true"></i>
+                <input id="register-name" type="text" class="auth-form__input" placeholder="أدخل اسمك الكامل" required>
+              </div>
+            </div>
+            <div class="auth-form__group">
+              <label class="auth-form__label" for="register-phone">رقم الجوال</label>
+              <div class="auth-form__field">
+                <i class="ri-phone-line" aria-hidden="true"></i>
+                <input id="register-phone" type="tel" class="auth-form__input" placeholder="+966 5X XXX XXXX" required>
+              </div>
+            </div>
+          </div>
+          <div class="auth-form__group">
+            <label class="auth-form__label" for="register-email">البريد الإلكتروني</label>
+            <div class="auth-form__field">
+              <i class="ri-mail-line" aria-hidden="true"></i>
+              <input id="register-email" type="email" class="auth-form__input" placeholder="example@email.com" required>
+            </div>
+          </div>
+          <div class="auth-form__cols">
+            <div class="auth-form__group">
+              <label class="auth-form__label" for="register-password">كلمة المرور</label>
+              <div class="auth-form__field auth-form__field--password">
+                <i class="ri-lock-line" aria-hidden="true"></i>
+                <input id="register-password" type="password" class="auth-form__input" placeholder="••••••••" required>
+                <button type="button" class="auth-form__toggle" data-password-toggle aria-label="إظهار كلمة المرور"><i class="ri-eye-line"></i></button>
+              </div>
+            </div>
+            <div class="auth-form__group">
+              <label class="auth-form__label" for="register-password-confirm">تأكيد كلمة المرور</label>
+              <div class="auth-form__field auth-form__field--password">
+                <i class="ri-lock-line" aria-hidden="true"></i>
+                <input id="register-password-confirm" type="password" class="auth-form__input" placeholder="••••••••" required>
+                <button type="button" class="auth-form__toggle" data-password-toggle aria-label="إظهار كلمة المرور"><i class="ri-eye-line"></i></button>
+              </div>
+            </div>
+          </div>
+          <label class="auth-form__check auth-form__check--terms">
+            <input type="checkbox" required>
+            <span>أوافق على الشروط والأحكام و سياسة الخصوصية</span>
+          </label>
+          <button type="submit" class="auth-form__submit">إنشاء حساب</button>
+        </form>
+        <p class="auth-form__footer">لديك حساب بالفعل؟ <a href="login.html">تسجيل الدخول</a></p>
+      </div>
+    </div>
+    <aside class="auth-brand">
+      <div class="auth-brand__inner">
+        <h2 class="auth-brand__title">انضم إلى أكبر منصة تعليمية</h2>
+        <p class="auth-brand__desc">طور مهاراتك في العمارة والهندسة والتصميم مع أفضل المدربين</p>
+        <div class="auth-brand__features auth-brand__features--glass">
+          <div class="auth-brand__feature">
+            <span class="auth-brand__feature-icon"><i class="ri-vidicon-line"></i></span>
+            <div>
+              <div class="auth-brand__feature-title">محتوى فيديو عالي الجودة</div>
+              <div class="auth-brand__feature-text">أكثر من ١٥٠٠ دورة تدريبية بجودة 4K</div>
+            </div>
+          </div>
+          <div class="auth-brand__feature">
+            <span class="auth-brand__feature-icon"><i class="ri-award-line"></i></span>
+            <div>
+              <div class="auth-brand__feature-title">شهادات معتمدة</div>
+              <div class="auth-brand__feature-text">احصل على شهادات معترف بها دولياً</div>
+            </div>
+          </div>
+          <div class="auth-brand__feature">
+            <span class="auth-brand__feature-icon"><i class="ri-group-line"></i></span>
+            <div>
+              <div class="auth-brand__feature-title">مجتمع نشط</div>
+              <div class="auth-brand__feature-text">انضم لأكثر من ١٠ آلاف طالب</div>
+            </div>
+          </div>
+        </div>
+        <div class="auth-brand__metrics auth-brand__metrics--inline">
+          <div class="auth-brand__metric">
+            <strong>+10k</strong>
+            <span>طالب</span>
+          </div>
+          <div class="auth-brand__metric">
+            <strong>4.8★</strong>
+            <span>التقييم</span>
+          </div>
+          <div class="auth-brand__metric">
+            <strong>+5k</strong>
+            <span>شهادة</span>
+          </div>
+        </div>
+      </div>
+    </aside>
+  </div>
+  <script type="module" src="js/app.js"></script>
+  <script type="module" src="js/pages/auth.js"></script>
+</body>
+</html>
