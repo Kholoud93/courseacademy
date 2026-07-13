@@ -1,17 +1,18 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>تواصل معنا — أكاديمية الدورات</title>
-  <link rel="stylesheet" href="css/variables.css">
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>تواصل معنا — coursacademy</title>
+  <link rel="stylesheet" href="css/variables.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap">
-  <link rel="stylesheet" href="css/global.css">
-  <link rel="stylesheet" href="css/layout.css">
-  <link rel="stylesheet" href="css/components.css">
-</head>
-<body data-layout="main" data-page="contact">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages/contact.css">
+</head>
+<body data-layout="main" data-page="contact">
   <div id="site-header">
 <header class="home-nav">
   <div class="container home-nav__inner">
@@ -25,7 +26,7 @@
       <a href="paths.html" class="home-nav__link" data-nav="paths">المسارات</a>
       <a href="blog.html" class="home-nav__link" data-nav="blog">المدونة</a>
       <a href="about.html" class="home-nav__link" data-nav="about">حولنا</a>
-      <a href="contact.html" class="home-nav__link" data-nav="contact">تواصل معنا</a>
+      <a href="contact.html" class="home-nav__link is-active" data-nav="contact">تواصل معنا</a>
     </nav>
 
     <div class="home-nav__actions">
@@ -154,23 +155,214 @@
     <a href="courses.html" class="btn btn--primary btn--full">إتمام الشراء</a>
   </div>
 </aside>
-  </div>
-  <main class="layout-main__content">
-    <section class="page-banner"><div class="container"><h1 class="page-banner__title">تواصل معنا</h1></div></section>
-    <section class="section"><div class="container contact-page__layout">
-      <form data-prevent>
-        <div class="form-group"><label class="form-label">الاسم</label><input type="text" class="input input--default" required></div>
-        <div class="form-group"><label class="form-label">البريد</label><input type="email" class="input input--default" required></div>
-        <div class="form-group"><label class="form-label">الرسالة</label><textarea class="textarea textarea--default" rows="5" required></textarea></div>
-        <button type="submit" class="btn btn--primary">إرسال</button>
-      </form>
-      <div class="card contact-page__info">
-        <h3 class="contact-page__info-title">معلومات التواصل</h3>
-        <p class="contact-page__detail">📧 info@courseacademy.com</p>
-        <p class="contact-page__detail">📞 +966 50 123 4567</p>
-      </div>
-    </div></section>
-  </main>
+  </div>
+  <main>
+    <section class="contact-hero">
+      <div class="container contact-hero__inner">
+        <h1 class="contact-hero__title">تواصل معنا</h1>
+        <div class="contact-hero__tagline">
+          <span class="contact-hero__tagline-line" aria-hidden="true"></span>
+          <span class="contact-hero__tagline-text">YOUR GATE TO SUCCESS</span>
+          <span class="contact-hero__tagline-line" aria-hidden="true"></span>
+        </div>
+        <p class="contact-hero__desc">فريقنا متواجد لمساعدتك في رحلتك التعليمية على مدار الساعة</p>
+      </div>
+    </section>
+
+    <section class="contact-highlights">
+      <div class="contact-highlights__grid">
+        <article class="contact-highlights__card">
+          <span class="contact-highlights__icon contact-highlights__icon--blue"><i class="ri-medal-line"></i></span>
+          <strong class="contact-highlights__title">معتمدون</strong>
+          <span class="contact-highlights__text">شهادات دولية معتمدة</span>
+        </article>
+        <article class="contact-highlights__card">
+          <span class="contact-highlights__icon contact-highlights__icon--green"><i class="ri-time-line"></i></span>
+          <strong class="contact-highlights__title">24/7</strong>
+          <span class="contact-highlights__text">دعم فني متواصل</span>
+        </article>
+        <article class="contact-highlights__card">
+          <span class="contact-highlights__icon contact-highlights__icon--purple"><i class="ri-mail-line"></i></span>
+          <strong class="contact-highlights__title">&lt; 24 ساعة</strong>
+          <span class="contact-highlights__text">وقت الاستجابة</span>
+        </article>
+        <article class="contact-highlights__card">
+          <span class="contact-highlights__icon contact-highlights__icon--pink"><i class="ri-group-line"></i></span>
+          <strong class="contact-highlights__title">+10 آلاف</strong>
+          <span class="contact-highlights__text">عميل راضي</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="contact-depts">
+      <div class="container">
+        <div class="contact-section-head">
+          <h2 class="contact-section-head__title">الأقسام المتخصصة</h2>
+          <p class="contact-section-head__desc">تواصل مع القسم المناسب لاحتياجاتك</p>
+        </div>
+        <div class="contact-depts__grid">
+          <article class="contact-depts__card">
+            <span class="contact-depts__icon"><i class="ri-phone-line"></i></span>
+            <h3 class="contact-depts__title">المبيعات والاستفسارات</h3>
+            <p class="contact-depts__text">للاستفسار عن الدورات والأسعار والتسجيل في البرامج التدريبية</p>
+            <div class="contact-depts__row">
+              <i class="ri-phone-fill"></i>
+              <a href="tel:+966112345678" dir="ltr">+966 11 234 5678</a>
+            </div>
+            <div class="contact-depts__row">
+              <i class="ri-mail-fill"></i>
+              <a href="mailto:sales@coursacademy.com">sales@coursacademy.com</a>
+            </div>
+          </article>
+          <article class="contact-depts__card">
+            <span class="contact-depts__icon"><i class="ri-question-line"></i></span>
+            <h3 class="contact-depts__title">الدعم الفني</h3>
+            <p class="contact-depts__text">للمساعدة في المشاكل التقنية والوصول للمنصة والمحتوى التعليمي</p>
+            <div class="contact-depts__row">
+              <i class="ri-phone-fill"></i>
+              <a href="tel:+966112345679" dir="ltr">+966 11 234 5679</a>
+            </div>
+            <div class="contact-depts__row">
+              <i class="ri-mail-fill"></i>
+              <a href="mailto:support@coursacademy.com">support@coursacademy.com</a>
+            </div>
+          </article>
+          <article class="contact-depts__card">
+            <span class="contact-depts__icon"><i class="ri-chat-3-line"></i></span>
+            <h3 class="contact-depts__title">الشكاوى والمقترحات</h3>
+            <p class="contact-depts__text">نرحب بملاحظاتك ومقترحاتك لتطوير خدماتنا وتحسين تجربتك</p>
+            <div class="contact-depts__row">
+              <i class="ri-phone-fill"></i>
+              <a href="tel:+966112345680" dir="ltr">+966 11 234 5680</a>
+            </div>
+            <div class="contact-depts__row">
+              <i class="ri-mail-fill"></i>
+              <a href="mailto:feedback@coursacademy.com">feedback@coursacademy.com</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-main">
+      <div class="container contact-main__grid">
+        <div class="contact-form-card">
+          <h2 class="contact-form-card__title">أرسل لنا رسالة</h2>
+          <p class="contact-form-card__desc">املأ النموذج وسنتواصل معك في أقرب وقت</p>
+          <form class="contact-form" data-prevent>
+            <div class="contact-form__row">
+              <div class="contact-form__group">
+                <label class="contact-form__label" for="contact-name">الاسم الكامل</label>
+                <input id="contact-name" type="text" class="contact-form__input" placeholder="أدخل اسمك الكامل" required>
+              </div>
+              <div class="contact-form__group">
+                <label class="contact-form__label" for="contact-email">البريد الإلكتروني</label>
+                <input id="contact-email" type="email" class="contact-form__input" placeholder="example@email.com" required>
+              </div>
+            </div>
+            <div class="contact-form__row">
+              <div class="contact-form__group">
+                <label class="contact-form__label" for="contact-phone">رقم الجوال</label>
+                <div class="contact-form__phone">
+                  <span class="contact-form__phone-code"><span>🇸🇦</span> +966 <i class="ri-arrow-down-s-line"></i></span>
+                  <input id="contact-phone" type="tel" class="contact-form__input" placeholder="5X XXX XXXX" required>
+                </div>
+              </div>
+              <div class="contact-form__group">
+                <label class="contact-form__label" for="contact-dept">القسم المختص</label>
+                <select id="contact-dept" class="contact-form__select" required>
+                  <option value="">اختر القسم</option>
+                  <option value="sales">المبيعات والاستفسارات</option>
+                  <option value="support">الدعم الفني</option>
+                  <option value="feedback">الشكاوى والمقترحات</option>
+                </select>
+              </div>
+            </div>
+            <div class="contact-form__group">
+              <label class="contact-form__label" for="contact-subject">موضوع الرسالة</label>
+              <input id="contact-subject" type="text" class="contact-form__input" placeholder="موضوع رسالتك" required>
+            </div>
+            <div class="contact-form__group">
+              <label class="contact-form__label" for="contact-message">الرسالة</label>
+              <textarea id="contact-message" class="contact-form__textarea" placeholder="اكتب رسالتك هنا..." required></textarea>
+            </div>
+            <button type="submit" class="contact-form__submit">
+              <i class="ri-send-plane-fill"></i>
+              إرسال الرسالة
+            </button>
+          </form>
+        </div>
+
+        <aside class="contact-side">
+          <div class="contact-hours">
+            <div class="contact-hours__head">
+              <i class="ri-time-line"></i>
+              <span>ساعات العمل</span>
+            </div>
+            <div class="contact-hours__list">
+              <div class="contact-hours__row">
+                <span class="contact-hours__day">السبت - الخميس</span>
+                <span class="contact-hours__time">٩:٣٠ ص - ٦:٠٠ م</span>
+              </div>
+              <div class="contact-hours__row">
+                <span class="contact-hours__day">الجمعة</span>
+                <span class="contact-hours__time contact-hours__time--closed">مغلق</span>
+              </div>
+            </div>
+            <div class="contact-hours__note">
+              <i class="ri-customer-service-2-line"></i>
+              <span>الدعم الفني: متاح ٢٤/٧ عبر البريد الإلكتروني والواتساب</span>
+            </div>
+          </div>
+
+          <div class="contact-social">
+            <h3 class="contact-social__title">تابعنا على السوشيال ميديا</h3>
+            <div class="contact-social__grid">
+              <a href="#" class="contact-social__btn contact-social__btn--twitter"><span>Twitter</span><i class="ri-twitter-x-fill"></i></a>
+              <a href="#" class="contact-social__btn contact-social__btn--facebook"><span>Facebook</span><i class="ri-facebook-fill"></i></a>
+              <a href="#" class="contact-social__btn contact-social__btn--instagram"><span>Instagram</span><i class="ri-instagram-line"></i></a>
+              <a href="#" class="contact-social__btn contact-social__btn--linkedin"><span>LinkedIn</span><i class="ri-linkedin-fill"></i></a>
+              <a href="#" class="contact-social__btn contact-social__btn--whatsapp"><span>WhatsApp</span><i class="ri-whatsapp-line"></i></a>
+              <a href="#" class="contact-social__btn contact-social__btn--youtube"><span>YouTube</span><i class="ri-youtube-fill"></i></a>
+            </div>
+          </div>
+
+          <div class="contact-quick">
+            <h3 class="contact-quick__title">تواصل سريع</h3>
+            <div class="contact-quick__list">
+              <a href="tel:+966112345678" class="contact-quick__item">
+                <span class="contact-quick__icon"><i class="ri-phone-fill"></i></span>
+                <span class="contact-quick__text">+966 11 234 5678</span>
+              </a>
+              <a href="mailto:info@coursacademy.com" class="contact-quick__item">
+                <span class="contact-quick__icon"><i class="ri-mail-fill"></i></span>
+                <span class="contact-quick__text">info@coursacademy.com</span>
+              </a>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="contact-map">
+      <div class="container">
+        <div class="contact-section-head">
+          <h2 class="contact-section-head__title">موقعنا على الخريطة</h2>
+        </div>
+        <div class="contact-map__card">
+          <div class="contact-map__box">
+            <span class="contact-map__pin"><i class="ri-map-pin-2-fill"></i></span>
+            <h3 class="contact-map__title">خريطة تفاعلية - المقر الرئيسي</h3>
+            <p class="contact-map__desc">الرياض، المملكة العربية السعودية</p>
+            <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" class="contact-map__btn">
+              <i class="ri-external-link-line"></i>
+              افتح في خرائط جوجل
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
   <div id="site-footer">
 <footer class="home-footer">
   <div class="container">
@@ -239,7 +431,7 @@
     </div>
   </div>
 </footer>
-  </div>
-  <script type="module" src="js/app.js"></script>
-</body>
-</html>
+  </div>
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
