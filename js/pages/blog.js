@@ -1,6 +1,7 @@
 import { renderList, getQueryParam, formatDate } from "../common.js";
-import { blogCard, blogFeaturedCard } from "../render.js";
+import { blogCard, blogFeaturedCard, homeFeaturedTrackCard } from "../render.js";
 import { blogPosts, blogCategories, blogGridPosts, getBlogBySlug, getFeaturedPost } from "../data/blogs.js";
+import { featuredCourses } from "../data/home.js";
 
 const page = document.body.dataset.page;
 
@@ -64,12 +65,59 @@ function renderBlogPage() {
   updateBlogUrl();
 }
 
+function renderTag(tag, variant = "main") {
+  const cls = variant === "sidebar" ? "blog-detail-tag blog-detail-tag--sidebar" : "blog-detail-tag";
+  return `<span class="${cls}">${tag}</span>`;
+}
+
 function getArticleContent(post) {
   if (post.content && !post.content.includes("محتوى المقال الكامل")) {
     return post.content;
   }
-  return `<p>${post.excerpt}</p>`;
+
+  return `<section class="blog-detail-section">
+  <div class="blog-detail-section__head">
+    <span class="blog-detail-section__num">1</span>
+    <h2 class="blog-detail-section__title">مقدمة</h2>
+  </div>
+  <p>يعتبر ${post.title} من أهم المواضيع التي تشغل بال المهندسين والمختصين في المجال الهندسي. في هذا المقال، سنستعرض معاً أبرز النقاط والتفاصيل المهمة التي يجب معرفتها في سوق العمل المصري والعربي.</p>
+</section>
+<section class="blog-detail-section">
+  <div class="blog-detail-section__head">
+    <span class="blog-detail-section__num">2</span>
+    <h2 class="blog-detail-section__title">النقاط الرئيسية</h2>
+  </div>
+  <ul class="cd-learn blog-detail-points">
+    <li><i class="ri-checkbox-circle-line"></i><span>فهم الأساسيات والمبادئ الهامة في هذا المجال</span></li>
+    <li><i class="ri-checkbox-circle-line"></i><span>تطبيق أحدث الممارسات والتقنيات العالمية على المشاريع المحلية</span></li>
+    <li><i class="ri-checkbox-circle-line"></i><span>تجنب الأخطاء الشائعة التي يقع فيها المبتدئون</span></li>
+    <li><i class="ri-checkbox-circle-line"></i><span>الاستفادة من خبرات المحترفين وتطبيقها في السوق المصري</span></li>
+  </ul>
+</section>
+<section class="blog-detail-section">
+  <div class="blog-detail-section__head">
+    <span class="blog-detail-section__num">3</span>
+    <h2 class="blog-detail-section__title">التطبيق العملي</h2>
+  </div>
+  <p>من المهم جداً أن نربط المعرفة النظرية بالتطبيق العملي. في مشاريعنا المصرية، نرى دائماً أهمية تطبيق هذه المفاهيم بشكل صحيح لضمان نجاح المشروع وتحقيق الأهداف المرجوة.</p>
+  <div class="blog-detail-tip">
+    <span class="blog-detail-tip__icon"><i class="ri-lightbulb-fill"></i></span>
+    <div>
+      <strong class="blog-detail-tip__title">نصيحة مهمة</strong>
+      <p>لا تتردد في الاستثمار في التعليم المستمر وتطوير مهاراتك. السوق المصري يشهد نمواً متسارعاً، ويحتاج إلى مهندسين محترفين يواكبون أحدث التطورات.</p>
+    </div>
+  </div>
+</section>
+<section class="blog-detail-section">
+  <div class="blog-detail-section__head">
+    <span class="blog-detail-section__num">4</span>
+    <h2 class="blog-detail-section__title">الخلاصة</h2>
+  </div>
+  <p>في النهاية، ${post.title} يعتبر موضوعاً حيوياً للغاية في مجال الهندسة المعمارية والبناء. ننصح بالاطلاع المستمر على آخر التطورات والمشاركة في الدورات التدريبية المتخصصة لضمان التميز المهني في سوق العمل.</p>
+</section>`;
 }
+
+const DEFAULT_HERO = "assets/images/blog-details-hero.png";
 
 function renderBlogDetails() {
   const post = getBlogBySlug(getQueryParam("slug")) || blogPosts[0];
@@ -79,8 +127,8 @@ function renderBlogDetails() {
   const breadcrumb = document.getElementById("bd-breadcrumb-title");
   if (breadcrumb) breadcrumb.textContent = post.title;
 
-  const categoryEl = document.getElementById("bd-category");
-  if (categoryEl) categoryEl.textContent = post.category;
+  const heroCategory = document.getElementById("bd-hero-category");
+  if (heroCategory) heroCategory.textContent = post.category;
 
   document.getElementById("article-title").textContent = post.title;
 
@@ -96,28 +144,104 @@ function renderBlogDetails() {
   const publishedAt = document.getElementById("bd-published-at");
   if (publishedAt) publishedAt.textContent = formatDate(post.publishedAt);
 
-  const readTime = document.getElementById("bd-read-time");
-  if (readTime) readTime.textContent = `${post.readTime.toLocaleString("ar-SA")} دقائق قراءة`;
+  const heroReadTime = document.getElementById("bd-hero-read-time");
+  if (heroReadTime) heroReadTime.textContent = `${post.readTime.toLocaleString("ar-SA", { useGrouping: false })} دقائق`;
 
-  const views = document.getElementById("bd-views");
-  if (views) views.textContent = `${post.views.toLocaleString("ar-SA")} مشاهدة`;
+  const heroViews = document.getElementById("bd-hero-views");
+  if (heroViews) heroViews.textContent = `${post.views} مشاهدة`;
 
-  const image = document.getElementById("article-image");
-  if (image) {
-    image.src = post.image;
-    image.alt = post.title;
-  }
+  const sidebarDate = document.getElementById("bd-sidebar-date");
+  if (sidebarDate) sidebarDate.textContent = formatDate(post.publishedAt);
 
+  const sidebarRead = document.getElementById("bd-sidebar-read");
+  if (sidebarRead) sidebarRead.textContent = `${post.readTime.toLocaleString("ar-SA", { useGrouping: false })} دقائق`;
+
+  const sidebarViews = document.getElementById("bd-sidebar-views");
+  if (sidebarViews) sidebarViews.textContent = post.views.toLocaleString("ar-SA", { useGrouping: false });
+
+  const sidebarCategory = document.getElementById("bd-sidebar-category");
+  if (sidebarCategory) sidebarCategory.textContent = post.category;
+
+  const introEl = document.getElementById("bd-intro");
+  if (introEl) introEl.textContent = post.intro || post.excerpt;
+
+  const tags = (post.tags || []).map((tag) => renderTag(tag, "main")).join("");
   const tagsEl = document.getElementById("bd-tags");
-  if (tagsEl) {
-    tagsEl.innerHTML = (post.tags || [])
-      .map((tag) => `<span class="blog-card__tag">${tag}</span>`)
-      .join("");
-  }
+  if (tagsEl) tagsEl.innerHTML = tags;
+
+  const sidebarTags = document.getElementById("bd-sidebar-tags");
+  if (sidebarTags) sidebarTags.innerHTML = (post.tags || []).map((tag) => renderTag(tag, "sidebar")).join("");
 
   document.getElementById("article-content").innerHTML = getArticleContent(post);
 
-  renderList(document.getElementById("related-posts"), blogGridPosts.slice(0, 3), blogCard);
+  const authorCardAvatar = document.getElementById("bd-author-card-avatar");
+  if (authorCardAvatar) {
+    authorCardAvatar.src = post.authorAvatar;
+    authorCardAvatar.alt = post.author;
+  }
+
+  const authorCardName = document.getElementById("bd-author-card-name");
+  if (authorCardName) authorCardName.textContent = post.author;
+
+  const authorRole = document.getElementById("bd-author-role");
+  if (authorRole) authorRole.textContent = post.authorTitle || `كاتب متخصص في ${post.category}`;
+
+  const authorBio = document.getElementById("bd-author-bio");
+  if (authorBio) {
+    authorBio.textContent =
+      post.authorBio ||
+      `كاتب متخصص في ${post.category}، يساهم بمقالات عملية للمهندسين والمهتمين بقطاع البناء.`;
+  }
+
+  const authorBadge = document.getElementById("bd-author-badge");
+  if (authorBadge) authorBadge.textContent = post.authorBadge || "خبير";
+
+  if (post.heroImage || DEFAULT_HERO) {
+    const hero = document.querySelector(".blog-detail-hero");
+    if (hero) {
+      hero.style.backgroundColor = "#0a0a0a";
+      hero.style.backgroundImage = `linear-gradient(0deg, #000000 0%, rgba(0, 0, 0, 0.6) 50%, rgba(0, 0, 0, 0.1) 100%), url("${post.heroImage || DEFAULT_HERO}")`;
+      hero.style.backgroundSize = "100% 100%, cover";
+      hero.style.backgroundPosition = "center, center";
+      hero.style.backgroundRepeat = "no-repeat";
+    }
+  }
+
+  const pageUrl = encodeURIComponent(window.location.href);
+  const pageTitle = encodeURIComponent(post.title);
+  document
+    .querySelector(".blog-detail-share__pill--twitter")
+    ?.setAttribute("href", `https://twitter.com/intent/tweet?url=${pageUrl}&text=${pageTitle}`);
+  document
+    .querySelector(".blog-detail-share__pill--linkedin")
+    ?.setAttribute("href", `https://www.linkedin.com/sharing/share-offsite/?url=${pageUrl}`);
+  document
+    .querySelector(".blog-detail-share__pill--whatsapp")
+    ?.setAttribute(
+      "href",
+      `https://wa.me/?text=${encodeURIComponent(`${post.title} ${window.location.href}`)}`
+    );
+
+  const relatedCourses = featuredCourses.slice(0, 3);
+  renderList(document.getElementById("related-posts"), relatedCourses, homeFeaturedTrackCard);
+
+  const copyBtn = document.querySelector(".blog-detail-share__pill--copy");
+  copyBtn?.addEventListener("click", async () => {
+    const label = copyBtn.innerHTML;
+    try {
+      await navigator.clipboard.writeText(window.location.href);
+      copyBtn.innerHTML = '<i class="ri-check-line"></i> تم النسخ';
+    } catch {
+      copyBtn.innerHTML = '<i class="ri-link"></i> نسخ الرابط';
+    }
+    window.setTimeout(() => {
+      copyBtn.innerHTML = label;
+    }, 2000);
+  });
+
+  document.querySelector(".blog-detail-newsletter__form")?.addEventListener("submit", (e) => {
+    e.preventDefault();
+  });
 }
 
 document.addEventListener("DOMContentLoaded", () => {

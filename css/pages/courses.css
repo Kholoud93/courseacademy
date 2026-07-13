@@ -216,6 +216,8 @@
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  min-width: 0;
+  width: 100%;
 }
 
 .courses-filters__pill {
@@ -239,6 +241,58 @@
 .courses-filters__pill.is-active {
   background: #0050d8;
   color: #ffffff;
+}
+
+@media (max-width: 1011px) {
+  .courses-layout {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .courses-sidebar {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .courses-filters-card,
+  .courses-filters-promo {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+  }
+
+  .courses-filters-card__list {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    overflow-x: auto;
+    overflow-y: hidden;
+    overscroll-behavior-x: contain;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    margin-inline: 0;
+    padding-inline: 0;
+    padding-bottom: 0.25rem;
+  }
+
+  .courses-filters-card__list::-webkit-scrollbar {
+    display: none;
+  }
+
+  .courses-filters__pill {
+    width: auto;
+    max-width: none;
+    flex: 0 0 auto;
+    white-space: nowrap;
+    padding: 0.5rem 0.875rem;
+    border-radius: var(--radius-full);
+  }
 }
 
 .courses-filters-promo {
@@ -465,21 +519,50 @@
   .courses-layout {
     grid-template-columns: 1fr;
     width: 100%;
+    max-width: 100%;
+    min-width: 0;
     margin-inline: 0;
     gap: 1.25rem;
+    box-sizing: border-box;
   }
 
   .courses-sidebar {
     position: static;
     width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .courses-filters-card,
+  .courses-filters-promo {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .courses-filters-card__list {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .courses-filters-promo .btn {
+    width: 100%;
+    max-width: 100%;
   }
 
   .courses-hero__stats {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+    max-width: 100%;
   }
 
   .courses-page__main {
     width: 100%;
+    max-width: 100%;
+    min-width: 0;
     align-items: stretch;
   }
 
@@ -542,11 +625,13 @@
 
   .courses-hero__search,
   .courses-hero__stats {
-    max-width: min(42rem, 88%);
+    max-width: 100%;
+    width: 100%;
   }
 
   .courses-page {
     padding-block: 1.5rem 2.5rem;
+    overflow-x: hidden;
   }
 
   .courses-page::before,

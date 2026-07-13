@@ -9,6 +9,8 @@
   <link rel="stylesheet" href="css/layout.css">
   <link rel="stylesheet" href="css/components.css">
   <link rel="stylesheet" href="css/pages/home.css">
+  <link rel="stylesheet" href="css/pages/courses.css">
+  <link rel="stylesheet" href="css/pages/course-details.css">
   <link rel="stylesheet" href="css/pages/blog.css">
 </head>
 <body data-layout="main" data-page="blog-details">
@@ -23,40 +25,110 @@
           <span aria-hidden="true">&gt;</span>
           <a href="blog.html">المدونة</a>
           <span aria-hidden="true">&gt;</span>
-          <span id="bd-breadcrumb-title">المقال</span>
+          <span id="bd-breadcrumb-title">مستقبل BIM في المملكة العربية السعودية ورؤية ٢٠٣٠</span>
         </nav>
+
+        <div class="blog-detail-hero__badges">
+          <span class="blog-detail-hero__category" id="bd-hero-category">BIM</span>
+          <span class="blog-detail-hero__meta-item"><i class="ri-time-line"></i> <span id="bd-hero-read-time">٨ دقائق</span></span>
+          <span class="blog-detail-hero__meta-item"><i class="ri-eye-line"></i> <span id="bd-hero-views">2543 مشاهدة</span></span>
+        </div>
+
+        <h1 class="blog-detail-hero__title" id="article-title">مستقبل BIM في المملكة العربية السعودية ورؤية ٢٠٣٠</h1>
+
+        <div class="blog-detail-hero__author">
+          <img id="bd-author-avatar" src="" alt="" class="blog-detail-hero__avatar">
+          <div class="blog-detail-hero__author-text">
+            <strong id="bd-author-name"></strong>
+            <time id="bd-published-at"></time>
+          </div>
+        </div>
       </div>
     </section>
 
-    <article class="blog-article">
-      <div class="container blog-article__container">
-        <span class="blog-article__category" id="bd-category"></span>
-        <h1 class="blog-article__title" id="article-title"></h1>
+    <section class="cd-body blog-detail-body">
+      <div class="container">
+        <div class="cd-layout blog-detail-layout">
+          <div class="blog-detail-main-col">
+            <div class="blog-detail-intro" id="bd-intro"></div>
+            <article class="cd-main blog-detail-main">
+              <div id="article-content" class="blog-detail-content"></div>
 
-        <div class="blog-article__head">
-          <div class="blog-article__author">
-            <img id="bd-author-avatar" src="" alt="" class="blog-article__avatar">
-            <div>
-              <strong id="bd-author-name"></strong>
-              <time id="bd-published-at"></time>
+              <div class="blog-detail-share">
+                <div class="blog-detail-share__tags-wrap">
+                  <span class="blog-detail-share__tags-label">الكلمات المفتاحية</span>
+                  <div class="blog-detail-share__tags" id="bd-tags"></div>
+                </div>
+                <div class="blog-detail-share__row">
+                  <span class="blog-detail-share__label"><i class="ri-share-line"></i> شارك هذا المقال</span>
+                  <div class="blog-detail-share__pills">
+                    <a href="#" class="blog-detail-share__pill blog-detail-share__pill--twitter" target="_blank" rel="noopener noreferrer"><i class="ri-twitter-x-line"></i> Twitter</a>
+                    <a href="#" class="blog-detail-share__pill blog-detail-share__pill--linkedin" target="_blank" rel="noopener noreferrer"><i class="ri-linkedin-box-fill"></i> LinkedIn</a>
+                    <a href="#" class="blog-detail-share__pill blog-detail-share__pill--whatsapp" target="_blank" rel="noopener noreferrer"><i class="ri-whatsapp-line"></i> WhatsApp</a>
+                    <button type="button" class="blog-detail-share__pill blog-detail-share__pill--copy"><i class="ri-link"></i> نسخ الرابط</button>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <div class="blog-detail-author-wrap">
+              <div class="blog-detail-author__card">
+                <div class="blog-detail-author__avatar-wrap">
+                  <img id="bd-author-card-avatar" src="" alt="" class="blog-detail-author__avatar">
+                  <span class="blog-detail-author__badge" id="bd-author-badge">خبير</span>
+                </div>
+                <div class="blog-detail-author__body">
+                  <h2 class="blog-detail-author__name" id="bd-author-card-name"></h2>
+                  <p class="blog-detail-author__role" id="bd-author-role"></p>
+                  <p class="blog-detail-author__bio" id="bd-author-bio"></p>
+                  <div class="blog-detail-author__social">
+                    <a href="#" aria-label="البريد"><i class="ri-mail-line"></i></a>
+                    <a href="#" aria-label="لينكدإن"><i class="ri-linkedin-box-line"></i></a>
+                    <a href="#" aria-label="تويتر"><i class="ri-twitter-line"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="blog-detail-related">
+              <h2 class="blog-section__title"><i class="ri-star-fill"></i> مقالات قد تعجبك</h2>
+              <div id="related-posts" class="blog-detail-related__grid"></div>
             </div>
           </div>
-          <div class="blog-article__stats">
-            <span><i class="ri-time-line"></i> <span id="bd-read-time"></span></span>
-            <span><i class="ri-eye-line"></i> <span id="bd-views"></span></span>
-          </div>
+
+          <aside class="cd-sidebar blog-detail-sidebar">
+            <div class="courses-filters-card">
+              <h2 class="courses-filters-card__title">تفاصيل المقال</h2>
+              <ul class="blog-detail-meta">
+                <li><i class="ri-calendar-line"></i> <span>تاريخ النشر: <strong id="bd-sidebar-date"></strong></span></li>
+                <li><i class="ri-time-line"></i> <span>مدة القراءة: <strong id="bd-sidebar-read"></strong></span></li>
+                <li><i class="ri-eye-line"></i> <span>المشاهدات: <strong id="bd-sidebar-views"></strong></span></li>
+                <li><i class="ri-price-tag-3-line"></i> <span>التصنيف: <strong id="bd-sidebar-category"></strong></span></li>
+              </ul>
+            </div>
+
+            <div class="courses-filters-promo blog-detail-promo">
+              <span class="courses-filters-promo__icon"><i class="ri-graduation-cap-line"></i></span>
+              <strong>طوّر مهاراتك الآن</strong>
+              <p>اكتشف دورات BIM والهندسة المعمارية المعتمدة</p>
+              <a href="courses.html" class="btn btn--white btn--sm">استعرض الدورات</a>
+            </div>
+
+            <div class="courses-filters-card">
+              <h2 class="courses-filters-card__title">الوسوم</h2>
+              <div class="blog-detail-sidebar__tags" id="bd-sidebar-tags"></div>
+            </div>
+
+            <div class="courses-filters-card blog-detail-newsletter">
+              <h2 class="courses-filters-card__title">اشترك في النشرة</h2>
+              <p class="blog-detail-newsletter__desc">احصل على أحدث المقالات والنصائح الهندسية</p>
+              <form class="blog-detail-newsletter__form" action="#" method="post">
+                <input type="email" class="blog-detail-newsletter__input" placeholder="بريدك الإلكتروني" required>
+                <button type="submit" class="blog-detail-newsletter__btn">اشتراك مجاناً</button>
+              </form>
+            </div>
+          </aside>
         </div>
-
-        <img id="article-image" class="blog-article__image" alt="">
-        <div class="blog-article__tags" id="bd-tags"></div>
-        <div id="article-content" class="blog-article__content"></div>
-      </div>
-    </article>
-
-    <section class="blog-related">
-      <div class="container blog-related__container">
-        <h2 class="blog-section__title">مقالات ذات صلة</h2>
-        <div id="related-posts" class="blog-page__grid"></div>
       </div>
     </section>
   </main>

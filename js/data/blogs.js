@@ -12,30 +12,78 @@ export const blogPosts = [
   {
     id: 1,
     slug: "bim-future-saudi-market",
-    title: "مستقبل BIM في المملكة العربية السعودية ورؤية 2030",
+    title: "مستقبل BIM في المملكة العربية السعودية ورؤية ٢٠٣٠",
     image: "assets/images/blog-featured.png",
+    heroImage: "assets/images/blog-details-hero.png",
+    intro:
+      "نظرة شاملة ومعمقة على تطور تقنية نمذجة معلومات البناء وتأثيرها الكبير على قطاع البناء والتشييد في المملكة العربية السعودية",
     excerpt:
-      "تعرف على كيفية تحويل BIM من مجرد أداة رسم إلى محرك أساسي للمشاريع الكبرى في رؤية المملكة 2030، وكيف تستفيد منها في مشاريعك الهندسية داخل المملكة.",
-    content: `<p>يشهد قطاع البناء في المملكة العربية السعودية تحولاً جذرياً مع تبني معايير BIM في المشاريع الحكومية والخاصة على حد سواء. لم يعد BIM خياراً تقنياً متقدماً، بل أصبح متطلباً أساسياً للمهندسين الذين يسعون للتميز في سوق العمل.</p>
-<p>في هذا المقال نستعرض أهم الاتجاهات التي تشكل مستقبل BIM محلياً: من التكامل مع منصات السحابة، إلى أتمتة التصميم، وصولاً إلى متطلبات رؤية 2030 في المشاريع الضخمة.</p>
-<p>سواء كنت مهندساً معمارياً في بداية مسيرتك أو محترفاً يسعى لتطوير مهاراته، فإن فهم هذا التحول سيساعدك على اختيار المسار التعليمي والمهني الأنسب.</p>`,
+      "تعرف على كيفية تحويل BIM من مجرد أداة رسم إلى محرك أساسي للمشاريع الكبرى في رؤية المملكة ٢٠٣٠، وكيف تستفيد منها في مشاريعك الهندسية داخل المملكة.",
+    content: `<section class="blog-detail-section">
+  <div class="blog-detail-section__head">
+    <span class="blog-detail-section__num">1</span>
+    <h2 class="blog-detail-section__title">مقدمة</h2>
+  </div>
+  <p>يعتبر مستقبل BIM في المملكة العربية السعودية ورؤية ٢٠٣٠ من أهم المواضيع التي تشغل بال المهندسين والمختصين في المجال الهندسي. في هذا المقال، سنستعرض معاً أبرز النقاط والتفاصيل المهمة التي يجب معرفتها في سوق العمل المصري والعربي.</p>
+</section>
+<section class="blog-detail-section">
+  <div class="blog-detail-section__head">
+    <span class="blog-detail-section__num">2</span>
+    <h2 class="blog-detail-section__title">النقاط الرئيسية</h2>
+  </div>
+  <ul class="cd-learn blog-detail-points">
+    <li><i class="ri-checkbox-circle-line"></i><span>فهم الأساسيات والمبادئ الهامة في هذا المجال</span></li>
+    <li><i class="ri-checkbox-circle-line"></i><span>تطبيق أحدث الممارسات والتقنيات العالمية على المشاريع المحلية</span></li>
+    <li><i class="ri-checkbox-circle-line"></i><span>تجنب الأخطاء الشائعة التي يقع فيها المبتدئون</span></li>
+    <li><i class="ri-checkbox-circle-line"></i><span>الاستفادة من خبرات المحترفين وتطبيقها في السوق المصري</span></li>
+  </ul>
+</section>
+<section class="blog-detail-section">
+  <div class="blog-detail-section__head">
+    <span class="blog-detail-section__num">3</span>
+    <h2 class="blog-detail-section__title">التطبيق العملي</h2>
+  </div>
+  <p>من المهم جداً أن نربط المعرفة النظرية بالتطبيق العملي. في مشاريعنا المصرية، نرى دائماً أهمية تطبيق هذه المفاهيم بشكل صحيح لضمان نجاح المشروع وتحقيق الأهداف المرجوة.</p>
+  <div class="blog-detail-tip">
+    <span class="blog-detail-tip__icon"><i class="ri-lightbulb-fill"></i></span>
+    <div>
+      <strong class="blog-detail-tip__title">نصيحة مهمة</strong>
+      <p>لا تتردد في الاستثمار في التعليم المستمر وتطوير مهاراتك. السوق المصري يشهد نمواً متسارعاً، ويحتاج إلى مهندسين محترفين يواكبون أحدث التطورات.</p>
+    </div>
+  </div>
+</section>
+<section class="blog-detail-section">
+  <div class="blog-detail-section__head">
+    <span class="blog-detail-section__num">4</span>
+    <h2 class="blog-detail-section__title">الخلاصة</h2>
+  </div>
+  <p>في النهاية، مستقبل BIM في المملكة العربية السعودية ورؤية ٢٠٣٠ يعتبر موضوعاً حيوياً للغاية في مجال الهندسة المعمارية والبناء. ننصح بالاطلاع المستمر على آخر التطورات والمشاركة في الدورات التدريبية المتخصصة لضمان التميز المهني في سوق العمل.</p>
+</section>`,
+    authorBio:
+      "متخصص في مجال BIM مع سنوات من الخبرة في التدريب والاستشارات الهندسية. يساهم في نشر المعرفة وتطوير المهارات الهندسية في مصر والوطن العربي.",
+    authorTitle: "خبير في مجال BIM",
+    authorBadge: "خبير",
     category: "BIM",
     categorySlug: "bim",
     author: "م. أحمد الشمري",
     authorAvatar: "assets/images/instructor-ahmed-shamri.png",
-    publishedAt: "2021-05-15",
+    publishedAt: "2026-05-15",
     readTime: 8,
     views: 2543,
-    tags: ["#BIM", "#رؤية_2030"],
+    tags: ["#BIM", "#رؤية_٢٠٣٠", "#التحول_الرقمي", "#السعودية"],
     featured: true,
   },
   {
     id: 2,
     slug: "construction-project-management-guide",
     title: "دليل شامل لإدارة المشاريع الإنشائية الضخمة بنجاح",
-    image: "https://picsum.photos/seed/blog-mgmt/640/400",
+    image: "assets/images/track-bim.png",
+    heroImage: "assets/images/blog-details-hero.png",
+    intro: "من التخطيط الأولي إلى التسليم النهائي، تعرف على الخطوات الأساسية لإدارة المشاريع الإنشائية الكبرى وفق أفضل الممارسات.",
     excerpt: "من التخطيط الأولي إلى التسليم النهائي، تعرف على الخطوات الأساسية لإدارة المشاريع الإنشائية الكبرى وفق أفضل الممارسات.",
     content: "<p>محتوى المقال الكامل...</p>",
+    authorTitle: "مهندس إنشائي | مدير مشاريع",
+    authorBio: "خبير في إدارة المشاريع الإنشائية الضخمة داخل المملكة، مع خبرة في التخطيط والتنفيذ والتسليم.",
     category: "إدارة المشاريع",
     categorySlug: "management",
     author: "م. خالد السعيد",
@@ -49,9 +97,13 @@ export const blogPosts = [
     id: 3,
     slug: "interior-design-riyadh-2024",
     title: "أحدث اتجاهات التصميم الداخلي في الرياض لعام 2024",
-    image: "https://picsum.photos/seed/blog-interior/640/400",
+    image: "assets/images/blog-featured.png",
+    heroImage: "assets/images/blog-details-hero.png",
+    intro: "استكشف أبرز صيحات التصميم الداخلي في السوق السعودي وكيف تدمجها في مشاريعك السكنية والتجارية.",
     excerpt: "استكشف أبرز صيحات التصميم الداخلي في السوق السعودي وكيف تدمجها في مشاريعك السكنية والتجارية.",
     content: "<p>محتوى المقال الكامل...</p>",
+    authorTitle: "مصممة داخلية | مستشارة مشاريع",
+    authorBio: "متخصصة في التصميم الداخلي للمشاريع السكنية والتجارية في الرياض ومدن المملكة.",
     category: "تصميم داخلي",
     categorySlug: "interior",
     author: "م. فاطمة العتيبي",
@@ -64,10 +116,14 @@ export const blogPosts = [
   {
     id: 4,
     slug: "bim-future-saudi-vision-grid",
-    title: "مستقبل الـ BIM في المملكة العربية السعودية ورؤية 2030",
-    image: "https://picsum.photos/seed/blog-bim-grid/640/400",
+    title: "مستقبل BIM في المملكة العربية السعودية ورؤية ٢٠٣٠",
+    image: "assets/images/blog-featured.png",
+    heroImage: "assets/images/blog-details-hero.png",
+    intro: "كيف يغير BIM مستقبل قطاع البناء في المملكة وما دوره في تحقيق أهداف رؤية 2030 للمشاريع العملاقة.",
     excerpt: "كيف يغير BIM مستقبل قطاع البناء في المملكة وما دوره في تحقيق أهداف رؤية 2030 للمشاريع العملاقة.",
     content: "<p>محتوى المقال الكامل...</p>",
+    authorTitle: "مهندس معماري | مدرب BIM",
+    authorBio: "مهندس معماري متخصص في BIM وإدارة المشاريع الرقمية داخل المملكة.",
     category: "BIM",
     categorySlug: "bim",
     author: "م. أحمد الشمري",
@@ -81,9 +137,13 @@ export const blogPosts = [
     id: 5,
     slug: "bim-skills-architect",
     title: "أهم 5 مهارات BIM يجب أن يتقنها كل مهندس معماري",
-    image: "https://picsum.photos/seed/blog-bim-skills/640/400",
+    image: "assets/images/track-bim.png",
+    heroImage: "assets/images/blog-details-hero.png",
+    intro: "المهارات الأساسية التي تميز المهندس المحترف في سوق العمل التنافسي وتفتح له فرصاً أكبر.",
     excerpt: "المهارات الأساسية التي تميز المهندس المحترف في سوق العمل التنافسي وتفتح له فرصاً أكبر.",
     content: "<p>محتوى المقال الكامل...</p>",
+    authorTitle: "مهندس معماري | مدرب BIM",
+    authorBio: "مدرب معتمد في Revit وNavisworks مع خبرة في تأهيل المهندسين لسوق العمل السعودي.",
     category: "BIM",
     categorySlug: "bim",
     author: "م. أحمد الشمري",
@@ -97,9 +157,13 @@ export const blogPosts = [
     id: 6,
     slug: "modern-construction-techniques",
     title: "تقنيات البناء الحديثة وتأثيرها على الإنتاجية",
-    image: "https://picsum.photos/seed/blog-construction/640/400",
+    image: "assets/images/track-bim.png",
+    heroImage: "assets/images/blog-details-hero.png",
+    intro: "نظرة على أحدث تقنيات البناء وكيف تسهم في تسريع التنفيذ وخفض التكاليف في المشاريع الكبرى.",
     excerpt: "نظرة على أحدث تقنيات البناء وكيف تسهم في تسريع التنفيذ وخفض التكاليف في المشاريع الكبرى.",
     content: "<p>محتوى المقال الكامل...</p>",
+    authorTitle: "مهندس إنشائي | مستشار تقني",
+    authorBio: "مهندس إنشائي يركز على تقنيات البناء الحديثة وتحسين الإنتاجية في المواقع.",
     category: "بناء",
     categorySlug: "construction",
     author: "م. خالد السعيد",
@@ -113,9 +177,13 @@ export const blogPosts = [
     id: 7,
     slug: "sustainability-engineering-2030",
     title: "الاستدامة في المشاريع الهندسية ورؤية 2030",
-    image: "https://picsum.photos/seed/blog-sustain/640/400",
+    image: "assets/images/blog-featured.png",
+    heroImage: "assets/images/blog-details-hero.png",
+    intro: "دور الاستدامة في المشاريع الهندسية وكيف تتماشى مع أهداف رؤية المملكة 2030 في قطاع البناء.",
     excerpt: "دور الاستدامة في المشاريع الهندسية وكيف تتماشى مع أهداف رؤية المملكة 2030 في قطاع البناء.",
     content: "<p>محتوى المقال الكامل...</p>",
+    authorTitle: "مهندسة استدامة | باحثة",
+    authorBio: "مهندسة متخصصة في الاستدامة وتطبيق معايير الكفاءة في المشاريع الهندسية.",
     category: "استدامة",
     categorySlug: "sustainability",
     author: "م. فاطمة العتيبي",
@@ -129,18 +197,64 @@ export const blogPosts = [
 
 const blogGridCard = {
   slug: "top-10-programs-architects-2026",
-  title: "أفضل ١٠ برامج للمهندسين المعماريين في ٢٠٢٦",
+  title: "مستقبل BIM في المملكة العربية السعودية ورؤية ٢٠٣٠",
   image: "assets/images/track-bim.png",
+  heroImage: "assets/images/blog-details-hero.png",
+  intro:
+    "نظرة شاملة ومعمقة على تطور تقنية نمذجة معلومات البناء وتأثيرها الكبير على قطاع البناء والتشييد في المملكة العربية السعودية",
   excerpt: "قائمة شاملة بأهم وأفضل البرامج التي يحتاجها كل مهندس معماري محترف",
-  content: "<p>قائمة شاملة بأهم وأفضل البرامج التي يحتاجها كل مهندس معماري محترف.</p>",
-  category: "برامج هندسية",
-  categorySlug: "architecture",
-  author: "م. سارة القحطاني",
-  authorAvatar: "assets/images/consult-avatar-3.png",
-  publishedAt: "2021-05-02",
+  content: `<section class="blog-detail-section">
+  <div class="blog-detail-section__head">
+    <span class="blog-detail-section__num">1</span>
+    <h2 class="blog-detail-section__title">مقدمة</h2>
+  </div>
+  <p>يعتبر مستقبل BIM في المملكة العربية السعودية ورؤية ٢٠٣٠ من أهم المواضيع التي تشغل بال المهندسين والمختصين في المجال الهندسي. في هذا المقال، سنستعرض معاً أبرز النقاط والتفاصيل المهمة التي يجب معرفتها في سوق العمل المصري والعربي.</p>
+</section>
+<section class="blog-detail-section">
+  <div class="blog-detail-section__head">
+    <span class="blog-detail-section__num">2</span>
+    <h2 class="blog-detail-section__title">النقاط الرئيسية</h2>
+  </div>
+  <ul class="cd-learn blog-detail-points">
+    <li><i class="ri-checkbox-circle-line"></i><span>فهم الأساسيات والمبادئ الهامة في هذا المجال</span></li>
+    <li><i class="ri-checkbox-circle-line"></i><span>تطبيق أحدث الممارسات والتقنيات العالمية على المشاريع المحلية</span></li>
+    <li><i class="ri-checkbox-circle-line"></i><span>تجنب الأخطاء الشائعة التي يقع فيها المبتدئون</span></li>
+    <li><i class="ri-checkbox-circle-line"></i><span>الاستفادة من خبرات المحترفين وتطبيقها في السوق المصري</span></li>
+  </ul>
+</section>
+<section class="blog-detail-section">
+  <div class="blog-detail-section__head">
+    <span class="blog-detail-section__num">3</span>
+    <h2 class="blog-detail-section__title">التطبيق العملي</h2>
+  </div>
+  <p>من المهم جداً أن نربط المعرفة النظرية بالتطبيق العملي. في مشاريعنا المصرية، نرى دائماً أهمية تطبيق هذه المفاهيم بشكل صحيح لضمان نجاح المشروع وتحقيق الأهداف المرجوة.</p>
+  <div class="blog-detail-tip">
+    <span class="blog-detail-tip__icon"><i class="ri-lightbulb-fill"></i></span>
+    <div>
+      <strong class="blog-detail-tip__title">نصيحة مهمة</strong>
+      <p>لا تتردد في الاستثمار في التعليم المستمر وتطوير مهاراتك. السوق المصري يشهد نمواً متسارعاً، ويحتاج إلى مهندسين محترفين يواكبون أحدث التطورات.</p>
+    </div>
+  </div>
+</section>
+<section class="blog-detail-section">
+  <div class="blog-detail-section__head">
+    <span class="blog-detail-section__num">4</span>
+    <h2 class="blog-detail-section__title">الخلاصة</h2>
+  </div>
+  <p>في النهاية، مستقبل BIM في المملكة العربية السعودية ورؤية ٢٠٣٠ يعتبر موضوعاً حيوياً للغاية في مجال الهندسة المعمارية والبناء. ننصح بالاطلاع المستمر على آخر التطورات والمشاركة في الدورات التدريبية المتخصصة لضمان التميز المهني في سوق العمل.</p>
+</section>`,
+  authorBio:
+    "متخصص في مجال BIM مع سنوات من الخبرة في التدريب والاستشارات الهندسية. يساهم في نشر المعرفة وتطوير المهارات الهندسية في مصر والوطن العربي.",
+  authorTitle: "خبير في مجال BIM",
+  authorBadge: "خبير",
+  category: "BIM",
+  categorySlug: "bim",
+  author: "م. أحمد الشمري",
+  authorAvatar: "assets/images/instructor-ahmed-shamri.png",
+  publishedAt: "2024-05-02",
   readTime: 9,
   views: 2890,
-  tags: ["#برامج", "#هندسة_معمارية", "#تكنولوجيا"],
+  tags: ["#BIM", "#رؤية_٢٠٣٠", "#التحول_الرقمي", "#السعودية"],
 };
 
 export const blogGridPosts = Array.from({ length: 6 }, () => ({ ...blogGridCard }));
