@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>الإعدادات — coursacademy</title>
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages/dashboard.css">
+  <link rel="stylesheet" href="css/pages/settings.css">
+</head>
+<body class="layout-dashboard" data-layout="dashboard" data-page="settings">
+  <div id="dashboard-shell"></div>
+  <div class="drawer-overlay" data-drawer-overlay="sidebar"></div>
+
+  <div class="layout-dashboard__body">
+    <header class="dash-topbar layout-dashboard__header">
+      <button type="button" class="btn btn--icon dash-topbar__menu" data-drawer-open="sidebar" aria-label="القائمة">
+        <i class="ri-menu-line"></i>
+      </button>
+      <div class="dash-topbar__greeting">
+        <h1 class="dash-topbar__title">مرحباً، محمد 👋</h1>
+        <p class="dash-topbar__subtitle">تابع تقدمك وتعلم شيئاً جديداً اليوم</p>
+      </div>
+      <div class="dash-notif" data-notif>
+        <button type="button" class="dash-topbar__bell" data-notif-toggle aria-label="الإشعارات" aria-expanded="false" aria-controls="dash-notif-panel">
+          <i class="ri-notification-3-line"></i>
+          <span class="dash-topbar__bell-dot"></span>
+        </button>
+        <div class="dash-notif__panel" id="dash-notif-panel" data-notif-panel hidden>
+          <div class="dash-notif__head">
+            <h2 class="dash-notif__title">الإشعارات</h2>
+            <span class="dash-notif__badge">3 جديد</span>
+          </div>
+          <ul class="dash-notif__list">
+            <li class="dash-notif__item">
+              <div class="dash-notif__icon dash-notif__icon--blue">
+                <i class="ri-book-open-line"></i>
+              </div>
+              <div class="dash-notif__body">
+                <h3 class="dash-notif__item-title">درس جديد متاح</h3>
+                <p class="dash-notif__item-text">تم إضافة درس جديد: النمذجة المتقدمة</p>
+                <time class="dash-notif__time"><i class="ri-time-line"></i> منذ ساعتين</time>
+              </div>
+            </li>
+            <li class="dash-notif__item">
+              <div class="dash-notif__icon dash-notif__icon--orange">
+                <i class="ri-medal-line"></i>
+              </div>
+              <div class="dash-notif__body">
+                <h3 class="dash-notif__item-title">تهانينا! حصلت على شهادة</h3>
+                <p class="dash-notif__item-text">لقد أكملت دورة AutoCAD بنجاح</p>
+                <time class="dash-notif__time"><i class="ri-time-line"></i> منذ 3 أيام</time>
+              </div>
+            </li>
+            <li class="dash-notif__item">
+              <div class="dash-notif__icon dash-notif__icon--green">
+                <i class="ri-chat-3-line"></i>
+              </div>
+              <div class="dash-notif__body">
+                <h3 class="dash-notif__item-title">رسالة من المدرب</h3>
+                <p class="dash-notif__item-text">م. أحمد الشمري أرسل لك رسالة</p>
+                <time class="dash-notif__time"><i class="ri-time-line"></i> منذ 5 أيام</time>
+              </div>
+            </li>
+          </ul>
+          <a href="notifications.html" class="dash-notif__footer">عرض جميع الإشعارات</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="layout-dashboard__content settings-page">
+      <h2 class="settings-page__title">الإعدادات</h2>
+
+      <section class="settings-card">
+        <h3 class="settings-card__title">
+          <i class="ri-user-line"></i>
+          المعلومات الشخصية
+        </h3>
+
+        <div class="settings-avatar">
+          <img
+            src="assets/images/team-ahmed-shamri.png"
+            alt=""
+            class="settings-avatar__img"
+            width="80"
+            height="80"
+            data-avatar-preview
+          >
+          <div class="settings-avatar__actions">
+            <label class="settings-avatar__btn">
+              تغيير الصورة
+              <input type="file" accept="image/png,image/jpeg" hidden data-avatar-input>
+            </label>
+            <p class="settings-avatar__hint">PNG أو JPG. الحد الأقصى 2MB</p>
+          </div>
+        </div>
+
+        <form class="settings-form" data-profile-form>
+          <div class="settings-form__row">
+            <div class="settings-field">
+              <label class="settings-field__label" for="full-name">الاسم الكامل</label>
+              <input id="full-name" type="text" class="settings-field__input" value="محمد أحمد" autocomplete="name">
+            </div>
+            <div class="settings-field">
+              <label class="settings-field__label" for="email">البريد الإلكتروني</label>
+              <input id="email" type="email" class="settings-field__input" value="mohammed@example.com" autocomplete="email" dir="ltr">
+            </div>
+          </div>
+          <div class="settings-field">
+            <label class="settings-field__label" for="phone">رقم الجوال</label>
+            <input id="phone" type="tel" class="settings-field__input" value="+966 50 123 4567" autocomplete="tel" dir="ltr">
+          </div>
+          <button type="submit" class="settings-form__save">حفظ التغييرات</button>
+        </form>
+      </section>
+
+      <section class="settings-card settings-card--stack">
+        <h3 class="settings-card__title">
+          <i class="ri-notification-3-line" aria-hidden="true"></i>
+          <span>الإشعارات</span>
+        </h3>
+
+        <ul class="settings-toggles">
+          <li class="settings-toggle">
+            <div class="settings-toggle__text">
+              <span class="settings-toggle__label">إشعارات التطبيق</span>
+              <span class="settings-toggle__desc">تلقي إشعارات حول الدروس الجديدة والتحديثات</span>
+            </div>
+            <label class="settings-switch">
+              <input type="checkbox" checked>
+              <span class="settings-switch__ui" aria-hidden="true"></span>
+              <span class="sr-only">إشعارات التطبيق</span>
+            </label>
+          </li>
+          <li class="settings-toggle">
+            <div class="settings-toggle__text">
+              <span class="settings-toggle__label">رسائل البريد الإلكتروني</span>
+              <span class="settings-toggle__desc">تلقي تحديثات عبر البريد الإلكتروني</span>
+            </div>
+            <label class="settings-switch">
+              <input type="checkbox" checked>
+              <span class="settings-switch__ui" aria-hidden="true"></span>
+              <span class="sr-only">رسائل البريد الإلكتروني</span>
+            </label>
+          </li>
+        </ul>
+      </section>
+
+      <section class="settings-card settings-card--stack">
+        <h3 class="settings-card__title">
+          <i class="ri-shield-keyhole-line" aria-hidden="true"></i>
+          <span>الأمان</span>
+        </h3>
+
+        <ul class="settings-security">
+          <li>
+            <a href="#" class="settings-security__item">
+              <div class="settings-security__text">
+                <span class="settings-security__label">تغيير كلمة المرور</span>
+                <span class="settings-security__desc">تحديث كلمة المرور الخاصة بك</span>
+              </div>
+              <i class="ri-arrow-left-s-line" aria-hidden="true"></i>
+            </a>
+          </li>
+          <li>
+            <div class="settings-security__item settings-security__item--soon">
+              <div class="settings-security__text">
+                <span class="settings-security__label">المصادقة الثنائية</span>
+                <span class="settings-security__desc">إضافة طبقة حماية إضافية</span>
+              </div>
+              <span class="settings-security__badge">قريباً</span>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </main>
+  </div>
+
+  <script type="module" src="js/app.js"></script>
+  <script type="module" src="js/pages/dashboard.js"></script>
+  <script type="module" src="js/pages/settings.js"></script>
+</body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>مراجعة الطلب — coursacademy</title>
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages/checkout.css">
+</head>
+<body class="checkout-body" data-page="checkout">
+  <header class="checkout-top">
+    <div class="container checkout-top__inner">
+      <a href="index.html" class="checkout-top__logo">
+        <img src="assets/images/logo.png" alt="coursademy" width="140" height="48">
+      </a>
+      <div class="checkout-top__secure">
+        <i class="ri-shield-check-fill"></i>
+        <span>دفع آمن</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="checkout-main">
+    <div class="container checkout-main__inner">
+      <nav class="checkout-steps" aria-label="خطوات الطلب">
+        <div class="checkout-steps__item is-active">
+          <span class="checkout-steps__num">1</span>
+          <span class="checkout-steps__label">مراجعة الطلب</span>
+        </div>
+        <span class="checkout-steps__line" aria-hidden="true"></span>
+        <div class="checkout-steps__item">
+          <span class="checkout-steps__num">2</span>
+          <span class="checkout-steps__label">بيانات الدفع</span>
+        </div>
+        <span class="checkout-steps__line" aria-hidden="true"></span>
+        <div class="checkout-steps__item">
+          <span class="checkout-steps__num">3</span>
+          <span class="checkout-steps__label">تأكيد الطلب</span>
+        </div>
+      </nav>
+
+      <div class="checkout-layout">
+        <section class="checkout-courses">
+          <h1 class="checkout-courses__title">الدورات في سلتك (2)</h1>
+
+          <article class="checkout-course">
+            <a href="course-details.html" class="checkout-course__thumb">
+              <img src="assets/images/track-bim.png" alt="إتقان Revit Architecture">
+            </a>
+            <div class="checkout-course__info">
+              <h2 class="checkout-course__name">
+                <a href="course-details.html">إتقان Revit Architecture</a>
+              </h2>
+              <p class="checkout-course__instructor">م. أحمد الشمري</p>
+              <div class="checkout-course__meta">
+                <span><i class="ri-star-fill"></i> 4.8</span>
+                <span><i class="ri-time-line"></i> 40 ساعة</span>
+                <span><i class="ri-user-line"></i> متقدم</span>
+              </div>
+            </div>
+            <div class="checkout-course__price">
+              <span class="checkout-course__price-current">3,999 د.أ</span>
+              <span class="checkout-course__price-old">5,999 د.أ</span>
+            </div>
+          </article>
+
+          <article class="checkout-course">
+            <a href="course-details.html" class="checkout-course__thumb">
+              <img src="assets/images/blog-details-hero.png" alt="إدارة المشاريع الإنشائية">
+            </a>
+            <div class="checkout-course__info">
+              <h2 class="checkout-course__name">
+                <a href="course-details.html">إدارة المشاريع الإنشائية</a>
+              </h2>
+              <p class="checkout-course__instructor">م. خالد السعيد</p>
+              <div class="checkout-course__meta">
+                <span><i class="ri-star-fill"></i> 4.7</span>
+                <span><i class="ri-time-line"></i> 50 ساعة</span>
+                <span><i class="ri-user-line"></i> متقدم</span>
+              </div>
+            </div>
+            <div class="checkout-course__price">
+              <span class="checkout-course__price-current">4,499 د.أ</span>
+              <span class="checkout-course__price-old">6,999 د.أ</span>
+            </div>
+          </article>
+
+          <div class="checkout-coupon">
+            <label class="checkout-coupon__label" for="coupon-code">
+              <i class="ri-coupon-3-line"></i>
+              كوبون خصم
+            </label>
+            <div class="checkout-coupon__row">
+              <input
+                id="coupon-code"
+                type="text"
+                class="checkout-coupon__input"
+                placeholder="أدخل كود الخصم"
+                data-coupon-input
+              >
+              <button type="button" class="checkout-coupon__btn" data-coupon-apply>تطبيق</button>
+            </div>
+            <p class="checkout-coupon__hint">جرب: COURSADEMY10</p>
+            <p class="checkout-coupon__msg" data-coupon-msg hidden></p>
+          </div>
+        </section>
+
+        <aside class="checkout-summary">
+          <h2 class="checkout-summary__title">ملخص الطلب</h2>
+          <div class="checkout-summary__rows">
+            <div class="checkout-summary__row">
+              <span>السعر الأصلي</span>
+              <span>12,998 د.أ</span>
+            </div>
+            <div class="checkout-summary__row checkout-summary__row--discount">
+              <span>خصم الدورات</span>
+              <span data-checkout-discount>-4,500 د.أ</span>
+            </div>
+            <div class="checkout-summary__row checkout-summary__row--coupon" data-coupon-row hidden>
+              <span>خصم الكوبون</span>
+              <span data-coupon-discount></span>
+            </div>
+          </div>
+          <div class="checkout-summary__total">
+            <div class="checkout-summary__total-row">
+              <span>الإجمالي</span>
+              <span data-checkout-total>8,498 د.أ</span>
+            </div>
+            <p class="checkout-summary__vat">شامل ضريبة القيمة المضافة</p>
+          </div>
+          <div class="checkout-summary__guarantee">
+            <i class="ri-shield-check-line"></i>
+            <span>ضمان استرداد الأموال خلال ٣٠ يوماً</span>
+          </div>
+          <a href="payment.html" class="checkout-summary__cta">
+            <i class="ri-lock-line"></i>
+            المتابعة للدفع
+          </a>
+          <p class="checkout-summary__secure">
+            <i class="ri-shield-check-line"></i>
+            دفع آمن ومشفر ١٠٠٪
+          </p>
+          <div class="checkout-summary__payments">
+            <img src="assets/images/payment-fawry.png" alt="Fawry">
+            <img src="assets/images/payment-mada.png" alt="mada">
+            <img src="assets/images/payment-mastercard.png" alt="Mastercard">
+            <img src="assets/images/payment-visa.png" alt="Visa">
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <script type="module" src="js/pages/checkout.js"></script>
+</body>
+</html>

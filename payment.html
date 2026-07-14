@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>بيانات الدفع — coursacademy</title>
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages/checkout.css">
+  <link rel="stylesheet" href="css/pages/payment.css">
+</head>
+<body class="checkout-body" data-page="payment">
+  <header class="checkout-top">
+    <div class="container checkout-top__inner">
+      <a href="index.html" class="checkout-top__logo">
+        <img src="assets/images/logo.png" alt="coursademy" width="140" height="48">
+      </a>
+      <div class="checkout-top__secure">
+        <i class="ri-shield-check-fill"></i>
+        <span>دفع آمن</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="checkout-main">
+    <div class="container checkout-main__inner">
+      <nav class="checkout-steps" aria-label="خطوات الطلب">
+        <div class="checkout-steps__item is-done">
+          <span class="checkout-steps__num"><i class="ri-check-line"></i></span>
+          <span class="checkout-steps__label">مراجعة الطلب</span>
+        </div>
+        <span class="checkout-steps__line is-done" aria-hidden="true"></span>
+        <div class="checkout-steps__item is-active">
+          <span class="checkout-steps__num">2</span>
+          <span class="checkout-steps__label">بيانات الدفع</span>
+        </div>
+        <span class="checkout-steps__line" aria-hidden="true"></span>
+        <div class="checkout-steps__item">
+          <span class="checkout-steps__num">3</span>
+          <span class="checkout-steps__label">تأكيد الطلب</span>
+        </div>
+      </nav>
+
+      <div class="checkout-layout payment-layout">
+        <section class="payment-methods">
+          <h1 class="payment-methods__title">اختر طريقة الدفع</h1>
+
+          <div class="payment-methods__grid" role="radiogroup" aria-label="طرق الدفع">
+            <label class="payment-method is-selected">
+              <input type="radio" name="pay-method" value="card" checked data-pay-method>
+              <span class="payment-method__icon payment-method__icon--card">
+                <i class="ri-bank-card-2-line"></i>
+              </span>
+              <span class="payment-method__body">
+                <span class="payment-method__name">بطاقة ائتمانية / مدى</span>
+                <span class="payment-method__brands">
+                  <img src="assets/images/payment-visa.png" alt="">
+                  <img src="assets/images/payment-mastercard.png" alt="">
+                  <img src="assets/images/payment-mada.png" alt="">
+                </span>
+              </span>
+              <span class="payment-method__check" aria-hidden="true"></span>
+            </label>
+
+            <label class="payment-method">
+              <input type="radio" name="pay-method" value="vodafone" data-pay-method>
+              <span class="payment-method__icon payment-method__icon--vodafone">
+                <i class="ri-smartphone-line"></i>
+              </span>
+              <span class="payment-method__body">
+                <span class="payment-method__name">فودافون كاش</span>
+                <span class="payment-method__desc">تحويل عبر محفظة فودافون</span>
+              </span>
+              <span class="payment-method__check" aria-hidden="true"></span>
+            </label>
+
+            <label class="payment-method">
+              <input type="radio" name="pay-method" value="fawry" data-pay-method>
+              <span class="payment-method__icon payment-method__icon--fawry">
+                <img src="assets/images/payment-fawry.png" alt="">
+              </span>
+              <span class="payment-method__body">
+                <span class="payment-method__name">فوري</span>
+                <span class="payment-method__desc">ادفع من أي فرع فوري</span>
+              </span>
+              <span class="payment-method__check" aria-hidden="true"></span>
+            </label>
+
+            <label class="payment-method">
+              <input type="radio" name="pay-method" value="instapay" data-pay-method>
+              <span class="payment-method__icon payment-method__icon--instapay">
+                <i class="ri-exchange-funds-line"></i>
+              </span>
+              <span class="payment-method__body">
+                <span class="payment-method__name">إنستاباي</span>
+                <span class="payment-method__desc">تحويل فوري عبر التطبيق</span>
+              </span>
+              <span class="payment-method__check" aria-hidden="true"></span>
+            </label>
+
+            <label class="payment-method">
+              <input type="radio" name="pay-method" value="bank" data-pay-method>
+              <span class="payment-method__icon payment-method__icon--bank">
+                <i class="ri-bank-line"></i>
+              </span>
+              <span class="payment-method__body">
+                <span class="payment-method__name">تحويل بنكي</span>
+                <span class="payment-method__desc">تحويل مباشر إلى حسابنا</span>
+              </span>
+              <span class="payment-method__check" aria-hidden="true"></span>
+            </label>
+          </div>
+
+          <div class="payment-card" data-card-panel>
+            <h2 class="payment-card__title">
+              <i class="ri-bank-card-line"></i>
+              بيانات البطاقة
+            </h2>
+
+            <div class="payment-card__preview" aria-hidden="true">
+              <span class="payment-card__glow payment-card__glow--bl"></span>
+              <span class="payment-card__glow payment-card__glow--tr"></span>
+              <div class="payment-card__preview-top">
+                <span class="payment-card__brand">Coursademy Pay</span>
+                <span class="payment-card__circles">
+                  <span class="payment-card__dot"></span>
+                  <span class="payment-card__dot"></span>
+                </span>
+              </div>
+              <p class="payment-card__number" data-card-display-number>•••• •••• •••• ••••</p>
+              <div class="payment-card__preview-bottom">
+                <div>
+                  <span class="payment-card__preview-value" data-card-display-name>اسم حامل البطاقة</span>
+                </div>
+                <div>
+                  <span class="payment-card__preview-value" data-card-display-expiry>MM/YY</span>
+                </div>
+              </div>
+            </div>
+
+            <form class="payment-card__form" data-card-form novalidate>
+              <div class="payment-field">
+                <label class="payment-field__label" for="card-name">اسم حامل البطاقة</label>
+                <input
+                  id="card-name"
+                  type="text"
+                  class="payment-field__input"
+                  placeholder="كما هو مكتوب على البطاقة"
+                  autocomplete="cc-name"
+                  data-card-name
+                >
+              </div>
+
+              <div class="payment-field">
+                <label class="payment-field__label" for="card-number">رقم البطاقة</label>
+                <input
+                  id="card-number"
+                  type="text"
+                  class="payment-field__input"
+                  inputmode="numeric"
+                  placeholder="0000 0000 0000 0000"
+                  autocomplete="cc-number"
+                  maxlength="19"
+                  data-card-number
+                >
+              </div>
+
+              <div class="payment-field-row">
+                <div class="payment-field">
+                  <label class="payment-field__label" for="card-expiry">تاريخ الانتهاء</label>
+                  <input
+                    id="card-expiry"
+                    type="text"
+                    class="payment-field__input"
+                    inputmode="numeric"
+                    placeholder="MM/YY"
+                    autocomplete="cc-exp"
+                    maxlength="5"
+                    data-card-expiry
+                  >
+                </div>
+                <div class="payment-field">
+                  <label class="payment-field__label" for="card-cvv">CVV</label>
+                  <div class="payment-field__cvv">
+                    <input
+                      id="card-cvv"
+                      type="password"
+                      class="payment-field__input"
+                      inputmode="numeric"
+                      placeholder="•••"
+                      autocomplete="cc-csc"
+                      maxlength="4"
+                      data-card-cvv
+                    >
+                    <i class="ri-lock-line" aria-hidden="true"></i>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <div class="payment-alt" data-alt-panel hidden>
+            <p class="payment-alt__text" data-alt-text></p>
+          </div>
+        </section>
+
+        <aside class="payment-summary">
+          <h2 class="payment-summary__title">ملخص الدفع</h2>
+          <div class="payment-summary__amount">
+            <span class="payment-summary__amount-label">المبلغ المستحق</span>
+            <span class="payment-summary__amount-value">8,498 د.أ</span>
+          </div>
+          <div class="payment-summary__ssl">
+            <i class="ri-shield-check-fill"></i>
+            <span>دفعتك محمية بتشفير SSL 256-bit</span>
+          </div>
+          <button type="button" class="payment-summary__cta" data-pay-confirm>
+            <i class="ri-lock-line"></i>
+            تأكيد الدفع
+          </button>
+          <a href="checkout.html" class="payment-summary__back">رجوع لمراجعة الطلب</a>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <script type="module" src="js/pages/payment.js"></script>
+</body>
+</html>

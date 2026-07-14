@@ -114,16 +114,28 @@
 
 @media (max-width: 786px) {
   .layout-dashboard__sidebar {
-    transform: translateX(100%);
-    transition: transform var(--transition-slow);
+    top: auto;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: calc(var(--bottom-nav-height) + env(safe-area-inset-bottom, 0px));
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+    transform: none;
+    z-index: var(--z-drawer);
   }
 
   .layout-dashboard__sidebar.is-open {
-    transform: translateX(0);
+    transform: none;
   }
 
   .layout-dashboard__body {
     margin-right: 0;
+    padding-bottom: calc(var(--bottom-nav-height) + env(safe-area-inset-bottom, 0px));
+  }
+
+  .layout-dashboard__content {
+    padding: var(--space-4) var(--space-4) var(--space-6);
   }
 
   .layout-learning__body {

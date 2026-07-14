@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>شهاداتي — coursacademy</title>
+  <title>المدفوعات — coursacademy</title>
   <link rel="stylesheet" href="css/variables.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap">
@@ -11,9 +11,9 @@
   <link rel="stylesheet" href="css/layout.css">
   <link rel="stylesheet" href="css/components.css">
   <link rel="stylesheet" href="css/pages/dashboard.css">
-  <link rel="stylesheet" href="css/pages/certificates.css">
+  <link rel="stylesheet" href="css/pages/payments.css">
 </head>
-<body class="layout-dashboard" data-layout="dashboard" data-page="certificates">
+<body class="layout-dashboard" data-layout="dashboard" data-page="payments">
   <div id="dashboard-shell"></div>
   <div class="drawer-overlay" data-drawer-overlay="sidebar"></div>
 
@@ -73,80 +73,91 @@
       </div>
     </header>
 
-    <main class="layout-dashboard__content certs-page">
-      <h2 class="certs-page__title">شهاداتي</h2>
+    <main class="layout-dashboard__content pay-page">
+      <h2 class="pay-page__title">المدفوعات</h2>
 
-      <div class="certs-grid">
-        <article class="cert-card">
-          <div class="cert-card__banner">
-            <i class="ri-medal-line"></i>
+      <section class="dash-stats pay-stats" aria-label="ملخص المدفوعات">
+        <article class="dash-stat">
+          <div class="dash-stat__icon dash-stat__icon--blue">
+            <i class="ri-money-dollar-circle-line"></i>
           </div>
-          <div class="cert-card__body">
-            <h3 class="cert-card__title">AutoCAD للمهندسين</h3>
-            <ul class="cert-card__meta">
-              <li class="cert-card__meta-item">
-                <i class="ri-calendar-line"></i>
-                <span>تاريخ الإصدار: ١٥ مارس ٢٠٢٤</span>
-              </li>
-              <li class="cert-card__meta-item">
-                <i class="ri-user-line"></i>
-                <span>المدرب: م. سارة القحطاني</span>
-              </li>
-              <li class="cert-card__meta-item">
-                <i class="ri-star-fill cert-card__star"></i>
-                <span>التقدير: ممتاز</span>
-              </li>
-            </ul>
-            <div class="cert-card__actions">
-              <a href="certificate-details.html?id=1" class="cert-card__btn cert-card__btn--primary">
-                <i class="ri-eye-line"></i>
-                عرض
-              </a>
-              <button type="button" class="cert-card__btn cert-card__btn--icon" aria-label="تحميل">
-                <i class="ri-download-2-line"></i>
-              </button>
-              <button type="button" class="cert-card__btn cert-card__btn--icon" aria-label="مشاركة">
-                <i class="ri-share-forward-line"></i>
-              </button>
-            </div>
-          </div>
+          <span class="dash-stat__value">9,497 ج.م</span>
+          <span class="dash-stat__label">إجمالي المدفوعات</span>
         </article>
+        <article class="dash-stat">
+          <div class="dash-stat__icon dash-stat__icon--green">
+            <i class="ri-bank-card-line"></i>
+          </div>
+          <span class="dash-stat__value">3</span>
+          <span class="dash-stat__label">عمليات ناجحة</span>
+        </article>
+        <article class="dash-stat">
+          <div class="dash-stat__icon dash-stat__icon--blue">
+            <i class="ri-calendar-line"></i>
+          </div>
+          <span class="dash-stat__value">3</span>
+          <span class="dash-stat__label">أشهر نشطة</span>
+        </article>
+      </section>
 
-        <article class="cert-card">
-          <div class="cert-card__banner">
-            <i class="ri-medal-line"></i>
-          </div>
-          <div class="cert-card__body">
-            <h3 class="cert-card__title">أساسيات BIM</h3>
-            <ul class="cert-card__meta">
-              <li class="cert-card__meta-item">
-                <i class="ri-calendar-line"></i>
-                <span>تاريخ الإصدار: ٢٠ يناير ٢٠٢٤</span>
-              </li>
-              <li class="cert-card__meta-item">
-                <i class="ri-user-line"></i>
-                <span>المدرب: م. أحمد الشمري</span>
-              </li>
-              <li class="cert-card__meta-item">
-                <i class="ri-star-fill cert-card__star"></i>
-                <span>التقدير: جيد جداً</span>
-              </li>
-            </ul>
-            <div class="cert-card__actions">
-              <a href="certificate-details.html?id=2" class="cert-card__btn cert-card__btn--primary">
-                <i class="ri-eye-line"></i>
-                عرض
-              </a>
-              <button type="button" class="cert-card__btn cert-card__btn--icon" aria-label="تحميل">
-                <i class="ri-download-2-line"></i>
-              </button>
-              <button type="button" class="cert-card__btn cert-card__btn--icon" aria-label="مشاركة">
-                <i class="ri-share-forward-line"></i>
-              </button>
-            </div>
-          </div>
-        </article>
-      </div>
+      <section class="pay-table-card">
+        <h3 class="pay-table-card__title">سجل المعاملات</h3>
+        <div class="pay-table-wrap">
+          <table class="pay-table">
+            <thead>
+              <tr>
+                <th>التاريخ</th>
+                <th>الدورة</th>
+                <th>المبلغ</th>
+                <th>طريقة الدفع</th>
+                <th>الحالة</th>
+                <th>الإجراءات</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>١٥ مارس ٢٠٢٤</td>
+                <td>AutoCAD للمهندسين</td>
+                <td class="pay-table__amount">2,499 ج.م</td>
+                <td>Visa •••• 1234</td>
+                <td><span class="pay-table__status">مكتمل</span></td>
+                <td>
+                  <a href="#" class="pay-table__invoice">
+                    <i class="ri-download-2-line"></i>
+                    الفاتورة
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td>٢٠ فبراير ٢٠٢٤</td>
+                <td>إتقان Revit Architecture</td>
+                <td class="pay-table__amount">3,999 ج.م</td>
+                <td>Mada •••• 5678</td>
+                <td><span class="pay-table__status">مكتمل</span></td>
+                <td>
+                  <a href="#" class="pay-table__invoice">
+                    <i class="ri-download-2-line"></i>
+                    الفاتورة
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td>٥ يناير ٢٠٢٤</td>
+                <td>أساسيات الرسم الهندسي</td>
+                <td class="pay-table__amount">2,999 ج.م</td>
+                <td>Apple Pay</td>
+                <td><span class="pay-table__status">مكتمل</span></td>
+                <td>
+                  <a href="#" class="pay-table__invoice">
+                    <i class="ri-download-2-line"></i>
+                    الفاتورة
+                  </a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
     </main>
   </div>
 

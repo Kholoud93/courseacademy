@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>تأكيد الطلب — coursacademy</title>
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages/checkout.css">
+  <link rel="stylesheet" href="css/pages/order-success.css">
+</head>
+<body class="checkout-body" data-page="order-success">
+  <header class="checkout-top">
+    <div class="container checkout-top__inner">
+      <a href="index.html" class="checkout-top__logo">
+        <img src="assets/images/logo.png" alt="coursademy" width="140" height="48">
+      </a>
+      <div class="checkout-top__secure">
+        <i class="ri-shield-check-fill"></i>
+        <span>دفع آمن</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="checkout-main">
+    <div class="container checkout-main__inner order-success">
+      <nav class="checkout-steps" aria-label="خطوات الطلب">
+        <div class="checkout-steps__item is-done">
+          <span class="checkout-steps__num"><i class="ri-check-line"></i></span>
+          <span class="checkout-steps__label">مراجعة الطلب</span>
+        </div>
+        <span class="checkout-steps__line is-done" aria-hidden="true"></span>
+        <div class="checkout-steps__item is-done">
+          <span class="checkout-steps__num"><i class="ri-check-line"></i></span>
+          <span class="checkout-steps__label">بيانات الدفع</span>
+        </div>
+        <span class="checkout-steps__line is-done" aria-hidden="true"></span>
+        <div class="checkout-steps__item is-active">
+          <span class="checkout-steps__num">3</span>
+          <span class="checkout-steps__label">تأكيد الطلب</span>
+        </div>
+      </nav>
+
+      <section class="order-success__hero">
+        <div class="order-success__badge" aria-hidden="true">
+          <i class="ri-check-line"></i>
+        </div>
+        <h1 class="order-success__title">تم الدفع بنجاح! 🎉</h1>
+        <p class="order-success__subtitle">شكراً على ثقتك في كورساديمي</p>
+        <p class="order-success__order-id">رقم الطلب: ORD-782426</p>
+      </section>
+
+      <section class="order-success__card">
+        <h2 class="order-success__card-title">تفاصيل الطلب</h2>
+        <ul class="order-success__items">
+          <li class="order-success__item">
+            <img src="assets/images/track-bim.png" alt="" class="order-success__thumb" width="56" height="40">
+            <span class="order-success__item-name">إتقان Revit Architecture</span>
+            <span class="order-success__item-price">3,999 د.أ</span>
+          </li>
+          <li class="order-success__item">
+            <img src="assets/images/blog-details-hero.png" alt="" class="order-success__thumb" width="56" height="40">
+            <span class="order-success__item-name">إدارة المشاريع الإنشائية</span>
+            <span class="order-success__item-price">4,499 د.أ</span>
+          </li>
+        </ul>
+        <div class="order-success__meta">
+          <div class="order-success__meta-row">
+            <span>طريقة الدفع</span>
+            <span>بطاقة ائتمانية / مدى</span>
+          </div>
+          <div class="order-success__meta-row order-success__meta-row--total">
+            <span>الإجمالي المدفوع</span>
+            <span>8,498 د.أ</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="order-success__card">
+        <h2 class="order-success__card-title">ماذا بعد؟</h2>
+        <ul class="order-success__next">
+          <li class="order-success__next-item">
+            <span class="order-success__next-icon order-success__next-icon--blue">
+              <i class="ri-checkbox-circle-fill"></i>
+            </span>
+            <span>تم تفعيل دوراتك فوراً</span>
+          </li>
+          <li class="order-success__next-item">
+            <span class="order-success__next-icon order-success__next-icon--green">
+              <i class="ri-play-circle-fill"></i>
+            </span>
+            <span>يمكنك البدء في التعلم الآن</span>
+          </li>
+          <li class="order-success__next-item">
+            <span class="order-success__next-icon order-success__next-icon--amber">
+              <i class="ri-award-fill"></i>
+            </span>
+            <span>شهادة إتمام عند الانتهاء</span>
+          </li>
+        </ul>
+      </section>
+
+      <div class="order-success__actions">
+        <a href="my-courses.html" class="order-success__btn order-success__btn--primary">ابدأ التعلم الآن</a>
+        <a href="courses.html" class="order-success__btn order-success__btn--ghost">تصفح دورات أخرى</a>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

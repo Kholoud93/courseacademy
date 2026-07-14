@@ -1,30 +1,196 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>مشاهدة الدرس — أكاديمية الدورات</title>
-  <link rel="stylesheet" href="css/variables.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css">
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>المشغل — coursacademy</title>
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap">
-  <link rel="stylesheet" href="css/global.css">
-  <link rel="stylesheet" href="css/layout.css">
-  <link rel="stylesheet" href="css/components.css">
-</head>
-<body class="layout-learning" data-layout="learning" data-page="learning">
-  <div class="layout-learning">
-    <div class="layout-learning__body">
-      <div class="layout-learning__player">
-        <div class="video-player">▶ <span id="video-title"></span></div>
-        <p class="learning-page__resources">محتوى الدرس والموارد</p>
-      </div>
-      <aside class="layout-learning__curriculum">
-        <h3 class="learning-page__curriculum-title">محتوى الدورة</h3>
-        <div id="curriculum" class="accordion"></div>
-      </aside>
-    </div>
-  </div>
-  <script type="module" src="js/app.js"></script>
-  <script type="module" src="js/pages/learning.js"></script>
-</body>
-</html>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages/dashboard.css">
+  <link rel="stylesheet" href="css/pages/learning.css">
+</head>
+<body class="layout-dashboard" data-layout="dashboard" data-page="learning">
+  <div id="dashboard-shell"></div>
+  <div class="drawer-overlay" data-drawer-overlay="sidebar"></div>
+
+  <div class="layout-dashboard__body">
+    <header class="dash-topbar layout-dashboard__header">
+      <button type="button" class="btn btn--icon dash-topbar__menu" data-drawer-open="sidebar" aria-label="القائمة">
+        <i class="ri-menu-line"></i>
+      </button>
+      <div class="dash-topbar__greeting">
+        <h1 class="dash-topbar__title">مرحباً، محمد 👋</h1>
+        <p class="dash-topbar__subtitle">تابع تقدمك وتعلم شيئاً جديداً اليوم</p>
+      </div>
+      <div class="dash-notif" data-notif>
+        <button type="button" class="dash-topbar__bell" data-notif-toggle aria-label="الإشعارات" aria-expanded="false" aria-controls="dash-notif-panel">
+          <i class="ri-notification-3-line"></i>
+          <span class="dash-topbar__bell-dot"></span>
+        </button>
+        <div class="dash-notif__panel" id="dash-notif-panel" data-notif-panel hidden>
+          <div class="dash-notif__head">
+            <h2 class="dash-notif__title">الإشعارات</h2>
+            <span class="dash-notif__badge">3 جديد</span>
+          </div>
+          <ul class="dash-notif__list">
+            <li class="dash-notif__item">
+              <div class="dash-notif__icon dash-notif__icon--blue">
+                <i class="ri-book-open-line"></i>
+              </div>
+              <div class="dash-notif__body">
+                <h3 class="dash-notif__item-title">درس جديد متاح</h3>
+                <p class="dash-notif__item-text">تم إضافة درس جديد: النمذجة المتقدمة</p>
+                <time class="dash-notif__time"><i class="ri-time-line"></i> منذ ساعتين</time>
+              </div>
+            </li>
+            <li class="dash-notif__item">
+              <div class="dash-notif__icon dash-notif__icon--orange">
+                <i class="ri-medal-line"></i>
+              </div>
+              <div class="dash-notif__body">
+                <h3 class="dash-notif__item-title">تهانينا! حصلت على شهادة</h3>
+                <p class="dash-notif__item-text">لقد أكملت دورة AutoCAD بنجاح</p>
+                <time class="dash-notif__time"><i class="ri-time-line"></i> منذ 3 أيام</time>
+              </div>
+            </li>
+            <li class="dash-notif__item">
+              <div class="dash-notif__icon dash-notif__icon--green">
+                <i class="ri-chat-3-line"></i>
+              </div>
+              <div class="dash-notif__body">
+                <h3 class="dash-notif__item-title">رسالة من المدرب</h3>
+                <p class="dash-notif__item-text">م. أحمد الشمري أرسل لك رسالة</p>
+                <time class="dash-notif__time"><i class="ri-time-line"></i> منذ 5 أيام</time>
+              </div>
+            </li>
+          </ul>
+          <a href="notifications.html" class="dash-notif__footer">عرض جميع الإشعارات</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="layout-dashboard__content player-page">
+      <div class="player-layout">
+        <section class="player-main">
+          <div class="player-video">
+            <button type="button" class="player-video__play" aria-label="تشغيل الفيديو">
+              <i class="ri-play-circle-line"></i>
+            </button>
+            <p class="player-video__label">مشغل الفيديو</p>
+            <p class="player-video__title">مقدمة في Revit</p>
+          </div>
+
+          <article class="player-info">
+            <div class="player-info__head">
+              <div class="player-info__meta">
+                <h2 class="player-info__title">مقدمة في Revit</h2>
+                <div class="player-info__details">
+                  <span class="player-info__detail">
+                    <i class="ri-time-line"></i>
+                    15:30
+                  </span>
+                  <span class="player-info__detail">الدرس 1 من 5</span>
+                </div>
+              </div>
+              <div class="player-info__actions">
+                <button type="button" class="player-btn player-btn--ghost">
+                  السابق
+                  <i class="ri-arrow-right-s-line"></i>
+                </button>
+                <button type="button" class="player-btn player-btn--primary">
+                  التالي
+                  <i class="ri-arrow-left-s-line"></i>
+                </button>
+                <button type="button" class="player-btn player-btn--outline">
+                  <i class="ri-folder-download-line"></i>
+                  تحميل الملفات
+                </button>
+              </div>
+            </div>
+            <div class="player-info__divider"></div>
+            <div class="player-info__desc">
+              <h3 class="player-info__desc-title">وصف الدرس</h3>
+              <p class="player-info__desc-text">
+                في هذا الدرس سنتعرف على أساسيات برنامج Revit وكيف تبدأ رحلتك في النمذجة المعمارية باستخدام أدوات الرسم والواجهات الأساسية للبرنامج.
+              </p>
+            </div>
+          </article>
+        </section>
+
+        <aside class="player-playlist">
+          <h2 class="player-playlist__title">قائمة الدروس</h2>
+          <ul class="player-playlist__list">
+            <li>
+              <button type="button" class="player-lesson is-active">
+                <span class="player-lesson__check">
+                  <i class="ri-checkbox-circle-fill"></i>
+                </span>
+                <span class="player-lesson__body">
+                  <span class="player-lesson__number">الدرس 1</span>
+                  <span class="player-lesson__name">مقدمة في Revit</span>
+                </span>
+                <span class="player-lesson__duration">15:30</span>
+              </button>
+            </li>
+            <li>
+              <button type="button" class="player-lesson">
+                <span class="player-lesson__check">
+                  <i class="ri-checkbox-circle-fill"></i>
+                </span>
+                <span class="player-lesson__body">
+                  <span class="player-lesson__number">الدرس 2</span>
+                  <span class="player-lesson__name">واجهة المستخدم</span>
+                </span>
+                <span class="player-lesson__duration">22:45</span>
+              </button>
+            </li>
+            <li>
+              <button type="button" class="player-lesson">
+                <span class="player-lesson__check">
+                  <i class="ri-checkbox-circle-fill"></i>
+                </span>
+                <span class="player-lesson__body">
+                  <span class="player-lesson__number">الدرس 3</span>
+                  <span class="player-lesson__name">إنشاء المشروع الأول</span>
+                </span>
+                <span class="player-lesson__duration">18:20</span>
+              </button>
+            </li>
+            <li>
+              <button type="button" class="player-lesson">
+                <span class="player-lesson__check">
+                  <i class="ri-checkbox-circle-fill"></i>
+                </span>
+                <span class="player-lesson__body">
+                  <span class="player-lesson__number">الدرس 4</span>
+                  <span class="player-lesson__name">أدوات الرسم الأساسية</span>
+                </span>
+                <span class="player-lesson__duration">25:10</span>
+              </button>
+            </li>
+            <li>
+              <button type="button" class="player-lesson">
+                <span class="player-lesson__check">
+                  <i class="ri-checkbox-circle-fill"></i>
+                </span>
+                <span class="player-lesson__body">
+                  <span class="player-lesson__number">الدرس 5</span>
+                  <span class="player-lesson__name">الحوائط والأبواب</span>
+                </span>
+                <span class="player-lesson__duration">30:00</span>
+              </button>
+            </li>
+          </ul>
+        </aside>
+      </div>
+    </main>
+  </div>
+
+  <script type="module" src="js/app.js"></script>
+  <script type="module" src="js/pages/dashboard.js"></script>
+</body>
+</html>

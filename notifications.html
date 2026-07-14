@@ -1,93 +1,249 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>الإشعارات — أكاديمية الدورات</title>
-  <link rel="stylesheet" href="css/variables.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css">
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>الإشعارات — coursacademy</title>
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap">
-  <link rel="stylesheet" href="css/global.css">
-  <link rel="stylesheet" href="css/layout.css">
-  <link rel="stylesheet" href="css/components.css">
-</head>
-<body class="layout-dashboard" data-layout="dashboard" data-page="notifications">
-  <div id="dashboard-shell">
-<aside class="sidebar layout-dashboard__sidebar" data-drawer="sidebar">
-  <a href="dashboard.html" class="sidebar__logo">أكاديمية الدورات</a>
-
-  <nav class="sidebar__nav">
-    <a href="dashboard.html" class="sidebar__link" data-nav="dashboard">
-      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9.5L12 3l9 6.5V20a1 1 0 01-1 1H5a1 1 0 01-1-1V9.5z"/></svg>
-      <span>لوحة التحكم</span>
-    </a>
-    <a href="my-courses.html" class="sidebar__link" data-nav="my-courses">
-      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>
-      <span>دوراتي</span>
-    </a>
-    <a href="certificates.html" class="sidebar__link" data-nav="certificates">
-      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="6"/><path d="M8.21 13.89L7 22l5-3 5 3-1.21-8.11"/></svg>
-      <span>الشهادات</span>
-    </a>
-    <a href="notifications.html" class="sidebar__link" data-nav="notifications">
-      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/></svg>
-      <span>الإشعارات</span>
-    </a>
-    <a href="messages.html" class="sidebar__link" data-nav="messages">
-      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
-      <span>الرسائل</span>
-    </a>
-    <a href="wallet.html" class="sidebar__link" data-nav="wallet">
-      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="6" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>
-      <span>المحفظة</span>
-    </a>
-    <a href="profile.html" class="sidebar__link" data-nav="profile">
-      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-      <span>الملف الشخصي</span>
-    </a>
-  </nav>
-
-  <div class="sidebar__footer">
-    <a href="login.html" class="sidebar__link">
-      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 21H5a2 2 0 01-2-2V5a2 2 0 012-2h4M16 17l5-5-5-5M21 12H9"/></svg>
-      <span>تسجيل الخروج</span>
-    </a>
-  </div>
-</aside>
-  </div>
-  <div class="layout-dashboard__body">
-    <header class="dashboard-header layout-dashboard__header"><button type="button" class="btn btn--icon" data-drawer-open="sidebar">☰</button></header>
-    <main class="layout-dashboard__content">
-      <h1 class="dashboard-page__title">الإشعارات</h1>
-      <div id="notification-list" class="card">
-<article class="card card--list-item is-unread">
-      
-      <div>
-        <h4 class="card__title">دورة جديدة</h4>
-        <p class="card__meta">تم إضافة دورة React المتقدم</p>
-        <time class="card__time">منذ 5 دقائق</time>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages/dashboard.css">
+  <link rel="stylesheet" href="css/pages/notifications.css">
+</head>
+<body class="layout-dashboard" data-layout="dashboard" data-page="notifications">
+  <div id="dashboard-shell"></div>
+  <div class="drawer-overlay" data-drawer-overlay="sidebar"></div>
+
+  <div class="layout-dashboard__body">
+    <header class="dash-topbar layout-dashboard__header">
+      <button type="button" class="btn btn--icon dash-topbar__menu" data-drawer-open="sidebar" aria-label="القائمة">
+        <i class="ri-menu-line"></i>
+      </button>
+      <div class="dash-topbar__greeting">
+        <h1 class="dash-topbar__title">مرحباً، محمد 👋</h1>
+        <p class="dash-topbar__subtitle">تابع تقدمك وتعلم شيئاً جديداً اليوم</p>
       </div>
-    </article>
-    <article class="card card--list-item is-unread">
-      
-      <div>
-        <h4 class="card__title">شهادة جاهزة</h4>
-        <p class="card__meta">شهادتك جاهزة للتحميل</p>
-        <time class="card__time">منذ ساعة</time>
+      <div class="dash-notif" data-notif>
+        <button type="button" class="dash-topbar__bell" data-notif-toggle aria-label="الإشعارات" aria-expanded="false" aria-controls="dash-notif-panel">
+          <i class="ri-notification-3-line"></i>
+          <span class="dash-topbar__bell-dot"></span>
+        </button>
+        <div class="dash-notif__panel" id="dash-notif-panel" data-notif-panel hidden>
+          <div class="dash-notif__head">
+            <h2 class="dash-notif__title">الإشعارات</h2>
+            <span class="dash-notif__badge">3 جديد</span>
+          </div>
+          <ul class="dash-notif__list">
+            <li class="dash-notif__item">
+              <div class="dash-notif__icon dash-notif__icon--blue">
+                <i class="ri-book-open-line"></i>
+              </div>
+              <div class="dash-notif__body">
+                <h3 class="dash-notif__item-title">درس جديد متاح</h3>
+                <p class="dash-notif__item-text">تم إضافة درس جديد: النمذجة المتقدمة</p>
+                <time class="dash-notif__time"><i class="ri-time-line"></i> منذ ساعتين</time>
+              </div>
+            </li>
+            <li class="dash-notif__item">
+              <div class="dash-notif__icon dash-notif__icon--orange">
+                <i class="ri-medal-line"></i>
+              </div>
+              <div class="dash-notif__body">
+                <h3 class="dash-notif__item-title">تهانينا! حصلت على شهادة</h3>
+                <p class="dash-notif__item-text">لقد أكملت دورة AutoCAD بنجاح</p>
+                <time class="dash-notif__time"><i class="ri-time-line"></i> منذ 3 أيام</time>
+              </div>
+            </li>
+            <li class="dash-notif__item">
+              <div class="dash-notif__icon dash-notif__icon--green">
+                <i class="ri-chat-3-line"></i>
+              </div>
+              <div class="dash-notif__body">
+                <h3 class="dash-notif__item-title">رسالة من المدرب</h3>
+                <p class="dash-notif__item-text">م. أحمد الشمري أرسل لك رسالة</p>
+                <time class="dash-notif__time"><i class="ri-time-line"></i> منذ 5 أيام</time>
+              </div>
+            </li>
+          </ul>
+          <a href="notifications.html" class="dash-notif__footer">عرض جميع الإشعارات</a>
+        </div>
       </div>
-    </article>
-    <article class="card card--list-item">
-      
-      <div>
-        <h4 class="card__title">تذكير</h4>
-        <p class="card__meta">لديك درس غير مكتمل</p>
-        <time class="card__time">أمس</time>
+    </header>
+
+    <main class="layout-dashboard__content notifs-page">
+      <div class="notifs-page__header">
+        <div class="notifs-page__intro">
+          <h2 class="notifs-page__title">الإشعارات</h2>
+          <p class="notifs-page__subtitle" data-unread-label>لديك 2 إشعار غير مقروء</p>
+        </div>
+        <button type="button" class="notifs-page__mark-all" data-mark-all>
+          تحديد الكل كمقروء
+        </button>
       </div>
-    </article>
-</div>
-    </main>
-  </div>
-  <script type="module" src="js/app.js"></script>
-  <script type="module" src="js/pages/dashboard.js"></script>
-</body>
-</html>
+
+      <div class="notifs-list" data-notifs-list>
+        <article class="notif-card is-unread">
+          <div class="notif-card__icon notif-card__icon--blue">
+            <i class="ri-book-open-line"></i>
+          </div>
+          <div class="notif-card__content">
+            <h3 class="notif-card__title">درس جديد متاح</h3>
+            <p class="notif-card__text">تم إضافة درس جديد «النمذجة المتقدمة» في دورة إتقان Revit Architecture</p>
+            <div class="notif-card__meta">
+              <span class="notif-card__course">
+                <i class="ri-book-2-line"></i>
+                إتقان Revit Architecture
+              </span>
+              <time class="notif-card__time">
+                <i class="ri-time-line"></i>
+                منذ ساعتين
+              </time>
+            </div>
+          </div>
+          <div class="notif-card__actions">
+            <button type="button" class="notif-card__mark" data-mark-read>تحديد كمقروء</button>
+            <button type="button" class="notif-card__delete" data-delete aria-label="حذف">
+              <i class="ri-delete-bin-line"></i>
+            </button>
+            <span class="notif-card__dot" aria-hidden="true"></span>
+          </div>
+        </article>
+
+        <article class="notif-card is-unread">
+          <div class="notif-card__icon notif-card__icon--orange">
+            <i class="ri-medal-line"></i>
+          </div>
+          <div class="notif-card__content">
+            <h3 class="notif-card__title">تهانينا! حصلت على شهادة جديدة</h3>
+            <p class="notif-card__text">لقد أكملت دورة AutoCAD للمهندسين بنجاح وحصلت على شهادتك</p>
+            <div class="notif-card__meta">
+              <span class="notif-card__course">
+                <i class="ri-book-2-line"></i>
+                AutoCAD للمهندسين
+              </span>
+              <time class="notif-card__time">
+                <i class="ri-time-line"></i>
+                منذ 3 أيام
+              </time>
+            </div>
+          </div>
+          <div class="notif-card__actions">
+            <button type="button" class="notif-card__mark" data-mark-read>تحديد كمقروء</button>
+            <button type="button" class="notif-card__delete" data-delete aria-label="حذف">
+              <i class="ri-delete-bin-line"></i>
+            </button>
+            <span class="notif-card__dot" aria-hidden="true"></span>
+          </div>
+        </article>
+
+        <article class="notif-card">
+          <div class="notif-card__icon notif-card__icon--green">
+            <i class="ri-chat-3-line"></i>
+          </div>
+          <div class="notif-card__content">
+            <h3 class="notif-card__title">رسالة من المدرب</h3>
+            <p class="notif-card__text">م. أحمد الشمري أرسل لك رسالة بخصوص مشروعك النهائي</p>
+            <div class="notif-card__meta">
+              <span class="notif-card__course">
+                <i class="ri-book-2-line"></i>
+                إتقان Revit Architecture
+              </span>
+              <time class="notif-card__time">
+                <i class="ri-time-line"></i>
+                منذ 5 أيام
+              </time>
+            </div>
+          </div>
+          <div class="notif-card__actions">
+            <button type="button" class="notif-card__delete" data-delete aria-label="حذف">
+              <i class="ri-delete-bin-line"></i>
+            </button>
+          </div>
+        </article>
+
+        <article class="notif-card">
+          <div class="notif-card__icon notif-card__icon--purple">
+            <i class="ri-notification-3-line"></i>
+          </div>
+          <div class="notif-card__content">
+            <h3 class="notif-card__title">تحديث الدورة</h3>
+            <p class="notif-card__text">تم تحديث محتوى دورة التصميم الداخلي الحديث بمحتوى جديد</p>
+            <div class="notif-card__meta">
+              <span class="notif-card__course">
+                <i class="ri-book-2-line"></i>
+                التصميم الداخلي الحديث
+              </span>
+              <time class="notif-card__time">
+                <i class="ri-time-line"></i>
+                منذ أسبوع
+              </time>
+            </div>
+          </div>
+          <div class="notif-card__actions">
+            <button type="button" class="notif-card__delete" data-delete aria-label="حذف">
+              <i class="ri-delete-bin-line"></i>
+            </button>
+          </div>
+        </article>
+
+        <article class="notif-card">
+          <div class="notif-card__icon notif-card__icon--amber">
+            <i class="ri-time-line"></i>
+          </div>
+          <div class="notif-card__content">
+            <h3 class="notif-card__title">تذكير بالدرس</h3>
+            <p class="notif-card__text">لم تكمل درس «واجهة المستخدم» منذ أسبوع. هل تود المتابعة؟</p>
+            <div class="notif-card__meta">
+              <span class="notif-card__course">
+                <i class="ri-book-2-line"></i>
+                إتقان Revit Architecture
+              </span>
+              <time class="notif-card__time">
+                <i class="ri-time-line"></i>
+                منذ أسبوع
+              </time>
+            </div>
+          </div>
+          <div class="notif-card__actions">
+            <button type="button" class="notif-card__delete" data-delete aria-label="حذف">
+              <i class="ri-delete-bin-line"></i>
+            </button>
+          </div>
+        </article>
+
+        <article class="notif-card">
+          <div class="notif-card__icon notif-card__icon--indigo">
+            <i class="ri-bank-card-line"></i>
+          </div>
+          <div class="notif-card__content">
+            <h3 class="notif-card__title">تم تأكيد الدفع</h3>
+            <p class="notif-card__text">تم تأكيد دفعك لدورة إدارة المشاريع الإنشائية بنجاح</p>
+            <div class="notif-card__meta">
+              <span class="notif-card__course">
+                <i class="ri-book-2-line"></i>
+                إدارة المشاريع الإنشائية
+              </span>
+              <time class="notif-card__time">
+                <i class="ri-time-line"></i>
+                منذ أسبوعين
+              </time>
+            </div>
+          </div>
+          <div class="notif-card__actions">
+            <button type="button" class="notif-card__delete" data-delete aria-label="حذف">
+              <i class="ri-delete-bin-line"></i>
+            </button>
+          </div>
+        </article>
+      </div>
+    </main>
+  </div>
+
+  <script type="module" src="js/app.js"></script>
+  <script type="module" src="js/pages/dashboard.js"></script>
+  <script type="module" src="js/pages/notifications.js"></script>
+</body>
+</html>

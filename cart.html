@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>شهاداتي — coursacademy</title>
+  <title>سلة التسوق — coursacademy</title>
   <link rel="stylesheet" href="css/variables.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap">
@@ -11,9 +11,9 @@
   <link rel="stylesheet" href="css/layout.css">
   <link rel="stylesheet" href="css/components.css">
   <link rel="stylesheet" href="css/pages/dashboard.css">
-  <link rel="stylesheet" href="css/pages/certificates.css">
+  <link rel="stylesheet" href="css/pages/cart.css">
 </head>
-<body class="layout-dashboard" data-layout="dashboard" data-page="certificates">
+<body class="layout-dashboard" data-layout="dashboard" data-page="cart">
   <div id="dashboard-shell"></div>
   <div class="drawer-overlay" data-drawer-overlay="sidebar"></div>
 
@@ -73,84 +73,75 @@
       </div>
     </header>
 
-    <main class="layout-dashboard__content certs-page">
-      <h2 class="certs-page__title">شهاداتي</h2>
+    <main class="layout-dashboard__content cart-page">
+      <h2 class="cart-page__title">سلة التسوق</h2>
 
-      <div class="certs-grid">
-        <article class="cert-card">
-          <div class="cert-card__banner">
-            <i class="ri-medal-line"></i>
-          </div>
-          <div class="cert-card__body">
-            <h3 class="cert-card__title">AutoCAD للمهندسين</h3>
-            <ul class="cert-card__meta">
-              <li class="cert-card__meta-item">
-                <i class="ri-calendar-line"></i>
-                <span>تاريخ الإصدار: ١٥ مارس ٢٠٢٤</span>
-              </li>
-              <li class="cert-card__meta-item">
-                <i class="ri-user-line"></i>
-                <span>المدرب: م. سارة القحطاني</span>
-              </li>
-              <li class="cert-card__meta-item">
-                <i class="ri-star-fill cert-card__star"></i>
-                <span>التقدير: ممتاز</span>
-              </li>
-            </ul>
-            <div class="cert-card__actions">
-              <a href="certificate-details.html?id=1" class="cert-card__btn cert-card__btn--primary">
-                <i class="ri-eye-line"></i>
-                عرض
-              </a>
-              <button type="button" class="cert-card__btn cert-card__btn--icon" aria-label="تحميل">
-                <i class="ri-download-2-line"></i>
-              </button>
-              <button type="button" class="cert-card__btn cert-card__btn--icon" aria-label="مشاركة">
-                <i class="ri-share-forward-line"></i>
-              </button>
+      <div class="cart-layout">
+        <section class="cart-items" data-cart-items>
+          <article class="cart-item" data-price="4499" data-old="6999">
+            <a href="course-details.html" class="cart-item__thumb">
+              <img src="assets/images/blog-details-hero.png" alt="إدارة المشاريع الإنشائية">
+            </a>
+            <div class="cart-item__info">
+              <h3 class="cart-item__title">
+                <a href="course-details.html">إدارة المشاريع الإنشائية</a>
+              </h3>
+              <p class="cart-item__instructor">م. خالد السعيد</p>
+              <div class="cart-item__price">
+                <span class="cart-item__price-current">4,499 د.أ</span>
+                <span class="cart-item__price-old">6,999 د.أ</span>
+              </div>
+            </div>
+            <button type="button" class="cart-item__remove" data-cart-remove aria-label="حذف">
+              <i class="ri-delete-bin-line"></i>
+            </button>
+          </article>
+
+          <article class="cart-item" data-price="3499" data-old="5499">
+            <a href="course-details.html" class="cart-item__thumb">
+              <img src="assets/images/blog-featured.png" alt="التصميم ثلاثي الأبعاد">
+            </a>
+            <div class="cart-item__info">
+              <h3 class="cart-item__title">
+                <a href="course-details.html">التصميم ثلاثي الأبعاد</a>
+              </h3>
+              <p class="cart-item__instructor">م. أحمد الشمري</p>
+              <div class="cart-item__price">
+                <span class="cart-item__price-current">3,499 د.أ</span>
+                <span class="cart-item__price-old">5,499 د.أ</span>
+              </div>
+            </div>
+            <button type="button" class="cart-item__remove" data-cart-remove aria-label="حذف">
+              <i class="ri-delete-bin-line"></i>
+            </button>
+          </article>
+        </section>
+
+        <aside class="cart-summary">
+          <h3 class="cart-summary__title">ملخص الطلب</h3>
+          <div class="cart-summary__rows">
+            <div class="cart-summary__row">
+              <span>السعر الأصلي</span>
+              <span data-cart-original>12,498 د.أ</span>
+            </div>
+            <div class="cart-summary__row cart-summary__row--discount">
+              <span>الخصم</span>
+              <span data-cart-discount>-4,500 د.أ</span>
+            </div>
+            <div class="cart-summary__row cart-summary__row--total">
+              <span>المجموع</span>
+              <span data-cart-total>7,998 د.أ</span>
             </div>
           </div>
-        </article>
-
-        <article class="cert-card">
-          <div class="cert-card__banner">
-            <i class="ri-medal-line"></i>
-          </div>
-          <div class="cert-card__body">
-            <h3 class="cert-card__title">أساسيات BIM</h3>
-            <ul class="cert-card__meta">
-              <li class="cert-card__meta-item">
-                <i class="ri-calendar-line"></i>
-                <span>تاريخ الإصدار: ٢٠ يناير ٢٠٢٤</span>
-              </li>
-              <li class="cert-card__meta-item">
-                <i class="ri-user-line"></i>
-                <span>المدرب: م. أحمد الشمري</span>
-              </li>
-              <li class="cert-card__meta-item">
-                <i class="ri-star-fill cert-card__star"></i>
-                <span>التقدير: جيد جداً</span>
-              </li>
-            </ul>
-            <div class="cert-card__actions">
-              <a href="certificate-details.html?id=2" class="cert-card__btn cert-card__btn--primary">
-                <i class="ri-eye-line"></i>
-                عرض
-              </a>
-              <button type="button" class="cert-card__btn cert-card__btn--icon" aria-label="تحميل">
-                <i class="ri-download-2-line"></i>
-              </button>
-              <button type="button" class="cert-card__btn cert-card__btn--icon" aria-label="مشاركة">
-                <i class="ri-share-forward-line"></i>
-              </button>
-            </div>
-          </div>
-        </article>
+          <a href="checkout.html" class="cart-summary__btn cart-summary__btn--primary">متابعة الاشتراك</a>
+          <a href="courses.html" class="cart-summary__btn cart-summary__btn--outline">تصفح المزيد</a>
+        </aside>
       </div>
     </main>
   </div>
 
   <script type="module" src="js/app.js"></script>
   <script type="module" src="js/pages/dashboard.js"></script>
+  <script type="module" src="js/pages/cart.js"></script>
 </body>
 </html>
