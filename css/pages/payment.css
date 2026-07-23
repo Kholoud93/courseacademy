@@ -5,7 +5,7 @@
 
 .payment-methods__title {
   margin: 0 0 1.25rem;
-  font-size: 1.375rem;
+  font-size: var(--dash-title-size);
   font-weight: var(--fw-bold);
   color: #1a1a2e;
   line-height: 1.3;
@@ -158,14 +158,14 @@
   align-items: center;
   gap: 0.5rem;
   margin: 0 0 1.25rem;
-  font-size: 1.0625rem;
+  font-size: var(--dash-section-title-size);
   font-weight: var(--fw-bold);
   color: #1a1a2e;
 }
 
 .payment-card__title i {
   color: #0050d8;
-  font-size: 1.25rem;
+  font-size: var(--dash-icon-size);
 }
 
 .payment-card__preview {
@@ -370,7 +370,7 @@
 
 .payment-summary__title {
   margin: 0 0 1.25rem;
-  font-size: 1.125rem;
+  font-size: var(--dash-section-title-size);
   font-weight: var(--fw-bold);
   color: #1a1a2e;
   text-align: center;
@@ -393,7 +393,7 @@
 }
 
 .payment-summary__amount-value {
-  font-size: 1.75rem;
+  font-size: var(--dash-stat-value-size);
   font-weight: var(--fw-bold);
   color: #0050d8;
   line-height: 1.2;
@@ -473,13 +473,13 @@
   }
 
   .payment-methods__title {
-    font-size: 1.5rem;
+    font-size: var(--dash-title-size);
   }
 }
 
 @media (max-width: 786px) {
   .payment-methods__title {
-    font-size: 1.125rem;
+    font-size: var(--dash-title-size-sm);
     margin-bottom: 1rem;
   }
 
@@ -515,7 +515,7 @@
   }
 
   .payment-summary__amount-value {
-    font-size: 1.5rem;
+    font-size: var(--dash-stat-value-size);
   }
 }
 
@@ -561,7 +561,7 @@
   }
 
   .payment-summary__amount-value {
-    font-size: 1.375rem;
+    font-size: 1.25rem;
   }
 
   .payment-summary__ssl {

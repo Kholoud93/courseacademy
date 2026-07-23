@@ -112,12 +112,12 @@
   border-radius: var(--radius-full);
   background: #eef3fb;
   color: #0050d8;
-  font-size: 1.5rem;
+  font-size: var(--dash-icon-size);
 }
 
 .cert-detail__verify-title {
   margin: 0;
-  font-size: 1.125rem;
+  font-size: var(--dash-section-title-size);
   font-weight: var(--fw-bold);
   color: #1a1a2e;
   line-height: 1.4;

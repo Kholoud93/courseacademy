@@ -6,7 +6,7 @@
 
 .settings-page__title {
   margin: 0 0 1.5rem;
-  font-size: 1.5rem;
+  font-size: var(--dash-title-size);
   font-weight: var(--fw-bold);
   color: #1a1a2e;
   line-height: 1.3;
@@ -31,7 +31,7 @@
   justify-content: flex-start;
   gap: 0.5rem;
   margin: 0 0 1.375rem;
-  font-size: 1.125rem;
+  font-size: var(--dash-section-title-size);
   font-weight: var(--fw-bold);
   color: #0f172a;
   line-height: 1.3;
@@ -39,7 +39,7 @@
 
 .settings-card__title i {
   color: #0050d8;
-  font-size: 1.375rem;
+  font-size: var(--dash-icon-size);
   line-height: 1;
   flex-shrink: 0;
 }
@@ -303,7 +303,7 @@ a.settings-security__item:hover .settings-security__label {
 
 .settings-security__item > i {
   color: #94a3b8;
-  font-size: 1.375rem;
+  font-size: var(--dash-icon-size);
   flex-shrink: 0;
   line-height: 1;
 }
@@ -330,7 +330,7 @@ a.settings-security__item:hover .settings-security__label {
 
 @media (max-width: 786px) {
   .settings-page__title {
-    font-size: 1.25rem;
+    font-size: var(--dash-title-size-sm);
     margin-bottom: 1.25rem;
   }
 
@@ -341,7 +341,7 @@ a.settings-security__item:hover .settings-security__label {
   }
 
   .settings-card__title {
-    font-size: 1rem;
+    font-size: var(--dash-section-title-size);
     margin-bottom: 1.25rem;
   }
 

@@ -81,7 +81,7 @@
 
 .player-info__title {
   margin: 0 0 0.5rem;
-  font-size: 1.25rem;
+  font-size: var(--dash-title-size);
   font-weight: var(--fw-bold);
   color: #1a1a2e;
   line-height: 1.4;
@@ -195,7 +195,7 @@
 
 .player-playlist__title {
   margin: 0 0 1rem;
-  font-size: 1.125rem;
+  font-size: var(--dash-section-title-size);
   font-weight: var(--fw-bold);
   color: #1a1a2e;
   line-height: 1.3;
@@ -393,7 +393,7 @@
   }
 
   .player-info__title {
-    font-size: 1.125rem;
+    font-size: var(--dash-title-size-sm);
   }
 
   .player-btn {
