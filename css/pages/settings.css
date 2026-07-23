@@ -352,13 +352,13 @@ a.settings-security__item:hover .settings-security__label {
   flex-shrink: 0;
 }
 
-@media (min-width: 700px) {
+@media (min-width: 768px) {
   .settings-form__row {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
-@media (max-width: 786px) {
+@media (max-width: 767.98px) {
   .settings-page__title {
   font-size: var(--type-page-title-size);
   font-family: var(--type-page-title-font);
@@ -382,7 +382,7 @@ a.settings-security__item:hover .settings-security__label {
   }
 }
 
-@media (max-width: 430px) {
+@media (max-width: 575.98px) {
   .settings-avatar {
     gap: 0.75rem;
   }

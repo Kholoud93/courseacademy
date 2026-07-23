@@ -225,18 +225,27 @@
   margin-inline: auto;
 }
 
-@media (max-width: 1199px) {
+@media (max-width: 1199.98px) {
   .paths-page {
     --track-card-height: auto;
   }
 
   .paths-page__grid {
+    display: grid !important;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 1rem;
+    overflow: visible;
+  }
+
+  .paths-page__grid > .home-track-card {
+    width: 100%;
+    max-width: none;
+    min-width: 0;
+    height: auto;
   }
 }
 
-@media (min-width: 787px) and (max-width: 1011px) {
+@media (min-width: 768px) and (max-width: 991.98px) {
   .paths-page {
     --track-card-image-height: 138px;
   }
@@ -250,7 +259,7 @@
   }
 }
 
-@media (max-width: 786px) {
+@media (max-width: 767.98px) {
   .paths-hero {
     padding-block: 2.75rem 3.25rem;
   }
@@ -301,29 +310,22 @@
   }
 
   .paths-page__grid {
-    display: flex;
-    flex-wrap: nowrap;
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 1rem;
-    overflow-x: auto;
-    overflow-y: hidden;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-    margin-inline: calc(-1 * var(--container-padding));
-    padding-inline: var(--container-padding);
-    padding-bottom: 0.25rem;
-  }
-
-  .paths-page__grid::-webkit-scrollbar {
-    display: none;
+    width: 100%;
+    max-width: 100%;
+    margin-inline: 0;
+    padding-inline: 0;
+    overflow: visible;
   }
 
   .paths-page__grid > .home-track-card {
-    flex: 0 0 min(78vw, 17.5rem);
-    width: min(78vw, 17.5rem);
+    width: 100%;
     max-width: none;
+    min-width: 0;
+    height: auto;
     min-height: var(--track-card-height);
-    scroll-snap-align: start;
   }
 
   .paths-page__head {
@@ -357,7 +359,7 @@
   }
 }
 
-@media (max-width: 430px) {
+@media (max-width: 575.98px) {
   .paths-hero {
     padding-block: 2.25rem 2.75rem;
   }
@@ -380,7 +382,6 @@
   }
 
   .paths-hero__title {
-    
     margin-bottom: 0.75rem;
   }
 
@@ -396,9 +397,15 @@
     padding-block: 2rem 1.75rem;
   }
 
+  .paths-page__grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
   .paths-page__grid > .home-track-card {
-    flex: 0 0 min(82vw, 16.5rem);
-    width: min(82vw, 16.5rem);
+    width: 100%;
+    max-width: none;
+    min-width: 0;
   }
 
   .paths-page__grid .home-track-card__stats {
@@ -432,5 +439,33 @@
 
   .paths-why-card__desc {
     max-width: none;
+  }
+}
+
+@media (max-width: 1199.98px) {
+  .paths-hero > .container,
+  .paths-page > .container,
+  .paths-why > .container {
+    padding-inline: 1.5rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .paths-hero > .container,
+  .paths-page > .container,
+  .paths-why > .container {
+    padding-inline: 1.25rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .paths-hero > .container,
+  .paths-page > .container,
+  .paths-why > .container {
+    padding-inline: 1rem;
+  }
+
+  .paths-page__grid {
+    gap: 0.875rem;
   }
 }

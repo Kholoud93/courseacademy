@@ -54,7 +54,54 @@ document.addEventListener("DOMContentLoaded", () => {
   setActivePill("level", activeLevel);
   applyFilters();
 
+  const sortRoot = document.getElementById("course-sort");
+  const sortTrigger = sortRoot?.querySelector(".courses-page__sort-trigger");
+  const sortMenu = sortRoot?.querySelector(".courses-page__sort-menu");
+  const sortValue = sortRoot?.querySelector(".courses-page__sort-value");
+
+  function closeSortMenu() {
+    if (!sortRoot || !sortTrigger || !sortMenu) return;
+    sortRoot.classList.remove("is-open");
+    sortTrigger.setAttribute("aria-expanded", "false");
+    sortMenu.hidden = true;
+  }
+
+  function openSortMenu() {
+    if (!sortRoot || !sortTrigger || !sortMenu) return;
+    sortRoot.classList.add("is-open");
+    sortTrigger.setAttribute("aria-expanded", "true");
+    sortMenu.hidden = false;
+  }
+
+  function setSortValue(value, label) {
+    if (!sortRoot || !sortValue) return;
+    sortBy = value;
+    sortRoot.dataset.value = value;
+    sortValue.textContent = label;
+    sortRoot.querySelectorAll(".courses-page__sort-option").forEach((option) => {
+      const active = option.dataset.value === value;
+      option.classList.toggle("is-active", active);
+      option.setAttribute("aria-selected", active ? "true" : "false");
+    });
+    applyFilters();
+  }
+
+  sortTrigger?.addEventListener("click", (e) => {
+    e.stopPropagation();
+    if (sortRoot.classList.contains("is-open")) closeSortMenu();
+    else openSortMenu();
+  });
+
+  sortMenu?.addEventListener("click", (e) => {
+    const option = e.target.closest(".courses-page__sort-option");
+    if (!option) return;
+    setSortValue(option.dataset.value, option.textContent.trim());
+    closeSortMenu();
+  });
+
   document.addEventListener("click", (e) => {
+    if (sortRoot && !sortRoot.contains(e.target)) closeSortMenu();
+
     const categoryBtn = e.target.closest("#category-filters [data-category]");
     if (categoryBtn) {
       activeCategory = categoryBtn.dataset.category;
@@ -71,9 +118,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  document.getElementById("course-sort")?.addEventListener("change", (e) => {
-    sortBy = e.target.value;
-    applyFilters();
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") closeSortMenu();
   });
 
   document.querySelector(".courses-hero__search")?.addEventListener("submit", (e) => {

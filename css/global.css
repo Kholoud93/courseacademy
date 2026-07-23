@@ -48,6 +48,7 @@ textarea,
 select {
   font: inherit;
   color: inherit;
+  max-width: 100%;
 }
 
 button {

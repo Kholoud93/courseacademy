@@ -495,11 +495,19 @@
   margin: 0;
 }
 
-@media (max-width: 1199px) {
+@media (max-width: 1199.98px) {
+  .about-hero > .container,
+  .about-mv > .container,
+  .about-values > .container,
+  .about-team > .container {
+    padding-inline: 1.5rem;
+  }
+
   .about-stats {
     min-height: auto;
     padding-top: 3rem;
     padding-bottom: 3rem;
+    padding-inline: 1.5rem;
   }
 
   .about-stats__grid {
@@ -514,16 +522,25 @@
 
   .about-mv__card {
     min-height: 280px;
+    max-width: none;
     padding: 1.5rem 1.75rem;
   }
 
   .about-values__grid,
   .about-team__grid {
+    display: grid !important;
     grid-template-columns: repeat(2, minmax(0, 1fr));
+    overflow: visible;
+  }
+
+  .about-team__card {
+    width: 100%;
+    max-width: none;
+    min-width: 0;
   }
 }
 
-@media (max-width: 1011px) {
+@media (max-width: 991.98px) {
   .about-hero {
     padding-block: 3.25rem 3.75rem;
   }
@@ -543,13 +560,17 @@
   }
 }
 
-@media (max-width: 786px) {
+@media (max-width: 767.98px) {
   .about-hero {
     padding-block: 2.75rem 3rem;
   }
 
+  .about-hero > .container {
+    padding-inline: 1.25rem;
+  }
+
   .about-hero__inner {
-    padding-inline: 0.75rem;
+    padding-inline: 0;
   }
 
   .about-hero__desc {
@@ -669,39 +690,29 @@
   }
 
   .about-team > .container {
-    padding-inline: 0;
+    padding-inline: 1.25rem;
     overflow: visible;
   }
 
   .about-team .about-section-head {
-    padding-inline: 1rem;
+    padding-inline: 0;
   }
 
   .about-team__grid {
-    display: flex;
-    flex-wrap: nowrap;
-    gap: 12px;
-    max-width: none;
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
     width: 100%;
-    overflow-x: auto;
-    overflow-y: hidden;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
+    max-width: 100%;
     margin-inline: 0;
-    padding-inline: 1rem;
-    padding-bottom: 0.5rem;
-  }
-
-  .about-team__grid::-webkit-scrollbar {
-    display: none;
+    padding-inline: 0;
+    overflow: visible;
   }
 
   .about-team__card {
-    flex: 0 0 min(72vw, 16.5rem);
-    width: min(72vw, 16.5rem);
+    width: 100%;
     max-width: none;
-    scroll-snap-align: start;
+    min-width: 0;
   }
 
   .about-team__body {
@@ -718,7 +729,7 @@
   }
 }
 
-@media (max-width: 430px) {
+@media (max-width: 575.98px) {
   .about-stats__grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 0.5rem;
@@ -788,11 +799,12 @@
   }
 
   .about-values > .container {
-    padding-inline: 0.75rem;
+    padding-inline: 1rem;
   }
 
   .about-values__grid {
-    gap: 8px;
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
   }
 
   .about-values__card {
@@ -828,14 +840,20 @@
     line-height: 1.6;
   }
 
+  .about-team > .container {
+    padding-inline: 1rem;
+  }
+
   .about-team__grid {
-    padding-inline: 0.75rem;
-    gap: 10px;
+    grid-template-columns: 1fr;
+    gap: 0.875rem;
+    padding-inline: 0;
   }
 
   .about-team__card {
-    flex-basis: min(78vw, 15rem);
-    width: min(78vw, 15rem);
+    width: 100%;
+    max-width: none;
+    min-width: 0;
   }
 
   .about-team__name {
@@ -860,5 +878,18 @@
     font-weight: var(--type-small-weight);
     line-height: var(--type-small-lh);
     letter-spacing: var(--type-small-ls);
+  }
+}
+
+@media (max-width: 380px) {
+  .about-hero > .container,
+  .about-mv > .container,
+  .about-values > .container,
+  .about-team > .container {
+    padding-inline: 1rem;
+  }
+
+  .about-stats {
+    padding-inline: 1rem;
   }
 }
