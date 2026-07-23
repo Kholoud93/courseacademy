@@ -1,5 +1,4 @@
-
-export function initForms() {
+function initForms() {
   document.addEventListener("input", (e) => {
     if (!e.target.classList.contains("input--otp") && !e.target.classList.contains("auth-otp__input")) return;
     if (e.target.value.length === 1) {

@@ -1,5 +1,3 @@
-import { getQueryParam } from "../common.js";
-
 let activeCategory = "all";
 let activeLevel = "all";
 let sortBy = "newest";

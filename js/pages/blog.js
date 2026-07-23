@@ -1,6 +1,3 @@
-import { getQueryParam, formatDate } from "../common.js";
-import { getBlogBySlug, blogPosts } from "../data/blogs.js";
-
 const page = document.body.dataset.page;
 
 let activeCategory = getQueryParam("category") || "all";
@@ -15,13 +12,63 @@ function updateBlogUrl() {
   window.history.replaceState({}, "", url);
 }
 
+function getGridPosts() {
+  let posts = blogPosts.filter((post) => !post.featured);
+
+  if (activeCategory !== "all") {
+    posts = posts.filter((post) => post.categorySlug === activeCategory);
+  }
+
+  const query = searchQuery.trim().toLowerCase();
+  if (query) {
+    posts = posts.filter((post) => {
+      const haystack = `${post.title} ${post.excerpt} ${post.category} ${(post.tags || []).join(" ")}`.toLowerCase();
+      return haystack.includes(query);
+    });
+  }
+
+  return posts;
+}
+
+function renderBlogGridCard(post) {
+  const tags = (post.tags || [])
+    .map((tag) => `<span class="blog-card__tag">${tag}</span>`)
+    .join("");
+
+  return `
+    <a href="blog-details.html?slug=${post.slug}" class="blog-card hover-lift" data-category="${post.categorySlug}">
+      <div class="home-track-card__image-wrap blog-card__media">
+        <img class="home-track-card__image" src="${post.image}" alt="${post.title}">
+        <span class="blog-card__category">${post.category}</span>
+        <span class="blog-card__views"><i class="ri-eye-line"></i> ${post.views.toLocaleString("ar-SA")}</span>
+      </div>
+      <div class="blog-card__body">
+        <h3 class="blog-card__title">${post.title}</h3>
+        <p class="blog-card__excerpt">${post.excerpt}</p>
+        ${tags ? `<div class="blog-card__tags">${tags}</div>` : ""}
+      </div>
+      <div class="blog-card__foot">
+        <div class="blog-card__author">
+          <img src="${post.authorAvatar}" alt="${post.author}">
+          <div class="blog-card__author-text">
+            <strong>${post.author}</strong>
+            <time>${formatDate(post.publishedAt)}</time>
+          </div>
+        </div>
+        <span class="blog-card__time"><i class="ri-time-line"></i> ${post.readTime.toLocaleString("ar-SA")} دقائق</span>
+      </div>
+    </a>`;
+}
+
 function renderBlogPage() {
   const featuredEl = document.getElementById("blog-featured");
   const wrap = featuredEl?.closest(".blog-featured-wrap");
   const searchInput = document.querySelector(".blog-hero__search-input");
-  const showFeatured = !searchQuery.trim() && activeCategory === "all";
+  const grid = document.getElementById("blog-grid");
+  const countEl = document.getElementById("blog-count");
+  const posts = getGridPosts();
 
-  if (wrap) wrap.hidden = !showFeatured;
+  if (wrap) wrap.hidden = Boolean(searchQuery.trim());
 
   if (searchInput && searchInput.value !== searchQuery) {
     searchInput.value = searchQuery;
@@ -30,6 +77,22 @@ function renderBlogPage() {
   document.querySelectorAll("#blog-filters [data-category]").forEach((btn) => {
     btn.classList.toggle("is-active", btn.dataset.category === activeCategory);
   });
+
+  if (grid) {
+    grid.innerHTML = posts.length
+      ? posts.map(renderBlogGridCard).join("")
+      : `<p class="blog-page__empty">لا توجد مقالات في هذا التصنيف</p>`;
+  }
+
+  if (countEl) {
+    const count = posts.length.toLocaleString("ar-SA");
+    countEl.textContent =
+      posts.length === 0
+        ? "لا توجد مقالات"
+        : posts.length === 1
+          ? "عرض مقال واحد"
+          : `عرض ${count} مقالات`;
+  }
 
   updateBlogUrl();
 }

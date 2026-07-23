@@ -1,12 +1,9 @@
-import { formatPrice, formatDate, formatDuration } from "./common.js";
-
-
 const COURSE_DETAILS_PAGE = "course-details.html?id=202";
 
 const PATH_DETAILS_PAGE = "path-details.html?id=101";
 
 
-export function homeTrackCard(track) {
+function homeTrackCard(track) {
   const currency = track.currency || "د.أ";
   const formatTrackPrice = (amount) => `${Number(amount).toLocaleString("ar-SA")} ${currency}`;
   const oldPrice = track.oldPrice
@@ -39,7 +36,7 @@ export function homeTrackCard(track) {
     </article>`;
 }
 
-export function homeFeaturedTrackCard(course) {
+function homeFeaturedTrackCard(course) {
   const discountBadge = course.discount
     ? `<span class="home-track-card__badge home-track-card__badge--discount">-${course.discount}%</span>`
     : "";
@@ -84,7 +81,7 @@ export function homeFeaturedTrackCard(course) {
     </article>`;
 }
 
-export function homeCourseCard(course) {
+function homeCourseCard(course) {
   const discountBadge = course.discount
     ? `<span class="home-course-card__badge home-course-card__badge--discount">-${course.discount}%</span>`
     : "";
@@ -119,7 +116,7 @@ export function homeCourseCard(course) {
     </article>`;
 }
 
-export function pathsWhyCard(item) {
+function pathsWhyCard(item) {
   return `
     <article class="paths-why-card">
       <span class="paths-why-card__icon" aria-hidden="true"><i class="${item.icon}"></i></span>
@@ -128,7 +125,7 @@ export function pathsWhyCard(item) {
     </article>`;
 }
 
-export function homeWhyCard(item) {
+function homeWhyCard(item) {
   return `
     <article class="home-track-card home-track-card--why hover-lift">
       <div class="home-track-card__image-wrap home-track-card__icon-wrap">
@@ -141,7 +138,7 @@ export function homeWhyCard(item) {
     </article>`;
 }
 
-export function homeFeatureCard(item) {
+function homeFeatureCard(item) {
   return `
     <article class="home-feature-card">
       <div class="home-feature-card__icon">${item.icon}</div>
@@ -150,7 +147,7 @@ export function homeFeatureCard(item) {
     </article>`;
 }
 
-export function homeTestimonialSlide(item) {
+function homeTestimonialSlide(item) {
   const stars = Array.from({ length: item.rating || 5 }, () =>
     `<i class="ri-star-fill"></i>`
   ).join("");
@@ -176,7 +173,7 @@ export function homeTestimonialSlide(item) {
     </div>`;
 }
 
-export function pathCard(path) {
+function pathCard(path) {
   const badge = path.isNew ? `<span class="badge badge--bestseller path-card__badge">جديد</span>` : "";
   return `
     <article class="path-card hover-lift">
@@ -196,7 +193,7 @@ export function pathCard(path) {
     </article>`;
 }
 
-export function featuredCourseCard(course) {
+function featuredCourseCard(course) {
   const discount = course.discount ? `<span class="featured-card__discount">-${course.discount}%</span>` : "";
   const oldPrice = course.oldPrice ? `<span class="featured-card__old-price">${formatPrice(course.oldPrice)}</span>` : "";
   return `
@@ -225,7 +222,7 @@ export function featuredCourseCard(course) {
     </article>`;
 }
 
-export function courseCard(course) {
+function courseCard(course) {
   const price = course.isFree ? "مجاني" : formatPrice(course.price);
   return `
     <a href="${COURSE_DETAILS_PAGE}">
@@ -255,7 +252,7 @@ export function courseCard(course) {
     </a>`;
 }
 
-export function courseProgressCard(course) {
+function courseProgressCard(course) {
   return `
     <a href="learning.html?courseId=${course.id}">
       <article class="card card--course-progress hover-lift">
@@ -271,7 +268,7 @@ export function courseProgressCard(course) {
     </a>`;
 }
 
-export function categoryCard(cat) {
+function categoryCard(cat) {
   return `
     <a href="courses.html?category=${cat.slug}" class="card card--category hover-lift">
       <div class="card__icon">${cat.icon}</div>
@@ -280,7 +277,7 @@ export function categoryCard(cat) {
     </a>`;
 }
 
-export function blogCard(post) {
+function blogCard(post) {
   const tags = (post.tags || [])
     .map((tag) => `<span class="blog-card__tag">${tag}</span>`)
     .join("");
@@ -310,7 +307,7 @@ export function blogCard(post) {
     </a>`;
 }
 
-export function blogFeaturedCard(post) {
+function blogFeaturedCard(post) {
   return `
     <a href="blog-details.html?slug=${post.slug}" class="blog-featured hover-lift">
       <div class="blog-featured__body">
@@ -337,7 +334,7 @@ export function blogFeaturedCard(post) {
     </a>`;
 }
 
-export function instructorCard(person) {
+function instructorCard(person) {
   return `
     <article class="card card--instructor hover-lift">
       <img class="card__avatar" src="${person.avatar}" alt="${person.name}">
@@ -346,7 +343,7 @@ export function instructorCard(person) {
     </article>`;
 }
 
-export function testimonialSlide(item) {
+function testimonialSlide(item) {
   return `
     <div class="home-testimonials__slide">
       <p class="home-testimonials__quote">"${item.quote}"</p>
@@ -360,7 +357,7 @@ export function testimonialSlide(item) {
     </div>`;
 }
 
-export function testimonialCard(item) {
+function testimonialCard(item) {
   return `
     <article class="card card--testimonial hover-lift">
       <p class="card__quote">"${item.quote}"</p>
@@ -374,7 +371,7 @@ export function testimonialCard(item) {
     </article>`;
 }
 
-export function progressBar(percent, label) {
+function progressBar(percent, label) {
   return `
     <div class="progress">
       ${label ? `<div class="progress__label"><span>${label}</span><span>${percent}%</span></div>` : ""}
@@ -382,7 +379,7 @@ export function progressBar(percent, label) {
     </div>`;
 }
 
-export function statCard(stat) {
+function statCard(stat) {
   return `
     <article class="card card--stat">
       <div class="card__icon-box" style="--stat-color: ${stat.color}">${stat.icon}</div>
@@ -393,7 +390,7 @@ export function statCard(stat) {
     </article>`;
 }
 
-export function certificateCard(cert) {
+function certificateCard(cert) {
   return `
     <a href="certificate-details.html?id=${cert.id}">
       <article class="card card--certificate hover-lift">
@@ -404,7 +401,7 @@ export function certificateCard(cert) {
     </a>`;
 }
 
-export function listItemCard(item) {
+function listItemCard(item) {
   const unread = item.isRead === false ? " is-unread" : "";
   return `
     <article class="card card--list-item${unread}">

@@ -1,4 +1,4 @@
-export const blogCategories = [
+const blogCategories = [
   { id: "all", label: "الكل" },
   { id: "bim", label: "BIM" },
   { id: "interior", label: "تصميم داخلي" },
@@ -8,7 +8,7 @@ export const blogCategories = [
   { id: "sustainability", label: "استدامة" },
 ];
 
-export const blogPosts = [
+const blogPosts = [
   {
     id: 1,
     slug: "bim-future-saudi-market",
@@ -257,13 +257,13 @@ const blogGridCard = {
   tags: ["#BIM", "#رؤية_٢٠٣٠", "#التحول_الرقمي", "#السعودية"],
 };
 
-export const blogGridPosts = Array.from({ length: 6 }, () => ({ ...blogGridCard }));
+const blogGridPosts = Array.from({ length: 6 }, () => ({ ...blogGridCard }));
 
-export function getBlogBySlug(slug) {
+function getBlogBySlug(slug) {
   if (blogGridCard.slug === slug) return { ...blogGridCard };
   return blogPosts.find((p) => p.slug === slug);
 }
 
-export function getFeaturedPost() {
+function getFeaturedPost() {
   return blogPosts.find((p) => p.featured) || blogPosts[0];
 }

@@ -4,11 +4,25 @@
 :root {
 
 
-  --bp-mobile: 430px;
-  --bp-tablet: 786px;
-  --bp-desktop: 1440px;
-  --bp-tablet-min: 431px;
-  --bp-desktop-min: 787px;
+  --bp-xs: 0;
+  --bp-sm: 576px;
+  --bp-md: 768px;
+  --bp-lg: 992px;
+  --bp-xl: 1200px;
+  --bp-xxl: 1400px;
+
+  --bp-mobile-min: 380px;
+  --bp-xs-max: 380px;
+  --bp-sm-max: 767.98px;
+  --bp-md-max: 991.98px;
+  --bp-lg-max: 1199.98px;
+  --bp-xl-max: 1399.98px;
+
+  --bp-mobile: 380px;
+  --bp-tablet: 767.98px;
+  --bp-desktop: 1400px;
+  --bp-tablet-min: 576px;
+  --bp-desktop-min: 768px;
 
 
 
@@ -74,21 +88,21 @@
 
 
 
-  --fs-xs: 0.5625rem;
-  --fs-sm: 0.6875rem;
-  --fs-base: 0.75rem;
-  --fs-md: 0.8125rem;
-  --fs-lg: 0.875rem;
-  --fs-xl: 1rem;
-  --fs-2xl: 1.125rem;
-  --fs-3xl: 1.25rem;
-  --fs-4xl: 1.375rem;
-  --fs-5xl: 1.5rem;
+  --fs-xs: 0.75rem;
+  --fs-sm: 0.875rem;
+  --fs-base: 1rem;
+  --fs-md: 1.125rem;
+  --fs-lg: 1.25rem;
+  --fs-xl: 1.5rem;
+  --fs-2xl: 1.75rem;
+  --fs-3xl: 2rem;
+  --fs-4xl: 2.25rem;
+  --fs-5xl: 2.5rem;
 
-  --lh-tight: 1.1;
-  --lh-snug: 1.2;
-  --lh-normal: 1.35;
-  --lh-relaxed: 1.45;
+  --lh-tight: 1.15;
+  --lh-snug: 1.25;
+  --lh-normal: 1.5;
+  --lh-relaxed: 1.65;
 
   --fw-regular: 400;
   --fw-medium: 500;
@@ -103,144 +117,144 @@
 
 
   --type-hero-title-font: var(--font-display);
-  --type-hero-title-size: var(--fs-lg);
-  --type-hero-title-weight: var(--fw-extrabold);
+  --type-hero-title-size: 2rem;
+  --type-hero-title-weight: var(--fw-bold);
   --type-hero-title-lh: var(--lh-tight);
   --type-hero-title-ls: var(--ls-tight);
 
   --type-page-title-font: var(--font-display);
-  --type-page-title-size: var(--fs-xl);
+  --type-page-title-size: 1.75rem;
   --type-page-title-weight: var(--fw-bold);
   --type-page-title-lh: var(--lh-tight);
   --type-page-title-ls: var(--ls-tight);
 
   --type-section-title-font: var(--font-primary);
-  --type-section-title-size: var(--fs-sm);
+  --type-section-title-size: 1.5rem;
   --type-section-title-weight: var(--fw-bold);
   --type-section-title-lh: var(--lh-snug);
   --type-section-title-ls: var(--ls-normal);
 
   --type-home-tag-font: var(--font-primary);
-  --type-home-tag-size: var(--fs-lg);
+  --type-home-tag-size: var(--type-label-size);
   --type-home-tag-weight: var(--fw-semibold);
   --type-home-tag-color: #0050d5;
   --type-home-tag-line-width: 2.5rem;
   --type-home-tag-line-color: rgba(0, 80, 213, 0.35);
 
-  --type-home-section-title-font: var(--font-primary);
-  --type-home-section-title-size: 2rem;
-  --type-home-section-title-weight: var(--fw-bold);
-  --type-home-section-title-lh: 1.35;
+  --type-home-section-title-font: var(--type-section-title-font);
+  --type-home-section-title-size: var(--type-section-title-size);
+  --type-home-section-title-weight: var(--type-section-title-weight);
+  --type-home-section-title-lh: var(--type-section-title-lh);
   --type-home-section-title-color: #0a2e8b;
 
-  --type-home-section-subtitle-font: var(--font-primary);
-  --type-home-section-subtitle-size: var(--fs-lg);
-  --type-home-section-subtitle-weight: var(--fw-regular);
-  --type-home-section-subtitle-lh: 1.625rem;
+  --type-home-section-subtitle-font: var(--type-card-subtitle-font);
+  --type-home-section-subtitle-size: var(--type-card-subtitle-size);
+  --type-home-section-subtitle-weight: var(--type-card-subtitle-weight);
+  --type-home-section-subtitle-lh: var(--type-card-subtitle-lh);
   --type-home-section-subtitle-color: #6b7280;
 
   --type-home-section-link-font: var(--font-primary);
-  --type-home-section-link-size: var(--fs-lg);
+  --type-home-section-link-size: var(--type-label-size);
   --type-home-section-link-weight: var(--fw-semibold);
   --type-home-section-link-color: #0050d5;
 
   --type-home-card-badge-font: var(--font-primary);
-  --type-home-card-badge-size: 0.6875rem;
+  --type-home-card-badge-size: var(--type-caption-size);
   --type-home-card-badge-weight: var(--fw-semibold);
   --type-home-card-badge-lh: 1;
 
   --type-home-card-stat-font: var(--font-primary);
-  --type-home-card-stat-size: 0.8125rem;
+  --type-home-card-stat-size: var(--type-small-size);
   --type-home-card-stat-weight: var(--fw-regular);
 
   --type-home-card-meta-font: var(--font-primary);
-  --type-home-card-meta-size: 0.75rem;
+  --type-home-card-meta-size: var(--type-small-size);
   --type-home-card-meta-weight: var(--fw-medium);
 
   --type-home-card-price-font: var(--font-primary);
-  --type-home-card-price-size: 1.125rem;
+  --type-home-card-price-size: var(--type-label-size);
   --type-home-card-price-weight: var(--fw-bold);
 
   --type-subsection-title-font: var(--font-primary);
-  --type-subsection-title-size: var(--fs-md);
+  --type-subsection-title-size: var(--type-card-title-size);
   --type-subsection-title-weight: var(--fw-semibold);
   --type-subsection-title-lh: var(--lh-snug);
   --type-subsection-title-ls: var(--ls-normal);
 
   --type-card-title-font: var(--font-primary);
   --type-card-title-size: 1.125rem;
-  --type-card-title-weight: var(--fw-bold);
-  --type-card-title-lh: 1.6875rem;
-  --type-card-title-ls: 0;
+  --type-card-title-weight: var(--fw-semibold);
+  --type-card-title-lh: var(--lh-snug);
+  --type-card-title-ls: var(--ls-normal);
 
   --type-card-subtitle-font: var(--font-primary);
-  --type-card-subtitle-size: 0.875rem;
+  --type-card-subtitle-size: 1rem;
   --type-card-subtitle-weight: var(--fw-regular);
-  --type-card-subtitle-lh: 1.421875rem;
-  --type-card-subtitle-ls: 0;
+  --type-card-subtitle-lh: var(--lh-normal);
+  --type-card-subtitle-ls: var(--ls-normal);
 
   --type-body-font: var(--font-primary);
-  --type-body-size: var(--fs-sm);
+  --type-body-size: 0.875rem;
   --type-body-weight: var(--fw-regular);
   --type-body-lh: var(--lh-relaxed);
   --type-body-ls: var(--ls-normal);
 
   --type-small-font: var(--font-primary);
-  --type-small-size: var(--fs-sm);
+  --type-small-size: 0.75rem;
   --type-small-weight: var(--fw-regular);
   --type-small-lh: var(--lh-normal);
   --type-small-ls: var(--ls-normal);
 
   --type-caption-font: var(--font-primary);
-  --type-caption-size: var(--fs-xs);
+  --type-caption-size: 0.75rem;
   --type-caption-weight: var(--fw-regular);
   --type-caption-lh: var(--lh-normal);
   --type-caption-ls: var(--ls-normal);
 
   --type-label-font: var(--font-primary);
-  --type-label-size: var(--fs-sm);
+  --type-label-size: 0.875rem;
   --type-label-weight: var(--fw-medium);
   --type-label-lh: var(--lh-normal);
   --type-label-ls: var(--ls-normal);
 
   --type-nav-font: var(--font-primary);
-  --type-nav-size: var(--fs-xs);
+  --type-nav-size: 0.875rem;
   --type-nav-weight: var(--fw-medium);
   --type-nav-lh: var(--lh-normal);
   --type-nav-ls: var(--ls-normal);
 
   --type-button-font: var(--font-primary);
-  --type-button-size: var(--fs-xs);
+  --type-button-size: 0.875rem;
   --type-button-weight: var(--fw-semibold);
   --type-button-lh: var(--lh-normal);
   --type-button-ls: var(--ls-normal);
 
   --type-badge-font: var(--font-primary);
-  --type-badge-size: var(--fs-xs);
+  --type-badge-size: var(--type-caption-size);
   --type-badge-weight: var(--fw-medium);
   --type-badge-lh: var(--lh-normal);
   --type-badge-ls: var(--ls-normal);
 
   --type-input-font: var(--font-primary);
-  --type-input-size: var(--fs-sm);
+  --type-input-size: var(--type-body-size);
   --type-input-weight: var(--fw-regular);
   --type-input-lh: var(--lh-normal);
   --type-input-ls: var(--ls-normal);
 
   --type-placeholder-font: var(--font-primary);
-  --type-placeholder-size: var(--fs-sm);
+  --type-placeholder-size: var(--type-body-size);
   --type-placeholder-weight: var(--fw-regular);
   --type-placeholder-lh: var(--lh-normal);
   --type-placeholder-ls: var(--ls-normal);
 
   --type-footer-font: var(--font-primary);
-  --type-footer-size: var(--fs-sm);
+  --type-footer-size: var(--type-body-size);
   --type-footer-weight: var(--fw-regular);
   --type-footer-lh: var(--lh-relaxed);
   --type-footer-ls: var(--ls-normal);
-  --type-footer-heading-size: var(--fs-base);
+  --type-footer-heading-size: var(--type-card-title-size);
   --type-footer-heading-weight: var(--fw-semibold);
-  --type-footer-caption-size: var(--fs-xs);
+  --type-footer-caption-size: var(--type-caption-size);
   --type-footer-caption-weight: var(--fw-regular);
 
 
@@ -319,18 +333,18 @@
   --icon-xl: 1.25rem;
   --icon-stroke: 1.5;
 
-  --dash-title-size: 1.25rem;
-  --dash-title-size-sm: 1.125rem;
-  --dash-subtitle-size: 0.8125rem;
-  --dash-section-title-size: 1rem;
-  --dash-card-title-size: 0.9375rem;
-  --dash-body-size: 0.8125rem;
-  --dash-meta-size: 0.75rem;
-  --dash-label-size: 0.75rem;
+  --dash-title-size: var(--type-page-title-size);
+  --dash-title-size-sm: var(--type-page-title-size);
+  --dash-subtitle-size: var(--type-card-subtitle-size);
+  --dash-section-title-size: var(--type-section-title-size);
+  --dash-card-title-size: var(--type-card-title-size);
+  --dash-body-size: var(--type-body-size);
+  --dash-meta-size: var(--type-small-size);
+  --dash-label-size: var(--type-label-size);
   --dash-icon-size: 1.125rem;
   --dash-icon-sm: 1rem;
-  --dash-stat-value-size: 1.375rem;
-  --dash-stat-label-size: 0.75rem;
+  --dash-stat-value-size: var(--type-card-title-size);
+  --dash-stat-label-size: var(--type-small-size);
 
 
 
@@ -415,12 +429,14 @@
 
 
 
-@media (min-width: 787px) {
+@media (min-width: 768px) {
   :root {
-    --type-hero-title-size: var(--fs-xl);
-    --type-page-title-size: var(--fs-lg);
-    --type-section-title-size: var(--fs-md);
-    --type-subsection-title-size: var(--fs-sm);
+    --type-hero-title-size: 2.5rem;
+    --type-page-title-size: 2rem;
+    --type-section-title-size: 1.75rem;
+    --type-card-title-size: 1.25rem;
+    --type-body-size: 1rem;
+    --type-small-size: 0.875rem;
 
     --container-padding: var(--space-3);
     --section-padding-y: var(--space-8);
@@ -434,9 +450,49 @@
   }
 }
 
-@media (min-width: 431px) {
+@media (min-width: 576px) {
   :root {
     --container-padding: var(--space-3);
     --section-padding-y: var(--space-6);
   }
 }
+
+body[data-layout="dashboard"],
+body.layout-dashboard {
+  --type-hero-title-size: 1.5rem;
+  --type-page-title-size: 1.25rem;
+  --type-section-title-size: 1.125rem;
+  --type-card-title-size: 0.9375rem;
+  --type-card-subtitle-size: 0.8125rem;
+  --type-body-size: 0.8125rem;
+  --type-small-size: 0.75rem;
+  --type-caption-size: 0.6875rem;
+  --type-label-size: 0.8125rem;
+  --type-nav-size: 0.8125rem;
+  --type-button-size: 0.8125rem;
+  --type-badge-size: 0.6875rem;
+  --type-input-size: 0.8125rem;
+  --type-placeholder-size: 0.8125rem;
+  --lh-tight: 1.2;
+  --lh-snug: 1.3;
+  --lh-normal: 1.4;
+  --lh-relaxed: 1.5;
+  --dashboard-header-height: 3.5rem;
+  --sidebar-width: 14.5rem;
+}
+
+@media (min-width: 768px) {
+  body[data-layout="dashboard"],
+  body.layout-dashboard {
+    --type-page-title-size: 1.375rem;
+    --type-section-title-size: 1.1875rem;
+    --type-card-title-size: 1rem;
+    --type-card-subtitle-size: 0.875rem;
+    --type-body-size: 0.875rem;
+    --type-small-size: 0.75rem;
+    --type-label-size: 0.875rem;
+    --type-nav-size: 0.875rem;
+    --type-button-size: 0.875rem;
+  }
+}
+

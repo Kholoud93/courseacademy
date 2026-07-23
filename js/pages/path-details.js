@@ -1,5 +1,3 @@
-import { getTrackById } from "../data/tracks.js";
-
 const DESIGN_TRACK_ID = 101;
 const track = getTrackById(DESIGN_TRACK_ID);
 

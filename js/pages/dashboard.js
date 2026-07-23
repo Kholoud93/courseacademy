@@ -1,5 +1,3 @@
-import { transactions } from "../data/instructors.js";
-
 const page = document.body.dataset.page;
 
 function initNotificationsPanel() {

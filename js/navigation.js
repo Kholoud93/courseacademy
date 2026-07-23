@@ -1,4 +1,4 @@
-export function initDrawers() {
+function initDrawers() {
   document.addEventListener("click", (e) => {
     const openBtn = e.target.closest("[data-drawer-open]");
     if (openBtn) {
@@ -49,7 +49,7 @@ function closeAllDrawers() {
   delete document.body.dataset.openDrawer;
 }
 
-export function initTabs() {
+function initTabs() {
   document.addEventListener("click", (e) => {
     const btn = e.target.closest(".tabs__btn");
     if (!btn) return;
@@ -62,14 +62,14 @@ export function initTabs() {
   });
 }
 
-export function initAccordion() {
+function initAccordion() {
   document.addEventListener("click", (e) => {
     const btn = e.target.closest("[data-accordion-toggle]");
     if (btn) btn.closest("[data-accordion-item]")?.classList.toggle("is-open");
   });
 }
 
-export function initPagination(callback) {
+function initPagination(callback) {
   document.addEventListener("click", (e) => {
     const btn = e.target.closest(".pagination__btn");
     if (!btn || btn.disabled || !btn.dataset.page) return;
@@ -77,7 +77,7 @@ export function initPagination(callback) {
   });
 }
 
-export function initNavigation() {
+function initNavigation() {
   initDrawers();
   initTabs();
   initAccordion();

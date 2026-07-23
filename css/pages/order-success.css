@@ -28,7 +28,9 @@
 }
 
 .order-success__badge i {
-  font-size: 1.75rem;
+  font-size: var(--type-section-title-size);
+  font-family: var(--type-section-title-font);
+  letter-spacing: var(--type-section-title-ls);
   font-weight: normal;
   line-height: 1;
 }
@@ -50,7 +52,10 @@
 
 .order-success__order-id {
   margin: 0.25rem 0 0;
-  font-size: 0.9375rem;
+  font-size: var(--type-body-size);
+  font-family: var(--type-body-font);
+  line-height: var(--type-body-lh);
+  letter-spacing: var(--type-body-ls);
   font-weight: var(--fw-semibold);
   color: #0050d8;
 }
@@ -99,7 +104,9 @@
 .order-success__item-name {
   flex: 1;
   min-width: 0;
-  font-size: 0.9375rem;
+  font-size: var(--type-body-size);
+  font-family: var(--type-body-font);
+  letter-spacing: var(--type-body-ls);
   font-weight: var(--fw-semibold);
   color: #1a1a2e;
   line-height: 1.4;
@@ -108,7 +115,10 @@
 
 .order-success__item-price {
   flex-shrink: 0;
-  font-size: 0.9375rem;
+  font-size: var(--type-body-size);
+  font-family: var(--type-body-font);
+  line-height: var(--type-body-lh);
+  letter-spacing: var(--type-body-ls);
   font-weight: var(--fw-bold);
   color: #1a1a2e;
   white-space: nowrap;
@@ -128,19 +138,30 @@
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  font-size: 0.875rem;
+  font-size: var(--type-body-size);
+  font-family: var(--type-body-font);
+  font-weight: var(--type-body-weight);
+  line-height: var(--type-body-lh);
+  letter-spacing: var(--type-body-ls);
   color: #6b7280;
 }
 
 .order-success__meta-row--total {
-  font-size: 1rem;
+  font-size: var(--type-card-subtitle-size);
+  font-family: var(--type-card-subtitle-font);
+  line-height: var(--type-card-subtitle-lh);
+  letter-spacing: var(--type-card-subtitle-ls);
   font-weight: var(--fw-bold);
   color: #1a1a2e;
 }
 
 .order-success__meta-row--total span:last-child {
   color: #0050d8;
-  font-size: 1.125rem;
+  font-size: var(--type-card-title-size);
+  font-family: var(--type-card-title-font);
+  font-weight: var(--type-card-title-weight);
+  line-height: var(--type-card-title-lh);
+  letter-spacing: var(--type-card-title-ls);
 }
 
 .order-success__next {
@@ -156,7 +177,9 @@
   display: flex;
   align-items: center;
   gap: 0.75rem;
-  font-size: 0.9375rem;
+  font-size: var(--type-body-size);
+  font-family: var(--type-body-font);
+  letter-spacing: var(--type-body-ls);
   font-weight: var(--fw-medium);
   color: #374151;
   line-height: 1.4;
@@ -171,7 +194,11 @@
   height: 2rem;
   border-radius: var(--radius-full);
   flex-shrink: 0;
-  font-size: 1.125rem;
+  font-size: var(--type-card-title-size);
+  font-family: var(--type-card-title-font);
+  font-weight: var(--type-card-title-weight);
+  line-height: var(--type-card-title-lh);
+  letter-spacing: var(--type-card-title-ls);
 }
 
 .order-success__next-icon--blue {
@@ -205,7 +232,10 @@
   min-height: 3rem;
   padding-inline: 1.5rem;
   border-radius: 0.75rem;
-  font-size: 0.9375rem;
+  font-size: var(--type-body-size);
+  font-family: var(--type-body-font);
+  line-height: var(--type-body-lh);
+  letter-spacing: var(--type-body-ls);
   font-weight: var(--fw-semibold);
   transition: filter var(--transition-fast), background var(--transition-fast);
   text-align: center;
@@ -247,7 +277,11 @@
   }
 
   .order-success__badge i {
-    font-size: 1.875rem;
+    font-size: var(--type-page-title-size);
+    font-family: var(--type-page-title-font);
+    font-weight: var(--type-page-title-weight);
+    line-height: var(--type-page-title-lh);
+    letter-spacing: var(--type-page-title-ls);
   }
 
   .order-success__card {
@@ -257,7 +291,11 @@
 
   .order-success__item-name,
   .order-success__item-price {
-    font-size: 0.875rem;
+    font-size: var(--type-body-size);
+    font-family: var(--type-body-font);
+    font-weight: var(--type-body-weight);
+    line-height: var(--type-body-lh);
+    letter-spacing: var(--type-body-ls);
   }
 
   .order-success__actions {
@@ -277,7 +315,11 @@
   }
 
   .order-success__order-id {
-    font-size: 0.8125rem;
+    font-size: var(--type-small-size);
+    font-family: var(--type-small-font);
+    font-weight: var(--type-small-weight);
+    line-height: var(--type-small-lh);
+    letter-spacing: var(--type-small-ls);
   }
 
   .order-success__thumb {
@@ -286,20 +328,36 @@
   }
 
   .order-success__meta-row {
-    font-size: 0.8125rem;
+    font-size: var(--type-small-size);
+    font-family: var(--type-small-font);
+    font-weight: var(--type-small-weight);
+    line-height: var(--type-small-lh);
+    letter-spacing: var(--type-small-ls);
     gap: 0.5rem;
   }
 
   .order-success__meta-row--total span:last-child {
-    font-size: 1rem;
+    font-size: var(--type-card-subtitle-size);
+    font-family: var(--type-card-subtitle-font);
+    font-weight: var(--type-card-subtitle-weight);
+    line-height: var(--type-card-subtitle-lh);
+    letter-spacing: var(--type-card-subtitle-ls);
   }
 
   .order-success__next-item {
-    font-size: 0.875rem;
+    font-size: var(--type-body-size);
+    font-family: var(--type-body-font);
+    font-weight: var(--type-body-weight);
+    line-height: var(--type-body-lh);
+    letter-spacing: var(--type-body-ls);
   }
 
   .order-success__btn {
     min-height: 2.75rem;
-    font-size: 0.875rem;
+    font-size: var(--type-body-size);
+    font-family: var(--type-body-font);
+    font-weight: var(--type-body-weight);
+    line-height: var(--type-body-lh);
+    letter-spacing: var(--type-body-ls);
   }
 }

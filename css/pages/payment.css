@@ -56,7 +56,11 @@
   height: 2.75rem;
   border-radius: 0.75rem;
   flex-shrink: 0;
-  font-size: 1.25rem;
+  font-size: var(--type-card-title-size);
+  font-family: var(--type-card-title-font);
+  font-weight: var(--type-card-title-weight);
+  line-height: var(--type-card-title-lh);
+  letter-spacing: var(--type-card-title-ls);
 }
 
 .payment-method__icon img {
@@ -98,14 +102,19 @@
 }
 
 .payment-method__name {
-  font-size: 0.9375rem;
+  font-size: var(--type-body-size);
+  font-family: var(--type-body-font);
+  letter-spacing: var(--type-body-ls);
   font-weight: var(--fw-semibold);
   color: #1a1a2e;
   line-height: 1.3;
 }
 
 .payment-method__desc {
-  font-size: 0.75rem;
+  font-size: var(--type-small-size);
+  font-family: var(--type-small-font);
+  font-weight: var(--type-small-weight);
+  letter-spacing: var(--type-small-ls);
   color: #6b7280;
   line-height: 1.3;
 }
@@ -250,14 +259,18 @@
 }
 
 .payment-card__brand {
-  font-size: 0.875rem;
+  font-size: var(--type-body-size);
+  font-family: var(--type-body-font);
+  line-height: var(--type-body-lh);
   font-weight: var(--fw-semibold);
   letter-spacing: 0.02em;
 }
 
 .payment-card__number {
   margin: 1.25rem 0;
-  font-size: 1.25rem;
+  font-size: var(--type-card-title-size);
+  font-family: var(--type-card-title-font);
+  line-height: var(--type-card-title-lh);
   font-weight: var(--fw-semibold);
   letter-spacing: 0.12em;
   direction: ltr;
@@ -273,7 +286,9 @@
 
 .payment-card__preview-value {
   display: block;
-  font-size: 0.8125rem;
+  font-size: var(--type-small-size);
+  font-family: var(--type-small-font);
+  line-height: var(--type-small-lh);
   font-weight: var(--fw-semibold);
   letter-spacing: 0.04em;
   overflow-wrap: break-word;
@@ -294,7 +309,10 @@
 }
 
 .payment-field__label {
-  font-size: 0.8125rem;
+  font-size: var(--type-small-size);
+  font-family: var(--type-small-font);
+  line-height: var(--type-small-lh);
+  letter-spacing: var(--type-small-ls);
   font-weight: var(--fw-semibold);
   color: #374151;
 }
@@ -307,7 +325,11 @@
   border-radius: 0.75rem;
   background: #ffffff;
   color: #1a1a2e;
-  font-size: 0.9375rem;
+  font-size: var(--type-body-size);
+  font-family: var(--type-body-font);
+  font-weight: var(--type-body-weight);
+  line-height: var(--type-body-lh);
+  letter-spacing: var(--type-body-ls);
   outline: none;
   transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
 }
@@ -341,7 +363,11 @@
   top: 50%;
   transform: translateY(-50%);
   color: #9ca3af;
-  font-size: 1rem;
+  font-size: var(--type-card-subtitle-size);
+  font-family: var(--type-card-subtitle-font);
+  font-weight: var(--type-card-subtitle-weight);
+  line-height: var(--type-card-subtitle-lh);
+  letter-spacing: var(--type-card-subtitle-ls);
   pointer-events: none;
 }
 
@@ -354,7 +380,10 @@
 
 .payment-alt__text {
   margin: 0;
-  font-size: 0.9375rem;
+  font-size: var(--type-body-size);
+  font-family: var(--type-body-font);
+  font-weight: var(--type-body-weight);
+  letter-spacing: var(--type-body-ls);
   color: #4b5563;
   line-height: 1.6;
 }
@@ -388,15 +417,19 @@
 }
 
 .payment-summary__amount-label {
-  font-size: 0.875rem;
+  font-family: var(--type-body-font);
+  font-size: var(--type-body-size);
+  font-weight: var(--type-body-weight);
+  line-height: var(--type-body-lh);
   color: #6b7280;
 }
 
 .payment-summary__amount-value {
-  font-size: var(--dash-stat-value-size);
-  font-weight: var(--fw-bold);
+  font-family: var(--type-home-card-price-font);
+  font-size: var(--type-home-card-price-size);
+  font-weight: var(--type-home-card-price-weight);
+  line-height: var(--lh-snug);
   color: #0050d8;
-  line-height: 1.2;
 }
 
 .payment-summary__ssl {
@@ -408,14 +441,20 @@
   border-radius: 0.75rem;
   background: #eaf8ef;
   color: #166534;
-  font-size: 0.8125rem;
+  font-size: var(--type-small-size);
+  font-family: var(--type-small-font);
+  letter-spacing: var(--type-small-ls);
   font-weight: var(--fw-semibold);
   line-height: 1.4;
 }
 
 .payment-summary__ssl i {
   color: #16a34a;
-  font-size: 1.125rem;
+  font-size: var(--type-card-title-size);
+  font-family: var(--type-card-title-font);
+  font-weight: var(--type-card-title-weight);
+  line-height: var(--type-card-title-lh);
+  letter-spacing: var(--type-card-title-ls);
   flex-shrink: 0;
 }
 
@@ -431,7 +470,10 @@
   border-radius: 0.75rem;
   background: var(--color-brand-gradient);
   color: #ffffff;
-  font-size: 0.9375rem;
+  font-size: var(--type-body-size);
+  font-family: var(--type-body-font);
+  line-height: var(--type-body-lh);
+  letter-spacing: var(--type-body-ls);
   font-weight: var(--fw-semibold);
   cursor: pointer;
   transition: filter var(--transition-fast);
@@ -450,7 +492,10 @@
   border: 1.5px solid #0050d8;
   border-radius: 0.75rem;
   color: #0050d8;
-  font-size: 0.875rem;
+  font-size: var(--type-body-size);
+  font-family: var(--type-body-font);
+  line-height: var(--type-body-lh);
+  letter-spacing: var(--type-body-ls);
   font-weight: var(--fw-semibold);
   background: #ffffff;
   transition: background var(--transition-fast);
@@ -494,7 +539,11 @@
   }
 
   .payment-method__name {
-    font-size: 0.875rem;
+    font-size: var(--type-body-size);
+    font-family: var(--type-body-font);
+    font-weight: var(--type-body-weight);
+    line-height: var(--type-body-lh);
+    letter-spacing: var(--type-body-ls);
   }
 
   .payment-card,
@@ -510,12 +559,19 @@
   }
 
   .payment-card__number {
-    font-size: 1.0625rem;
+    font-size: var(--type-card-title-size);
+    font-family: var(--type-card-title-font);
+    font-weight: var(--type-card-title-weight);
+    line-height: var(--type-card-title-lh);
     letter-spacing: 0.08em;
   }
 
   .payment-summary__amount-value {
-    font-size: var(--dash-stat-value-size);
+    font-size: var(--type-home-card-price-size);
+    font-family: var(--type-label-font);
+    font-weight: var(--type-label-weight);
+    line-height: var(--type-label-lh);
+    letter-spacing: var(--type-label-ls);
   }
 }
 
@@ -529,7 +585,11 @@
   }
 
   .payment-method__desc {
-    font-size: 0.6875rem;
+    font-size: var(--type-caption-size);
+    font-family: var(--type-caption-font);
+    font-weight: var(--type-caption-weight);
+    line-height: var(--type-caption-lh);
+    letter-spacing: var(--type-caption-ls);
   }
 
   .payment-field-row {
@@ -541,31 +601,55 @@
   }
 
   .payment-card__number {
-    font-size: 0.9375rem;
+    font-size: var(--type-body-size);
+    font-family: var(--type-body-font);
+    font-weight: var(--type-body-weight);
+    line-height: var(--type-body-lh);
+    letter-spacing: var(--type-body-ls);
     margin: 1rem 0;
   }
 
   .payment-field__input {
     height: 2.5rem;
-    font-size: 0.875rem;
+    font-size: var(--type-body-size);
+    font-family: var(--type-body-font);
+    font-weight: var(--type-body-weight);
+    line-height: var(--type-body-lh);
+    letter-spacing: var(--type-body-ls);
   }
 
   .payment-summary__cta {
     height: 2.75rem;
-    font-size: 0.875rem;
+    font-size: var(--type-body-size);
+    font-family: var(--type-body-font);
+    font-weight: var(--type-body-weight);
+    line-height: var(--type-body-lh);
+    letter-spacing: var(--type-body-ls);
   }
 
   .payment-summary__back {
     height: 2.5rem;
-    font-size: 0.8125rem;
+    font-size: var(--type-small-size);
+    font-family: var(--type-small-font);
+    font-weight: var(--type-small-weight);
+    line-height: var(--type-small-lh);
+    letter-spacing: var(--type-small-ls);
   }
 
   .payment-summary__amount-value {
-    font-size: 1.25rem;
+    font-size: var(--type-label-size);
+    font-family: var(--type-label-font);
+    font-weight: var(--type-label-weight);
+    line-height: var(--type-label-lh);
+    letter-spacing: var(--type-label-ls);
   }
 
   .payment-summary__ssl {
-    font-size: 0.75rem;
+    font-size: var(--type-small-size);
+    font-family: var(--type-small-font);
+    font-weight: var(--type-small-weight);
+    line-height: var(--type-small-lh);
+    letter-spacing: var(--type-small-ls);
     padding: 0.75rem;
     align-items: flex-start;
   }
@@ -577,6 +661,10 @@
   }
 
   .payment-card__preview-value {
-    font-size: 0.75rem;
+    font-size: var(--type-small-size);
+    font-family: var(--type-small-font);
+    font-weight: var(--type-small-weight);
+    line-height: var(--type-small-lh);
+    letter-spacing: var(--type-small-ls);
   }
 }

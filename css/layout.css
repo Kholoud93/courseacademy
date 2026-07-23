@@ -44,7 +44,7 @@
 
 .layout-dashboard__content {
   flex: 1;
-  padding: var(--space-4) var(--space-6) var(--space-8);
+  padding: 0.5rem 1rem 1.25rem;
 }
 
 
@@ -96,7 +96,7 @@
 
 
 
-@media (min-width: 431px) {
+@media (min-width: 576px) {
   .layout-auth__form {
     padding: var(--space-8);
   }
@@ -104,7 +104,7 @@
 
 
 
-@media (min-width: 787px) {
+@media (min-width: 768px) {
   .layout-auth__sidebar {
     display: flex;
   }
@@ -112,7 +112,7 @@
 
 
 
-@media (max-width: 786px) {
+@media (max-width: 767.98px) {
   .layout-dashboard__sidebar {
     top: auto;
     bottom: 0;
@@ -135,7 +135,7 @@
   }
 
   .layout-dashboard__content {
-    padding: var(--space-4) var(--space-4) var(--space-6);
+    padding: 0.5rem 0.875rem 1rem;
   }
 
   .layout-learning__body {
@@ -178,7 +178,7 @@
   margin-bottom: var(--space-8);
 }
 
-@media (min-width: 431px) {
+@media (min-width: 576px) {
   .blog-article__related-grid,
   .dashboard__learning-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -194,7 +194,7 @@
   }
 }
 
-@media (min-width: 787px) {
+@media (min-width: 768px) {
   .courses-list__grid,
   .my-courses__grid,
   .blog-list__grid,
