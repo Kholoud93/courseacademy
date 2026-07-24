@@ -1,19 +1,19 @@
-﻿<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>تفاصيل الدورة — coursacademy</title>
-  <link rel="stylesheet" href="css/variables.css">
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>تفاصيل الدورة — coursacademy</title>
+  <link rel="stylesheet" href="css/variables.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap">
-  <link rel="stylesheet" href="css/global.css">
-  <link rel="stylesheet" href="css/layout.css">
-  <link rel="stylesheet" href="css/components.css">
-  <link rel="stylesheet" href="css/pages/course-details.css?v=202-tablet-768">
-</head>
-<body data-layout="main" data-page="courses">
-
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages/course-details.css?v=202-tablet-768">
+</head>
+<body data-layout="main" data-page="courses">
+
   <div id="site-header">
 <header class="home-nav">
   <div class="container home-nav__inner">
@@ -41,7 +41,7 @@
         <span class="home-nav__cart-badge">2</span>
       </button>
       <a href="login.html" class="home-nav__login">تسجيل الدخول</a>
-      <a href="dashboard.html" class="btn btn--primary home-nav__cta">لوحة التحكم</a>
+      <a href="dashboard.html" class="btn btn--primary btn--sm home-nav__cta">لوحة التحكم</a>
       <button type="button" class="home-nav__toggle" data-drawer-open="mobile-menu" aria-label="القائمة">
         <span class="home-nav__hamburger"><span></span><span></span><span></span></span>
       </button>
@@ -156,153 +156,153 @@
     <a href="courses.html" class="btn btn--primary btn--full">إتمام الشراء</a>
   </div>
 </aside>
-  </div>
-
-  <main>
-    <section class="cd-hero">
-      <div class="container cd-hero__inner">
-        <nav class="cd-breadcrumb" aria-label="مسار التنقل">
-          <a href="index.html">الرئيسية</a>
-          <span class="cd-breadcrumb__sep" aria-hidden="true">&gt;</span>
-          <a href="courses.html">الدورات</a>
-          <span class="cd-breadcrumb__sep" aria-hidden="true">&gt;</span>
-          <span id="cd-breadcrumb-title">إتقان Revit Architecture</span>
-        </nav>
-
-        <div class="cd-hero__grid">
-          <div class="cd-hero__content">
-            <div class="cd-hero__badges" id="cd-hero-badges"></div>
-            <h1 class="cd-hero__title" id="cd-hero-title"></h1>
-            <p class="cd-hero__desc" id="cd-hero-desc"></p>
-
-            <div class="cd-hero__stats" id="cd-hero-stats"></div>
-
-            <div class="cd-hero__instructor">
-              <img id="cd-instructor-avatar" src="" alt="" class="cd-hero__instructor-avatar">
-              <div class="cd-hero__instructor-info">
-                <span class="cd-hero__instructor-label" id="cd-instructor-label">المدرس</span>
-                <strong id="cd-instructor-name">م. أحمد الشمري</strong>
-                <div id="cd-instructor-role"></div>
-                <div id="cd-instructor-updated"></div>
-              </div>
-            </div>
-          </div>
-
-          <div class="cd-hero__media">
-            <div class="cd-hero__video">
-              <img id="cd-hero-image" src="" alt="" class="cd-hero__video-img">
-              <button type="button" class="cd-hero__play" aria-label="تشغيل مقدمة الدورة">
-                <i class="ri-play-fill"></i>
-              </button>
-              <span class="cd-hero__video-caption">شاهد مقدمة الدورة مجاناً</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="cd-body">
-      <div class="container cd-layout">
-        <div class="cd-main">
-          <div data-tabs="course-detail" class="cd-tabs-wrap">
-            <div class="cd-tabs">
-              <button type="button" class="cd-tabs__btn is-active" data-tabs="course-detail" data-tab="overview">نظرة عامة <i class="ri-eye-line"></i></button>
-              <button type="button" class="cd-tabs__btn" data-tabs="course-detail" data-tab="curriculum">المنهج الدراسي <i class="ri-list-check-2"></i></button>
-              <button type="button" class="cd-tabs__btn" data-tabs="course-detail" data-tab="instructor">المدرب <i class="ri-user-line"></i></button>
-              <button type="button" class="cd-tabs__btn" data-tabs="course-detail" data-tab="reviews">التقييمات <i class="ri-star-line"></i></button>
-            </div>
-
-            <div id="tab-panel" class="cd-tab-panel">
-              <section class="cd-section">
-                <h2 class="cd-section__title cd-section__title--blue">ما ستتعلمه في هذه الدورة</h2>
-                <ul class="cd-learn" id="cd-learn-list"></ul>
-              </section>
-
-              <section class="cd-section">
-                <h2 class="cd-section__title cd-section__title--orange">متطلبات الالتحاق بالدورة</h2>
-                <ul class="cd-requirements" id="cd-requirements-list"></ul>
-              </section>
-
-              <section class="cd-section">
-                <h2 class="cd-section__title cd-section__title--green">تفاصيل الدورة</h2>
-                <div class="cd-meta-grid" id="cd-meta-grid"></div>
-              </section>
-
-              <section class="cd-certificate">
-                <span class="cd-certificate__icon"><i class="ri-award-fill"></i></span>
-                <div>
-                  <h3>شهادة إتمام معتمدة</h3>
-                  <p>تحصل على شهادة معتمدة بعد إتمام الدورة بنجاح مقبولة لدى كبرى الشركات في مصر والخليج.</p>
-                </div>
-              </section>
-            </div>
-
-            <div id="curriculum-panel" class="cd-tab-panel" hidden>
-              <div class="cd-curriculum-head">
-                <h2 class="cd-curriculum__title">محتوى الدورة</h2>
-                <span class="cd-curriculum__summary" id="cd-curriculum-summary"></span>
-              </div>
-              <div id="curriculum-accordion" class="cd-curriculum"></div>
-            </div>
-
-            <div id="instructor-panel" class="cd-tab-panel" hidden>
-              <div class="cd-instructor-card" id="cd-instructor-card"></div>
-            </div>
-
-            <div id="reviews-panel" class="cd-tab-panel" hidden>
-              <div id="reviews-list" class="cd-reviews"></div>
-            </div>
-          </div>
-        </div>
-
-        <aside class="cd-sidebar">
-          <div class="cd-buy-card">
-            <div class="cd-buy-card__video">
-              <img id="cd-sidebar-image" src="" alt="">
-              <span class="cd-buy-card__discount" id="cd-sidebar-discount">خصم 33%</span>
-              <button type="button" class="cd-buy-card__play" aria-label="تشغيل">
-                <i class="ri-play-fill"></i>
-              </button>
-            </div>
-
-            <div class="cd-buy-card__price">
-              <div class="cd-buy-card__price-row">
-                <span class="cd-buy-card__price-current" id="cd-price-current"></span>
-                <span class="cd-buy-card__price-old" id="cd-price-old"></span>
-              </div>
-              <p class="cd-buy-card__offer" id="cd-price-offer">
-                ينتهي العرض قريباً — لا تفوّت الفرصة!
-                <i class="ri-time-line"></i>
-              </p>
-            </div>
-
-            <div class="cd-buy-card__actions">
-              <a href="login.html" class="cd-buy-card__btn cd-buy-card__btn--primary">اشترك الآن</a>
-              <button type="button" class="cd-buy-card__btn cd-buy-card__btn--cart">أضف للسلة <i class="ri-shopping-cart-2-line"></i></button>
-              <button type="button" class="cd-buy-card__btn cd-buy-card__btn--wish">أضف للمفضلة <i class="ri-heart-line"></i></button>
-            </div>
-
-            <p class="cd-buy-card__guarantee">
-              ضمان استرداد المال خلال ١٤ يوم — بدون شروط
-              <i class="ri-shield-check-line"></i>
-            </p>
-
-            <ul class="cd-buy-card__features" id="cd-sidebar-features"></ul>
-
-            <div class="cd-buy-card__share">
-              <span>شارك الدورة:</span>
-              <div class="cd-buy-card__share-icons">
-                <a href="#" aria-label="فيسبوك"><i class="ri-facebook-fill"></i></a>
-                <a href="#" aria-label="لينكدإن"><i class="ri-linkedin-fill"></i></a>
-                <a href="#" aria-label="تويتر"><i class="ri-twitter-x-line"></i></a>
-              </div>
-            </div>
-          </div>
-        </aside>
-      </div>
-    </section>
-  </main>
-
+  </div>
+
+  <main>
+    <section class="cd-hero">
+      <div class="container cd-hero__inner">
+        <nav class="cd-breadcrumb" aria-label="مسار التنقل">
+          <a href="index.html">الرئيسية</a>
+          <span class="cd-breadcrumb__sep" aria-hidden="true">&gt;</span>
+          <a href="courses.html">الدورات</a>
+          <span class="cd-breadcrumb__sep" aria-hidden="true">&gt;</span>
+          <span id="cd-breadcrumb-title">إتقان Revit Architecture</span>
+        </nav>
+
+        <div class="cd-hero__grid">
+          <div class="cd-hero__content">
+            <div class="cd-hero__badges" id="cd-hero-badges"></div>
+            <h1 class="cd-hero__title" id="cd-hero-title"></h1>
+            <p class="cd-hero__desc" id="cd-hero-desc"></p>
+
+            <div class="cd-hero__stats" id="cd-hero-stats"></div>
+
+            <div class="cd-hero__instructor">
+              <img id="cd-instructor-avatar" src="" alt="" class="cd-hero__instructor-avatar">
+              <div class="cd-hero__instructor-info">
+                <span class="cd-hero__instructor-label" id="cd-instructor-label">المدرس</span>
+                <strong id="cd-instructor-name">م. أحمد الشمري</strong>
+                <div id="cd-instructor-role"></div>
+                <div id="cd-instructor-updated"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="cd-hero__media">
+            <div class="cd-hero__video">
+              <img id="cd-hero-image" src="" alt="" class="cd-hero__video-img">
+              <button type="button" class="cd-hero__play" aria-label="تشغيل مقدمة الدورة">
+                <i class="ri-play-fill"></i>
+              </button>
+              <span class="cd-hero__video-caption">شاهد مقدمة الدورة مجاناً</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cd-body">
+      <div class="container cd-layout">
+        <div class="cd-main">
+          <div data-tabs="course-detail" class="cd-tabs-wrap">
+            <div class="cd-tabs">
+              <button type="button" class="cd-tabs__btn is-active" data-tabs="course-detail" data-tab="overview">نظرة عامة <i class="ri-eye-line"></i></button>
+              <button type="button" class="cd-tabs__btn" data-tabs="course-detail" data-tab="curriculum">المنهج الدراسي <i class="ri-list-check-2"></i></button>
+              <button type="button" class="cd-tabs__btn" data-tabs="course-detail" data-tab="instructor">المدرب <i class="ri-user-line"></i></button>
+              <button type="button" class="cd-tabs__btn" data-tabs="course-detail" data-tab="reviews">التقييمات <i class="ri-star-line"></i></button>
+            </div>
+
+            <div id="tab-panel" class="cd-tab-panel">
+              <section class="cd-section">
+                <h2 class="cd-section__title cd-section__title--blue">ما ستتعلمه في هذه الدورة</h2>
+                <ul class="cd-learn" id="cd-learn-list"></ul>
+              </section>
+
+              <section class="cd-section">
+                <h2 class="cd-section__title cd-section__title--orange">متطلبات الالتحاق بالدورة</h2>
+                <ul class="cd-requirements" id="cd-requirements-list"></ul>
+              </section>
+
+              <section class="cd-section">
+                <h2 class="cd-section__title cd-section__title--green">تفاصيل الدورة</h2>
+                <div class="cd-meta-grid" id="cd-meta-grid"></div>
+              </section>
+
+              <section class="cd-certificate">
+                <span class="cd-certificate__icon"><i class="ri-award-fill"></i></span>
+                <div>
+                  <h3>شهادة إتمام معتمدة</h3>
+                  <p>تحصل على شهادة معتمدة بعد إتمام الدورة بنجاح مقبولة لدى كبرى الشركات في مصر والخليج.</p>
+                </div>
+              </section>
+            </div>
+
+            <div id="curriculum-panel" class="cd-tab-panel" hidden>
+              <div class="cd-curriculum-head">
+                <h2 class="cd-curriculum__title">محتوى الدورة</h2>
+                <span class="cd-curriculum__summary" id="cd-curriculum-summary"></span>
+              </div>
+              <div id="curriculum-accordion" class="cd-curriculum"></div>
+            </div>
+
+            <div id="instructor-panel" class="cd-tab-panel" hidden>
+              <div class="cd-instructor-card" id="cd-instructor-card"></div>
+            </div>
+
+            <div id="reviews-panel" class="cd-tab-panel" hidden>
+              <div id="reviews-list" class="cd-reviews"></div>
+            </div>
+          </div>
+        </div>
+
+        <aside class="cd-sidebar">
+          <div class="cd-buy-card">
+            <div class="cd-buy-card__video">
+              <img id="cd-sidebar-image" src="" alt="">
+              <span class="cd-buy-card__discount" id="cd-sidebar-discount">خصم 33%</span>
+              <button type="button" class="cd-buy-card__play" aria-label="تشغيل">
+                <i class="ri-play-fill"></i>
+              </button>
+            </div>
+
+            <div class="cd-buy-card__price">
+              <div class="cd-buy-card__price-row">
+                <span class="cd-buy-card__price-current" id="cd-price-current"></span>
+                <span class="cd-buy-card__price-old" id="cd-price-old"></span>
+              </div>
+              <p class="cd-buy-card__offer" id="cd-price-offer">
+                ينتهي العرض قريباً — لا تفوّت الفرصة!
+                <i class="ri-time-line"></i>
+              </p>
+            </div>
+
+            <div class="cd-buy-card__actions">
+              <a href="login.html" class="cd-buy-card__btn cd-buy-card__btn--primary">اشترك الآن</a>
+              <button type="button" class="cd-buy-card__btn cd-buy-card__btn--cart">أضف للسلة <i class="ri-shopping-cart-2-line"></i></button>
+              <button type="button" class="cd-buy-card__btn cd-buy-card__btn--wish">أضف للمفضلة <i class="ri-heart-line"></i></button>
+            </div>
+
+            <p class="cd-buy-card__guarantee">
+              ضمان استرداد المال خلال ١٤ يوم — بدون شروط
+              <i class="ri-shield-check-line"></i>
+            </p>
+
+            <ul class="cd-buy-card__features" id="cd-sidebar-features"></ul>
+
+            <div class="cd-buy-card__share">
+              <span>شارك الدورة:</span>
+              <div class="cd-buy-card__share-icons">
+                <a href="#" aria-label="فيسبوك"><i class="ri-facebook-fill"></i></a>
+                <a href="#" aria-label="لينكدإن"><i class="ri-linkedin-fill"></i></a>
+                <a href="#" aria-label="تويتر"><i class="ri-twitter-x-line"></i></a>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
   <div id="site-footer">
 <footer class="home-footer">
   <div class="container">
@@ -381,6 +381,6 @@
   <script src="js/app.js"></script>
   <script src="js/data/home.js"></script>
   <script src="js/data/courses.js"></script>
-  <script src="js/pages/course-details.js"></script>
-</body>
-</html>
+  <script src="js/pages/course-details.js"></script>
+</body>
+</html>

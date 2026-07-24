@@ -117,7 +117,8 @@
   }
 
   .cd-tabs__btn i {
-    font-size: var(--type-small-size);
+    font-size: var(--icon-sm);
+    line-height: 1;
   }
 }
 
@@ -125,14 +126,17 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0.25rem 1rem;
-  border-radius: var(--radius-full);
+  height: 2rem;
+  min-height: 2rem;
+  padding: 0 0.75rem;
+  border-radius: 0.75rem;
   font-family: var(--type-badge-font);
   font-size: var(--type-badge-size);
   font-weight: var(--type-badge-weight);
-  line-height: var(--type-badge-lh);
+  line-height: 1;
   letter-spacing: var(--type-badge-ls);
   white-space: nowrap;
+  box-sizing: border-box;
 }
 
 .cd-hero__badge--category {
@@ -148,13 +152,15 @@
 }
 
 .cd-hero__title {
-  font-family: var(--type-hero-title-font);
-  font-size: var(--type-hero-title-size);
-  font-weight: var(--type-hero-title-weight);
-  line-height: var(--type-hero-title-lh);
-  letter-spacing: var(--type-hero-title-ls);
+  font-family: var(--type-page-title-font);
+  font-size: var(--type-page-title-size);
+  font-weight: var(--type-page-title-weight);
+  line-height: var(--type-page-title-lh);
+  letter-spacing: var(--type-page-title-ls);
   margin-bottom: 0.875rem;
   color: #ffffff;
+  max-width: 100%;
+  overflow-wrap: break-word;
 }
 
 .cd-hero__desc {
@@ -165,7 +171,8 @@
   line-height: var(--type-body-lh);
   color: rgba(255, 255, 255, 0.8);
   margin-bottom: 1.375rem;
-  max-width: 38rem;
+  max-width: min(38rem, 100%);
+  overflow-wrap: break-word;
 }
 
 .cd-hero__stats {
@@ -181,25 +188,26 @@
   align-items: center;
   flex-direction: row-reverse;
   gap: 0.375rem;
-  padding: 0.3125rem 0.75rem;
-  border-radius: var(--radius-full);
-  font-family: var(--font-primary);
-  font-size: var(--type-body-size);
-  font-weight: var(--fw-medium);
-  line-height: var(--lh-normal);
+  height: 2rem;
+  min-height: 2rem;
+  padding: 0 0.75rem;
+  border-radius: 0.75rem;
+  font-family: var(--type-label-font);
+  font-size: var(--type-label-size);
+  font-weight: var(--type-label-weight);
+  line-height: 1;
+  letter-spacing: var(--type-label-ls);
   color: rgba(255, 255, 255, 0.92);
   background: rgba(255, 255, 255, 0.12);
   border: 1px solid rgba(255, 255, 255, 0.18);
   white-space: nowrap;
+  box-sizing: border-box;
 }
 
 .cd-hero__stat i {
   color: rgba(255, 255, 255, 0.88);
-  font-size: var(--type-body-size);
-  font-family: var(--type-body-font);
-  font-weight: var(--type-body-weight);
-  line-height: var(--type-body-lh);
-  letter-spacing: var(--type-body-ls);
+  font-size: var(--icon-md);
+  line-height: 1;
   flex-shrink: 0;
 }
 
@@ -288,11 +296,8 @@
 }
 
 .cd-hero__instructor-meta i {
-  font-size: var(--type-body-size);
-  font-family: var(--type-body-font);
-  font-weight: var(--type-body-weight);
-  line-height: var(--type-body-lh);
-  letter-spacing: var(--type-body-ls);
+  font-size: var(--icon-md);
+  line-height: 1;
   color: rgba(255, 255, 255, 0.5);
 }
 
@@ -475,15 +480,16 @@
   align-items: center;
   justify-content: flex-start;
   gap: 0.625rem;
-  font-family: var(--type-card-title-font);
-  font-size: var(--type-card-title-size);
-  font-weight: var(--type-card-title-weight);
-  line-height: var(--type-card-title-lh);
-  letter-spacing: var(--type-card-title-ls);
+  font-family: var(--type-section-title-font);
+  font-size: var(--type-section-title-size);
+  font-weight: var(--type-section-title-weight);
+  line-height: var(--type-section-title-lh);
+  letter-spacing: var(--type-section-title-ls);
   color: #1f2937;
   margin-bottom: 1rem;
   text-align: right;
   width: 100%;
+  overflow-wrap: break-word;
 }
 
 .cd-section__title::before {
@@ -519,15 +525,17 @@
   flex-direction: row-reverse;
   gap: 0.5rem;
   padding: 0.625rem 0.875rem;
-  font-family: var(--type-small-font);
-  font-size: var(--type-small-size);
-  font-weight: var(--type-small-weight);
-  line-height: var(--type-small-lh);
-  letter-spacing: var(--type-small-ls);
+  font-family: var(--type-body-font);
+  font-size: var(--type-body-size);
+  font-weight: var(--type-body-weight);
+  line-height: var(--type-body-lh);
+  letter-spacing: var(--type-body-ls);
   color: #1e40af;
   background: #eff6ff;
   border: 1px solid #bfdbfe;
-  border-radius: var(--radius-full);
+  border-radius: 0.75rem;
+  min-width: 0;
+  box-sizing: border-box;
 }
 
 .cd-learn li i {
@@ -699,21 +707,21 @@
 }
 
 .cd-certificate h3 {
-  font-family: var(--type-card-title-font);
-  font-size: var(--type-card-title-size);
-  font-weight: var(--type-card-title-weight);
-  line-height: var(--type-card-title-lh);
-  letter-spacing: var(--type-card-title-ls);
+  font-family: var(--card-type-title-font);
+  font-size: var(--card-type-title-size);
+  font-weight: var(--card-type-title-weight);
+  line-height: var(--card-type-title-lh);
+  letter-spacing: var(--card-type-title-ls);
   margin-bottom: 0.375rem;
   color: #1f2937;
 }
 
 .cd-certificate p {
-  font-family: var(--type-card-subtitle-font);
-  font-size: var(--type-small-size);
-  font-weight: var(--type-card-subtitle-weight);
-  line-height: var(--type-small-lh);
-  letter-spacing: var(--type-card-subtitle-ls);
+  font-family: var(--card-type-desc-font);
+  font-size: var(--card-type-desc-size);
+  font-weight: var(--card-type-desc-weight);
+  line-height: var(--card-type-desc-lh);
+  letter-spacing: var(--card-type-desc-ls);
   color: #6b7280;
 }
 
@@ -757,14 +765,19 @@
   top: 1rem;
   left: 1rem;
   z-index: 2;
-  padding: 0.25rem 0.625rem;
-  border-radius: var(--radius-full);
+  display: inline-flex;
+  align-items: center;
+  height: var(--badge-height);
+  min-height: var(--badge-height);
+  padding: 0 var(--badge-padding-x);
+  border-radius: var(--badge-radius);
   background: #ff4d4d;
   color: #ffffff;
   font-family: var(--card-type-badge-font);
   font-size: var(--card-type-badge-size);
   font-weight: var(--card-type-badge-weight);
   line-height: var(--card-type-badge-lh);
+  box-sizing: border-box;
 }
 
 .cd-buy-card__play {
@@ -1684,11 +1697,11 @@
   }
 
   .cd-buy-card__btn {
-    font-size: var(--type-small-size);
-    font-family: var(--type-small-font);
-    font-weight: var(--type-small-weight);
-    line-height: var(--type-small-lh);
-    letter-spacing: var(--type-small-ls);
+    font-family: var(--card-type-button-font);
+    font-size: var(--card-type-button-size);
+    font-weight: var(--card-type-button-weight);
+    line-height: var(--card-type-button-lh);
+    letter-spacing: var(--card-type-button-ls);
     padding: 0.5rem 0.875rem;
   }
 
@@ -1699,11 +1712,6 @@
 
   .cd-learn li {
     padding: 0.5rem 0.75rem;
-    font-size: var(--type-small-size);
-    font-family: var(--type-small-font);
-    font-weight: var(--type-small-weight);
-    line-height: var(--type-small-lh);
-    letter-spacing: var(--type-small-ls);
   }
 
   .cd-meta-grid {
@@ -1817,29 +1825,29 @@
   }
 
   .cd-buy-card__btn {
-    font-size: var(--type-caption-size);
-    font-family: var(--type-caption-font);
-    font-weight: var(--type-caption-weight);
-    line-height: var(--type-caption-lh);
-    letter-spacing: var(--type-caption-ls);
+    font-family: var(--card-type-button-font);
+    font-size: var(--card-type-button-size);
+    font-weight: var(--card-type-button-weight);
+    line-height: var(--card-type-button-lh);
+    letter-spacing: var(--card-type-button-ls);
     padding: 0.4375rem 0.75rem;
   }
 
   .cd-buy-card__feature-label,
   .cd-buy-card__guarantee {
-    font-size: var(--type-caption-size);
-    font-family: var(--type-caption-font);
-    font-weight: var(--type-caption-weight);
-    line-height: var(--type-caption-lh);
-    letter-spacing: var(--type-caption-ls);
+    font-family: var(--card-type-meta-font);
+    font-size: var(--card-type-meta-size);
+    font-weight: var(--card-type-meta-weight);
+    line-height: var(--card-type-meta-lh);
+    letter-spacing: var(--card-type-meta-ls);
   }
 
   .cd-buy-card__feature-value {
-    font-size: var(--type-caption-size);
-    font-family: var(--type-caption-font);
-    font-weight: var(--type-caption-weight);
-    line-height: var(--type-caption-lh);
-    letter-spacing: var(--type-caption-ls);
+    font-family: var(--card-type-meta-font);
+    font-size: var(--card-type-meta-size);
+    font-weight: var(--fw-semibold);
+    line-height: var(--card-type-meta-lh);
+    letter-spacing: var(--card-type-meta-ls);
   }
 
   .cd-learn {
@@ -1849,11 +1857,6 @@
 
   .cd-learn li {
     padding: 0.5rem 0.625rem;
-    font-size: var(--type-caption-size);
-    font-family: var(--type-caption-font);
-    font-weight: var(--type-caption-weight);
-    line-height: var(--type-caption-lh);
-    letter-spacing: var(--type-caption-ls);
   }
 
   .cd-meta-grid {
@@ -1868,19 +1871,16 @@
   .cd-meta-card__icon {
     width: 2.25rem;
     height: 2.25rem;
-    font-size: var(--type-card-subtitle-size);
-    font-family: var(--type-card-subtitle-font);
-    font-weight: var(--type-card-subtitle-weight);
-    line-height: var(--type-card-subtitle-lh);
-    letter-spacing: var(--type-card-subtitle-ls);
+    font-size: var(--card-icon-action);
+    line-height: 1;
   }
 
   .cd-meta-card__text strong {
-    font-size: var(--type-small-size);
-    font-family: var(--type-small-font);
-    font-weight: var(--type-small-weight);
-    line-height: var(--type-small-lh);
-    letter-spacing: var(--type-small-ls);
+    font-family: var(--card-type-title-font);
+    font-size: var(--card-type-title-size);
+    font-weight: var(--card-type-title-weight);
+    line-height: var(--card-type-title-lh);
+    letter-spacing: var(--card-type-title-ls);
   }
 
   .cd-section:has(.cd-meta-grid),
@@ -2148,12 +2148,7 @@
   }
 
   .cd-hero__badge {
-    font-size: var(--type-small-size);
-    font-family: var(--type-small-font);
-    font-weight: var(--type-small-weight);
-    line-height: var(--type-small-lh);
-    letter-spacing: var(--type-small-ls);
-    padding: 0.25rem 0.75rem;
+    padding: 0 0.75rem;
   }
 
   .cd-hero__stats {
@@ -2174,11 +2169,11 @@
   }
 
   .cd-buy-card__btn {
-    font-size: var(--type-button-size);
-    font-family: var(--type-button-font);
-    font-weight: var(--type-button-weight);
-    line-height: var(--type-button-lh);
-    letter-spacing: var(--type-button-ls);
+    font-family: var(--card-type-button-font);
+    font-size: var(--card-type-button-size);
+    font-weight: var(--card-type-button-weight);
+    line-height: var(--card-type-button-lh);
+    letter-spacing: var(--card-type-button-ls);
     padding: 0.5rem 0.875rem;
   }
 
