@@ -5,10 +5,10 @@
 
 .payment-methods__title {
   margin: 0 0 1.25rem;
-  font-size: var(--dash-title-size);
+  font-size: var(--type-page-title-size);
   font-weight: var(--fw-bold);
   color: #1a1a2e;
-  line-height: 1.3;
+  line-height: var(--type-page-title-lh);
 }
 
 .payment-methods__grid {
@@ -167,14 +167,14 @@
   align-items: center;
   gap: 0.5rem;
   margin: 0 0 1.25rem;
-  font-size: var(--dash-section-title-size);
+  font-size: var(--type-section-title-size);
   font-weight: var(--fw-bold);
   color: #1a1a2e;
 }
 
 .payment-card__title i {
   color: #0050d8;
-  font-size: var(--dash-icon-size);
+  font-size: var(--icon-lg);
 }
 
 .payment-card__preview {
@@ -399,7 +399,7 @@
 
 .payment-summary__title {
   margin: 0 0 1.25rem;
-  font-size: var(--dash-section-title-size);
+  font-size: var(--type-section-title-size);
   font-weight: var(--fw-bold);
   color: #1a1a2e;
   text-align: center;
@@ -470,11 +470,11 @@
   border-radius: 0.75rem;
   background: var(--color-brand-gradient);
   color: #ffffff;
-  font-size: var(--type-body-size);
-  font-family: var(--type-body-font);
-  line-height: var(--type-body-lh);
-  letter-spacing: var(--type-body-ls);
-  font-weight: var(--fw-semibold);
+  font-size: var(--type-button-size);
+  font-family: var(--type-button-font);
+  line-height: var(--type-button-lh);
+  letter-spacing: var(--type-button-ls);
+  font-weight: var(--type-button-weight);
   cursor: pointer;
   transition: filter var(--transition-fast);
 }
@@ -492,11 +492,11 @@
   border: 1.5px solid #0050d8;
   border-radius: 0.75rem;
   color: #0050d8;
-  font-size: var(--type-body-size);
-  font-family: var(--type-body-font);
-  line-height: var(--type-body-lh);
-  letter-spacing: var(--type-body-ls);
-  font-weight: var(--fw-semibold);
+  font-size: var(--type-button-size);
+  font-family: var(--type-button-font);
+  line-height: var(--type-button-lh);
+  letter-spacing: var(--type-button-ls);
+  font-weight: var(--type-button-weight);
   background: #ffffff;
   transition: background var(--transition-fast);
 }
@@ -518,13 +518,13 @@
   }
 
   .payment-methods__title {
-    font-size: var(--dash-title-size);
+    font-size: var(--type-page-title-size);
   }
 }
 
 @media (max-width: 767.98px) {
   .payment-methods__title {
-    font-size: var(--dash-title-size-sm);
+    font-size: var(--type-page-title-size);
     margin-bottom: 1rem;
   }
 
@@ -620,11 +620,11 @@
 
   .payment-summary__cta {
     height: 2.75rem;
-    font-size: var(--type-body-size);
-    font-family: var(--type-body-font);
-    font-weight: var(--type-body-weight);
-    line-height: var(--type-body-lh);
-    letter-spacing: var(--type-body-ls);
+    font-size: var(--type-button-size);
+    font-family: var(--type-button-font);
+    font-weight: var(--type-button-weight);
+    line-height: var(--type-button-lh);
+    letter-spacing: var(--type-button-ls);
   }
 
   .payment-summary__back {

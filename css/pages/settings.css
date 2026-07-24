@@ -10,7 +10,7 @@
   font-size: var(--type-page-title-size);
   font-weight: var(--type-page-title-weight);
   color: #1a1a2e;
-  line-height: 1.3;
+  line-height: var(--type-page-title-lh);
 }
 
 .settings-card {
@@ -80,11 +80,11 @@
   border-radius: 0.75rem;
   background: var(--color-brand-gradient);
   color: #ffffff;
-  font-size: var(--type-body-size);
-  font-family: var(--type-body-font);
-  line-height: var(--type-body-lh);
-  letter-spacing: var(--type-body-ls);
-  font-weight: var(--fw-semibold);
+  font-size: var(--type-button-size);
+  font-family: var(--type-button-font);
+  line-height: var(--type-button-lh);
+  letter-spacing: var(--type-button-ls);
+  font-weight: var(--type-button-weight);
   cursor: pointer;
   width: fit-content;
   transition: filter var(--transition-fast);
@@ -163,11 +163,11 @@
   border-radius: 0.75rem;
   background: var(--color-brand-gradient);
   color: #ffffff;
-  font-size: var(--type-body-size);
-  font-family: var(--type-body-font);
-  line-height: var(--type-body-lh);
-  letter-spacing: var(--type-body-ls);
-  font-weight: var(--fw-semibold);
+  font-size: var(--type-button-size);
+  font-family: var(--type-button-font);
+  line-height: var(--type-button-lh);
+  letter-spacing: var(--type-button-ls);
+  font-weight: var(--type-button-weight);
   cursor: pointer;
   transition: filter var(--transition-fast);
 }

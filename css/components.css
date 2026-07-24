@@ -337,10 +337,10 @@
   display: flex;
   align-items: center;
   gap: var(--space-1);
-  font-family: var(--type-small-font);
-  font-size: var(--type-small-size);
-  font-weight: var(--type-small-weight);
-  line-height: var(--type-small-lh);
+  font-family: var(--card-type-meta-font);
+  font-size: var(--card-type-meta-size);
+  font-weight: var(--card-type-meta-weight);
+  line-height: var(--card-type-meta-lh);
   color: var(--color-star);
   margin-bottom: var(--space-2);
 }
@@ -349,20 +349,20 @@
 .card--course-progress .card__stats {
   display: flex;
   gap: var(--space-4);
-  font-family: var(--type-home-card-stat-font);
-  font-size: var(--type-home-card-stat-size);
-  font-weight: var(--type-home-card-stat-weight);
-  line-height: var(--type-small-lh);
+  font-family: var(--card-type-meta-font);
+  font-size: var(--card-type-meta-size);
+  font-weight: var(--card-type-meta-weight);
+  line-height: var(--card-type-meta-lh);
   color: var(--color-text-secondary);
   margin-bottom: var(--space-3);
 }
 
 .card--course .card__price,
 .card--course-progress .card__price {
-  font-family: var(--type-home-card-price-font);
-  font-size: var(--type-label-size);
-  font-weight: var(--type-home-card-price-weight);
-  line-height: var(--lh-snug);
+  font-family: var(--card-type-price-font);
+  font-size: var(--card-type-price-size);
+  font-weight: var(--card-type-price-weight);
+  line-height: var(--card-type-price-lh);
   color: var(--color-primary-500);
 }
 
@@ -401,31 +401,35 @@
 }
 
 .card--category .card__count {
-  font-size: var(--type-caption-size);
-  font-family: var(--type-caption-font);
-  font-weight: var(--type-caption-weight);
-  line-height: var(--type-caption-lh);
-  letter-spacing: var(--type-caption-ls);
+  font-family: var(--card-type-caption-font);
+  font-size: var(--card-type-caption-size);
+  font-weight: var(--card-type-caption-weight);
+  line-height: var(--card-type-caption-lh);
+  letter-spacing: var(--card-type-caption-ls);
   color: var(--color-text-secondary);
   margin-top: var(--space-1);
+}
+
+.card--category .card__icon i {
+  font-size: var(--card-icon-sm);
 }
 
 
 
 .card--blog .card__date {
-  font-family: var(--type-caption-font);
-  font-size: var(--type-caption-size);
-  font-weight: var(--type-caption-weight);
-  line-height: var(--type-caption-lh);
+  font-family: var(--card-type-caption-font);
+  font-size: var(--card-type-caption-size);
+  font-weight: var(--card-type-caption-weight);
+  line-height: var(--card-type-caption-lh);
   color: var(--color-text-secondary);
   margin-bottom: var(--space-2);
 }
 
 .card--blog .card__excerpt {
-  font-family: var(--type-card-subtitle-font);
-  font-size: var(--type-small-size);
-  font-weight: var(--type-card-subtitle-weight);
-  line-height: var(--type-small-lh);
+  font-family: var(--card-type-desc-font);
+  font-size: var(--card-type-desc-size);
+  font-weight: var(--card-type-desc-weight);
+  line-height: var(--card-type-desc-lh);
   color: var(--color-text-secondary);
   margin-top: var(--space-2);
   display: -webkit-box;
@@ -451,11 +455,11 @@
 }
 
 .card--instructor .card__role {
-  font-size: var(--type-small-size);
-  font-family: var(--type-small-font);
-  font-weight: var(--type-small-weight);
-  line-height: var(--type-small-lh);
-  letter-spacing: var(--type-small-ls);
+  font-family: var(--card-type-subtitle-font);
+  font-size: var(--card-type-subtitle-size);
+  font-weight: var(--card-type-subtitle-weight);
+  line-height: var(--card-type-subtitle-lh);
+  letter-spacing: var(--card-type-subtitle-ls);
   color: var(--color-text-secondary);
 }
 
@@ -466,13 +470,13 @@
 }
 
 .card--testimonial .card__quote {
-  font-size: var(--type-card-subtitle-size);
-  font-family: var(--type-card-subtitle-font);
-  font-weight: var(--type-card-subtitle-weight);
-  letter-spacing: var(--type-card-subtitle-ls);
+  font-family: var(--card-type-desc-font);
+  font-size: var(--card-type-desc-size);
+  font-weight: var(--card-type-desc-weight);
+  letter-spacing: var(--card-type-desc-ls);
   color: var(--color-text-secondary);
   margin-bottom: var(--space-6);
-  line-height: var(--lh-relaxed);
+  line-height: var(--card-type-desc-lh);
 }
 
 .card--testimonial .card__author {
@@ -519,13 +523,17 @@
 }
 
 .card--stat .card__label {
-  font-size: var(--type-small-size);
-  font-family: var(--type-small-font);
-  font-weight: var(--type-small-weight);
-  line-height: var(--type-small-lh);
-  letter-spacing: var(--type-small-ls);
+  font-family: var(--card-type-meta-font);
+  font-size: var(--card-type-meta-size);
+  font-weight: var(--card-type-meta-weight);
+  line-height: var(--card-type-meta-lh);
+  letter-spacing: var(--card-type-meta-ls);
   color: var(--color-text-secondary);
   margin-top: var(--space-1);
+}
+
+.card--stat .card__icon-box i {
+  font-size: var(--card-icon-action);
 }
 
 .card--stat-platform {
@@ -579,20 +587,20 @@
 }
 
 .card--feature-auth .card__title {
-  font-family: var(--type-card-title-font);
-  font-size: var(--type-body-size);
-  font-weight: var(--type-card-title-weight);
-  line-height: var(--lh-snug);
-  letter-spacing: var(--type-card-title-ls);
+  font-family: var(--card-type-title-font);
+  font-size: var(--card-type-title-size);
+  font-weight: var(--card-type-title-weight);
+  line-height: var(--card-type-title-lh);
+  letter-spacing: var(--card-type-title-ls);
   color: var(--color-text-inverse);
   margin-bottom: var(--space-1);
 }
 
 .card--feature-auth .card__desc {
-  font-family: var(--type-card-subtitle-font);
-  font-size: var(--type-small-size);
-  font-weight: var(--type-card-subtitle-weight);
-  line-height: var(--type-small-lh);
+  font-family: var(--card-type-desc-font);
+  font-size: var(--card-type-desc-size);
+  font-weight: var(--card-type-desc-weight);
+  line-height: var(--card-type-desc-lh);
   opacity: 0.85;
 }
 
@@ -656,11 +664,11 @@
 }
 
 .card--list-item .card__time {
-  font-size: var(--type-caption-size);
-  font-family: var(--type-caption-font);
-  font-weight: var(--type-caption-weight);
-  line-height: var(--type-caption-lh);
-  letter-spacing: var(--type-caption-ls);
+  font-family: var(--card-type-caption-font);
+  font-size: var(--card-type-caption-size);
+  font-weight: var(--card-type-caption-weight);
+  line-height: var(--card-type-caption-lh);
+  letter-spacing: var(--card-type-caption-ls);
   color: var(--color-text-muted);
 }
 
@@ -674,10 +682,10 @@
 }
 
 .card--buy .card__price {
-  font-family: var(--type-home-card-price-font);
-  font-size: var(--type-label-size);
-  font-weight: var(--type-home-card-price-weight);
-  line-height: var(--lh-snug);
+  font-family: var(--card-type-price-font);
+  font-size: var(--card-type-price-lg-size);
+  font-weight: var(--card-type-price-weight);
+  line-height: var(--card-type-price-lh);
   color: var(--color-primary-500);
   margin-bottom: var(--space-4);
 }
@@ -690,11 +698,11 @@
   display: flex;
   align-items: center;
   gap: var(--space-2);
-  font-size: var(--type-small-size);
-  font-family: var(--type-small-font);
-  font-weight: var(--type-small-weight);
-  line-height: var(--type-small-lh);
-  letter-spacing: var(--type-small-ls);
+  font-family: var(--card-type-desc-font);
+  font-size: var(--card-type-desc-size);
+  font-weight: var(--card-type-desc-weight);
+  line-height: var(--card-type-desc-lh);
+  letter-spacing: var(--card-type-desc-ls);
   color: var(--color-text-secondary);
   padding-block: var(--space-2);
 }

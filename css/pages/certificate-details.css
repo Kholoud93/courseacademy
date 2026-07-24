@@ -45,11 +45,11 @@
   height: 2.75rem;
   padding-inline: 1.5rem;
   border-radius: 0.75rem;
-  font-size: var(--type-body-size);
-  font-family: var(--type-body-font);
-  line-height: var(--type-body-lh);
-  letter-spacing: var(--type-body-ls);
-  font-weight: var(--fw-semibold);
+  font-size: var(--type-button-size);
+  font-family: var(--type-button-font);
+  line-height: var(--type-button-lh);
+  letter-spacing: var(--type-button-ls);
+  font-weight: var(--type-button-weight);
   border: 1.5px solid transparent;
   cursor: pointer;
   white-space: nowrap;
@@ -119,15 +119,15 @@
   border-radius: var(--radius-full);
   background: #eef3fb;
   color: #0050d8;
-  font-size: var(--dash-icon-size);
+  font-size: var(--icon-lg);
 }
 
 .cert-detail__verify-title {
   margin: 0;
-  font-size: var(--dash-section-title-size);
+  font-size: var(--type-section-title-size);
   font-weight: var(--fw-bold);
   color: #1a1a2e;
-  line-height: 1.4;
+  line-height: var(--type-section-title-lh);
 }
 
 .cert-detail__verify-text {

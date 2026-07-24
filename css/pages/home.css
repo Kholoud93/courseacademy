@@ -715,7 +715,7 @@ body[data-layout="home"] {
 
   gap: 0.125rem;
 
-  line-height: 1.25;
+  line-height: var(--lh-snug);
 
   text-align: start;
 
@@ -1035,7 +1035,7 @@ body[data-layout="home"] {
 
   font-weight: var(--fw-regular);
 
-  line-height: 1.1;
+  line-height: var(--lh-tight);
 
   margin: 0;
 
@@ -1243,9 +1243,7 @@ body[data-layout="home"] {
 
   --track-card-width: min(364px, 100%);
 
-  --track-card-height: 376.306px;
-
-  --track-card-image-height: 145px;
+  --track-card-image-height: 160px;
 
   padding-top: calc(var(--home-section-gap) + 2.75rem);
 
@@ -1279,6 +1277,8 @@ body[data-layout="home"] {
 
   justify-content: stretch;
 
+  align-items: stretch;
+
   width: 100%;
 
   margin-bottom: 0;
@@ -1306,7 +1306,9 @@ body[data-layout="home"] {
 
   width: 100%;
 
-  height: var(--track-card-height);
+  height: auto;
+
+  min-height: 0;
 
   max-width: 100%;
 
@@ -1394,13 +1396,13 @@ body[data-layout="home"] {
 
   justify-content: center;
 
-  font-family: var(--type-home-card-badge-font);
+  font-family: var(--card-type-badge-font);
 
-  font-size: var(--type-home-card-badge-size);
+  font-size: var(--card-type-badge-size);
 
-  font-weight: var(--type-home-card-badge-weight);
+  font-weight: var(--card-type-badge-weight);
 
-  line-height: var(--type-home-card-badge-lh);
+  line-height: var(--card-type-badge-lh);
 
   border-radius: 16px;
 
@@ -1512,10 +1514,10 @@ body[data-layout="home"] {
 
   color: #ffffff;
 
-  font-size: var(--type-caption-size);
-  font-family: var(--type-caption-font);
-  line-height: var(--type-caption-lh);
-  letter-spacing: var(--type-caption-ls);
+  font-size: var(--card-type-caption-size);
+  font-family: var(--card-type-caption-font);
+  line-height: var(--card-type-caption-lh);
+  letter-spacing: var(--card-type-caption-ls);
 
   font-weight: var(--fw-semibold);
 
@@ -1531,11 +1533,8 @@ body[data-layout="home"] {
 
   color: #dbb115;
 
-  font-size: var(--type-caption-size);
-  font-family: var(--type-caption-font);
-  font-weight: var(--type-caption-weight);
-  line-height: var(--type-caption-lh);
-  letter-spacing: var(--type-caption-ls);
+  font-size: var(--card-icon-meta);
+  line-height: 1;
 
 }
 
@@ -1551,13 +1550,13 @@ body[data-layout="home"] {
 
   gap: 0.375rem;
 
-  font-family: var(--type-home-card-meta-font);
+  font-family: var(--card-type-meta-font);
 
-  font-size: var(--type-home-card-meta-size);
+  font-size: var(--card-type-meta-size);
 
-  font-weight: var(--type-home-card-meta-weight);
+  font-weight: var(--card-type-meta-weight);
 
-  line-height: var(--type-small-lh);
+  line-height: var(--card-type-meta-lh);
 
   color: var(--type-home-section-subtitle-color);
 
@@ -1595,7 +1594,9 @@ body[data-layout="home"] {
 
   flex-direction: column;
 
-  padding: 1rem;
+  gap: 0.5rem;
+
+  padding: 1.125rem 1.125rem 1.25rem;
 
   background: rgba(255, 255, 255, 1);
 
@@ -1605,19 +1606,23 @@ body[data-layout="home"] {
 
 .home-track-card__title {
 
-  font-family: var(--type-card-title-font);
+  font-family: var(--card-type-title-font);
 
-  font-size: var(--type-body-size);
+  font-size: var(--card-type-title-size);
 
-  font-weight: var(--type-card-title-weight);
+  font-weight: var(--card-type-title-weight);
 
-  line-height: var(--lh-snug);
+  line-height: var(--card-type-title-lh);
 
-  letter-spacing: var(--type-card-title-ls);
+  letter-spacing: var(--card-type-title-ls);
 
-  margin-bottom: 0.375rem;
+  margin-bottom: 0.25rem;
 
   text-align: right;
+
+  overflow-wrap: break-word;
+
+  word-break: break-word;
 
 }
 
@@ -1633,29 +1638,25 @@ body[data-layout="home"] {
 
 .home-track-card__desc {
 
-  font-family: var(--type-card-subtitle-font);
+  font-family: var(--card-type-desc-font);
 
-  font-size: var(--type-small-size);
+  font-size: var(--card-type-desc-size);
 
-  font-weight: var(--type-card-subtitle-weight);
+  font-weight: var(--card-type-desc-weight);
 
-  line-height: var(--type-small-lh);
+  line-height: var(--card-type-desc-lh);
 
-  letter-spacing: var(--type-card-subtitle-ls);
+  letter-spacing: var(--card-type-desc-ls);
 
   text-align: right;
 
   color: var(--type-home-section-subtitle-color);
 
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.25rem;
 
-  display: -webkit-box;
+  overflow-wrap: break-word;
 
-  -webkit-line-clamp: 2;
-
-  -webkit-box-orient: vertical;
-
-  overflow: hidden;
+  word-break: break-word;
 
 }
 
@@ -1671,19 +1672,21 @@ body[data-layout="home"] {
 
   justify-content: center;
 
-  gap: 0.25rem;
+  gap: 0.375rem 0.5rem;
 
-  font-family: var(--type-home-card-stat-font);
+  font-family: var(--card-type-meta-font);
 
-  font-size: var(--type-home-card-stat-size);
+  font-size: var(--card-type-meta-size);
 
-  font-weight: var(--type-home-card-stat-weight);
+  font-weight: var(--card-type-meta-weight);
 
-  line-height: var(--type-small-lh);
+  line-height: var(--card-type-meta-lh);
 
   color: var(--type-home-section-subtitle-color);
 
-  margin-bottom: 0;
+  margin-top: 0.25rem;
+
+  margin-bottom: 0.125rem;
 
 }
 
@@ -1703,11 +1706,9 @@ body[data-layout="home"] {
 
 .home-track-card__stat i {
 
-  font-size: var(--type-body-size);
-  font-family: var(--type-body-font);
-  font-weight: var(--type-body-weight);
-  line-height: var(--type-body-lh);
-  letter-spacing: var(--type-body-ls);
+  font-size: var(--card-icon-meta);
+
+  line-height: 1;
 
   color: #0050d8;
 
@@ -1723,11 +1724,11 @@ body[data-layout="home"] {
 
   color: #d1d5db;
 
-  font-size: var(--type-small-size);
-  font-family: var(--type-small-font);
-  font-weight: var(--type-small-weight);
-  line-height: var(--type-small-lh);
-  letter-spacing: var(--type-small-ls);
+  font-size: var(--card-type-meta-size);
+  font-family: var(--card-type-meta-font);
+  font-weight: var(--card-type-meta-weight);
+  line-height: var(--card-type-meta-lh);
+  letter-spacing: var(--card-type-meta-ls);
 
 }
 
@@ -1739,15 +1740,17 @@ body[data-layout="home"] {
 
   flex-direction: row-reverse;
 
+  flex-wrap: wrap;
+
   align-items: center;
 
   justify-content: space-between;
 
-  gap: 0.5rem;
+  gap: 0.625rem;
 
   margin-top: auto;
 
-  padding-top: 0.625rem;
+  padding-top: 0.875rem;
 
   border-top: 1px solid rgba(229, 231, 235, 1);
 
@@ -1757,15 +1760,15 @@ body[data-layout="home"] {
 
 .home-track-card__level {
 
-  font-family: var(--type-badge-font);
+  font-family: var(--card-type-badge-font);
 
-  font-size: var(--type-badge-size);
+  font-size: var(--card-type-badge-size);
 
-  font-weight: var(--type-badge-weight);
+  font-weight: var(--card-type-badge-weight);
 
-  line-height: var(--type-badge-lh);
+  line-height: var(--card-type-badge-lh);
 
-  letter-spacing: var(--type-badge-ls);
+  letter-spacing: var(--card-type-badge-ls);
 
   color: #0050d5;
 
@@ -1789,7 +1792,7 @@ body[data-layout="home"] {
 
   align-items: flex-end;
 
-  gap: 0;
+  gap: 0.125rem;
 
 }
 
@@ -1797,13 +1800,13 @@ body[data-layout="home"] {
 
 .home-track-card__price {
 
-  font-family: var(--type-home-card-price-font);
+  font-family: var(--card-type-price-font);
 
-  font-size: var(--type-label-size);
+  font-size: var(--card-type-price-size);
 
-  font-weight: var(--type-home-card-price-weight);
+  font-weight: var(--card-type-price-weight);
 
-  line-height: var(--lh-snug);
+  line-height: var(--card-type-price-lh);
 
   color: rgba(0, 80, 213, 1);
 
@@ -1813,13 +1816,13 @@ body[data-layout="home"] {
 
 .home-track-card__old-price {
 
-  font-family: var(--type-caption-font);
+  font-family: var(--card-type-caption-font);
 
-  font-size: var(--type-caption-size);
+  font-size: var(--card-type-caption-size);
 
-  font-weight: var(--type-caption-weight);
+  font-weight: var(--card-type-caption-weight);
 
-  line-height: var(--type-caption-lh);
+  line-height: var(--card-type-caption-lh);
 
   color: #9ca3af;
 
@@ -1833,6 +1836,14 @@ body[data-layout="home"] {
 
 
 .home-course-card {
+
+  display: flex;
+
+  flex-direction: column;
+
+  height: auto;
+
+  min-height: 0;
 
   background: var(--color-white);
 
@@ -1888,13 +1899,13 @@ body[data-layout="home"] {
 
   justify-content: center;
 
-  font-family: var(--type-home-card-badge-font);
+  font-family: var(--card-type-badge-font);
 
-  font-size: var(--type-home-card-badge-size);
+  font-size: var(--card-type-badge-size);
 
-  font-weight: var(--type-home-card-badge-weight);
+  font-weight: var(--card-type-badge-weight);
 
-  line-height: var(--type-home-card-badge-lh);
+  line-height: var(--card-type-badge-lh);
 
   border-radius: 8px;
 
@@ -1954,13 +1965,13 @@ body[data-layout="home"] {
 
   color: #ffffff;
 
-  font-family: var(--type-caption-font);
+  font-family: var(--card-type-caption-font);
 
-  font-size: var(--type-caption-size);
+  font-size: var(--card-type-caption-size);
 
   font-weight: var(--fw-semibold);
 
-  line-height: var(--type-caption-lh);
+  line-height: var(--card-type-caption-lh);
 
   padding: 0.1875rem 0.4375rem;
 
@@ -1974,17 +1985,22 @@ body[data-layout="home"] {
 
   color: #dbb115;
 
-  font-size: var(--type-caption-size);
-  font-family: var(--type-caption-font);
-  font-weight: var(--type-caption-weight);
-  line-height: var(--type-caption-lh);
-  letter-spacing: var(--type-caption-ls);
+  font-size: var(--card-icon-meta);
+  line-height: 1;
 
 }
 
 
 
 .home-course-card__body {
+
+  display: flex;
+
+  flex-direction: column;
+
+  flex: 1;
+
+  min-height: 0;
 
   padding: 0.875rem;
 
@@ -1994,19 +2010,23 @@ body[data-layout="home"] {
 
 .home-course-card__title {
 
-  font-family: var(--type-card-title-font);
+  font-family: var(--card-type-title-font);
 
-  font-size: var(--type-body-size);
+  font-size: var(--card-type-title-size);
 
-  font-weight: var(--type-card-title-weight);
+  font-weight: var(--card-type-title-weight);
 
-  line-height: var(--lh-snug);
+  line-height: var(--card-type-title-lh);
 
-  letter-spacing: var(--type-card-title-ls);
+  letter-spacing: var(--card-type-title-ls);
 
   margin-bottom: 0.375rem;
 
   text-align: right;
+
+  overflow-wrap: break-word;
+
+  word-break: break-word;
 
 }
 
@@ -2022,15 +2042,15 @@ body[data-layout="home"] {
 
 .home-course-card__desc {
 
-  font-family: var(--type-card-subtitle-font);
+  font-family: var(--card-type-desc-font);
 
-  font-size: var(--type-small-size);
+  font-size: var(--card-type-desc-size);
 
-  font-weight: var(--type-card-subtitle-weight);
+  font-weight: var(--card-type-desc-weight);
 
-  line-height: var(--type-small-lh);
+  line-height: var(--card-type-desc-lh);
 
-  letter-spacing: var(--type-card-subtitle-ls);
+  letter-spacing: var(--card-type-desc-ls);
 
   color: var(--type-home-section-subtitle-color);
 
@@ -2038,13 +2058,9 @@ body[data-layout="home"] {
 
   text-align: right;
 
-  display: -webkit-box;
+  overflow-wrap: break-word;
 
-  -webkit-line-clamp: 2;
-
-  -webkit-box-orient: vertical;
-
-  overflow: hidden;
+  word-break: break-word;
 
 }
 
@@ -2060,13 +2076,13 @@ body[data-layout="home"] {
 
   gap: 0.375rem;
 
-  font-family: var(--type-home-card-meta-font);
+  font-family: var(--card-type-meta-font);
 
-  font-size: var(--type-home-card-meta-size);
+  font-size: var(--card-type-meta-size);
 
-  font-weight: var(--type-home-card-meta-weight);
+  font-weight: var(--card-type-meta-weight);
 
-  line-height: var(--type-small-lh);
+  line-height: var(--card-type-meta-lh);
 
   color: var(--type-home-section-subtitle-color);
 
@@ -2098,11 +2114,15 @@ body[data-layout="home"] {
 
   display: flex;
 
+  flex-wrap: wrap;
+
   align-items: center;
 
   justify-content: space-between;
 
   gap: 0.5rem;
+
+  margin-top: auto;
 
   padding-top: 0.625rem;
 
@@ -2122,13 +2142,13 @@ body[data-layout="home"] {
 
   gap: 0.375rem;
 
-  font-family: var(--type-home-card-stat-font);
+  font-family: var(--card-type-meta-font);
 
-  font-size: var(--type-home-card-stat-size);
+  font-size: var(--card-type-meta-size);
 
-  font-weight: var(--type-home-card-stat-weight);
+  font-weight: var(--card-type-meta-weight);
 
-  line-height: var(--type-small-lh);
+  line-height: var(--card-type-meta-lh);
 
   color: #9ca3af;
 
@@ -2150,7 +2170,7 @@ body[data-layout="home"] {
 
 .home-course-card__stat i {
 
-  font-size: var(--icon-sm);
+  font-size: var(--card-icon-meta);
 
   color: #0050d8;
 
@@ -2160,13 +2180,13 @@ body[data-layout="home"] {
 
 .home-course-card__price {
 
-  font-family: var(--type-home-card-price-font);
+  font-family: var(--card-type-price-font);
 
-  font-size: var(--type-label-size);
+  font-size: var(--card-type-price-size);
 
-  font-weight: var(--type-home-card-price-weight);
+  font-weight: var(--card-type-price-weight);
 
-  line-height: var(--lh-snug);
+  line-height: var(--card-type-price-lh);
 
   color: #0050d8;
 
@@ -2675,8 +2695,6 @@ body[data-layout="home"] {
 
 .home-featured {
 
-  --featured-card-height: 418.031px;
-
   --featured-card-image-height: 161.031px;
 
   --featured-grid-gap: 1rem;
@@ -2783,7 +2801,7 @@ body[data-layout="home"] {
 
   height: auto;
 
-  min-height: var(--featured-card-height);
+  min-height: 0;
 
   position: relative;
 
@@ -2839,11 +2857,11 @@ body[data-layout="home"] {
 
 .home-featured__grid .home-track-card--featured .home-track-card__stat {
 
-  font-size: var(--type-caption-size);
-  font-family: var(--type-caption-font);
-  font-weight: var(--type-caption-weight);
-  line-height: var(--type-caption-lh);
-  letter-spacing: var(--type-caption-ls);
+  font-size: var(--card-type-caption-size);
+  font-family: var(--card-type-caption-font);
+  font-weight: var(--card-type-caption-weight);
+  line-height: var(--card-type-caption-lh);
+  letter-spacing: var(--card-type-caption-ls);
 
   color: #9ca3af;
 
@@ -2853,11 +2871,8 @@ body[data-layout="home"] {
 
 .home-featured__grid .home-track-card--featured .home-track-card__stat i {
 
-  font-size: var(--type-small-size);
-  font-family: var(--type-small-font);
-  font-weight: var(--type-small-weight);
-  line-height: var(--type-small-lh);
-  letter-spacing: var(--type-small-ls);
+  font-size: var(--card-icon-meta);
+  line-height: 1;
 
   color: #9ca3af;
 
@@ -2897,17 +2912,21 @@ body[data-layout="home"] {
 
   min-width: 220px;
 
-  height: 3rem;
+  height: var(--card-btn-height);
 
-  padding-inline: 1.5rem;
+  min-height: 2.5rem;
 
-  font-family: var(--type-home-section-link-font);
+  padding-inline: 1.25rem;
 
-  font-size: var(--type-home-section-link-size);
+  font-family: var(--card-type-button-font);
 
-  font-weight: var(--type-home-section-link-weight);
+  font-size: var(--card-type-button-size);
 
-  line-height: var(--type-home-section-subtitle-lh);
+  font-weight: var(--card-type-button-weight);
+
+  line-height: var(--card-type-button-lh);
+
+  letter-spacing: var(--card-type-button-ls);
 
   color: rgba(255, 255, 255, 1);
 
@@ -3124,15 +3143,15 @@ body[data-layout="home"] {
 
 .home-track-card--why .home-track-card__title {
 
-  font-family: var(--type-card-title-font);
+  font-family: var(--card-type-title-font);
 
-  font-size: var(--type-body-size);
+  font-size: var(--card-type-title-size);
 
-  font-weight: var(--type-card-title-weight);
+  font-weight: var(--card-type-title-weight);
 
-  line-height: var(--type-body-lh);
+  line-height: var(--card-type-title-lh);
 
-  letter-spacing: var(--type-card-title-ls);
+  letter-spacing: var(--card-type-title-ls);
 
   color: var(--color-white);
 
@@ -3144,15 +3163,15 @@ body[data-layout="home"] {
 
 .home-track-card--why .home-track-card__desc {
 
-  font-family: var(--type-card-subtitle-font);
+  font-family: var(--card-type-desc-font);
 
-  font-size: var(--type-small-size);
+  font-size: var(--card-type-desc-size);
 
-  font-weight: var(--type-card-subtitle-weight);
+  font-weight: var(--card-type-desc-weight);
 
-  line-height: var(--type-small-lh);
+  line-height: var(--card-type-desc-lh);
 
-  letter-spacing: var(--type-card-subtitle-ls);
+  letter-spacing: var(--card-type-desc-ls);
 
   color: rgba(255, 255, 255, 0.7);
 
@@ -3683,7 +3702,7 @@ body[data-layout="home"] {
 
   font-weight: var(--fw-semibold);
 
-  line-height: 1.375rem;
+  line-height: var(--type-card-subtitle-lh);
 
   color: var(--testimonial-blue);
 
@@ -3703,7 +3722,7 @@ body[data-layout="home"] {
 
   font-weight: var(--fw-regular);
 
-  line-height: 1.25rem;
+  line-height: var(--type-body-lh);
 
   color: #9ca3af;
 
@@ -4072,13 +4091,13 @@ body[data-layout="home"] {
 
   padding-inline: 2rem;
 
-  font-family: var(--font-primary);
+  font-family: var(--type-button-font);
 
-  font-size: var(--type-card-subtitle-size);
+  font-size: var(--type-button-size);
 
-  font-weight: var(--fw-semibold);
+  font-weight: var(--type-button-weight);
 
-  line-height: 1.5rem;
+  line-height: var(--type-button-lh);
 
   color: #0a2e8b;
 
@@ -5167,7 +5186,7 @@ body[data-layout="home"] {
     width: min(78vw, 17.5rem);
     max-width: none;
     height: auto;
-    min-height: var(--track-card-height);
+    min-height: 0;
     scroll-snap-align: start;
   }
 
@@ -5192,7 +5211,7 @@ body[data-layout="home"] {
     width: min(78vw, 16rem);
     max-width: none;
     height: auto;
-    min-height: var(--featured-card-height, 22rem);
+    min-height: 0;
     scroll-snap-align: start;
   }
 

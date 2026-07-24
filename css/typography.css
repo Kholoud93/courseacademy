@@ -232,11 +232,11 @@ p:not([class]) {
 }
 
 .card__title {
-  font-family: var(--type-card-title-font);
-  font-size: var(--type-card-title-size);
-  font-weight: var(--type-card-title-weight);
-  line-height: var(--type-card-title-lh);
-  letter-spacing: var(--type-card-title-ls);
+  font-family: var(--card-type-title-font);
+  font-size: var(--card-type-title-size);
+  font-weight: var(--card-type-title-weight);
+  line-height: var(--card-type-title-lh);
+  letter-spacing: var(--card-type-title-ls);
   margin-bottom: var(--card-title-gap);
 }
 
@@ -246,12 +246,143 @@ p:not([class]) {
 .card__date,
 .card__count,
 .card__quote {
-  font-family: var(--type-card-subtitle-font);
-  font-size: var(--type-card-subtitle-size);
-  font-weight: var(--type-card-subtitle-weight);
-  line-height: var(--type-card-subtitle-lh);
-  letter-spacing: var(--type-card-subtitle-ls);
+  font-family: var(--card-type-desc-font);
+  font-size: var(--card-type-desc-size);
+  font-weight: var(--card-type-desc-weight);
+  line-height: var(--card-type-desc-lh);
+  letter-spacing: var(--card-type-desc-ls);
   color: var(--color-text-secondary);
+}
+
+.home-track-card__title,
+.home-course-card__title,
+.blog-card__title,
+.blog-featured__title,
+.fav-card__title,
+.cert-card__title,
+.my-course-card__title,
+.dash-course__title,
+.cart-item__title,
+.cart-summary__title,
+.pd-course-card__title,
+.pd-curriculum-plan__title,
+.about-values__title,
+.about-mv__title,
+.about-team__name,
+.contact-highlights__title,
+.contact-depts__title,
+.paths-why-card__title,
+.player-info__desc-title,
+.player-lesson__name,
+.player-video__label {
+  font-family: var(--card-type-title-font);
+  font-size: var(--card-type-title-size);
+  font-weight: var(--card-type-title-weight);
+  line-height: var(--card-type-title-lh);
+  letter-spacing: var(--card-type-title-ls);
+}
+
+.home-track-card__desc,
+.home-course-card__desc,
+.blog-card__excerpt,
+.blog-featured__excerpt,
+.about-values__text,
+.about-mv__text,
+.about-team__bio,
+.contact-depts__text,
+.paths-why-card__desc,
+.player-info__desc-text,
+.fav-card__instructor,
+.cert-card__meta,
+.my-course-card__meta,
+.cart-item__meta {
+  font-family: var(--card-type-desc-font);
+  font-size: var(--card-type-desc-size);
+  font-weight: var(--card-type-desc-weight);
+  line-height: var(--card-type-desc-lh);
+  letter-spacing: var(--card-type-desc-ls);
+}
+
+.home-track-card__stat,
+.home-course-card__stat,
+.home-track-card__level,
+.player-lesson__number,
+.player-lesson__duration,
+.player-info__detail,
+.dash-course__meta,
+.fav-card__meta,
+.my-course-card__progress-text {
+  font-family: var(--card-type-meta-font);
+  font-size: var(--card-type-meta-size);
+  font-weight: var(--card-type-meta-weight);
+  line-height: var(--card-type-meta-lh);
+  letter-spacing: var(--card-type-meta-ls);
+}
+
+.home-track-card__badge,
+.home-course-card__badge,
+.blog-card__category,
+.blog-featured__category,
+.fav-card__badge,
+.cert-card__badge,
+.my-course-card__badge {
+  font-family: var(--card-type-badge-font);
+  font-size: var(--card-type-badge-size);
+  font-weight: var(--card-type-badge-weight);
+  line-height: var(--card-type-badge-lh);
+  letter-spacing: var(--card-type-badge-ls);
+}
+
+.home-track-card__price,
+.home-course-card__price,
+.fav-card__price,
+.cart-item__price,
+.cart-summary__total-value {
+  font-family: var(--card-type-price-font);
+  font-size: var(--card-type-price-size);
+  font-weight: var(--card-type-price-weight);
+  line-height: var(--card-type-price-lh);
+  letter-spacing: var(--card-type-price-ls);
+}
+
+.home-track-card__stat i,
+.home-course-card__stat i,
+.player-info__detail i,
+.fav-card__meta i,
+.my-course-card__meta i,
+.cart-item__meta i {
+  font-size: var(--card-icon-meta);
+}
+
+.home-track-card__instructor i,
+.about-values__icon,
+.contact-highlights__icon,
+.contact-depts__icon,
+.paths-why-card__icon {
+  font-size: var(--card-icon-sm);
+}
+
+.fav-card__btn,
+.cert-card__btn,
+.my-course-card__btn,
+.cart-summary__checkout,
+.player-btn,
+.home-featured__btn,
+.dash-course__btn {
+  font-family: var(--card-type-button-font);
+  font-size: var(--card-type-button-size);
+  font-weight: var(--card-type-button-weight);
+  line-height: var(--card-type-button-lh);
+  letter-spacing: var(--card-type-button-ls);
+}
+
+.fav-card__btn i,
+.cert-card__btn i,
+.my-course-card__btn i,
+.player-btn i,
+.home-featured__btn i,
+.dash-course__btn i {
+  font-size: var(--card-icon-action);
 }
 
 .navbar__link,

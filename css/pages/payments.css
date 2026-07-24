@@ -22,7 +22,7 @@ body[data-page="payments"].layout-dashboard {
   font-size: var(--type-page-title-size);
   font-weight: var(--type-page-title-weight);
   color: #1a1a2e;
-  line-height: 1.3;
+  line-height: var(--type-page-title-lh);
 }
 
 .pay-stats .dash-stat {

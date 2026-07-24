@@ -46,19 +46,20 @@
 }
 
 .courses-hero__title {
-  font-family: var(--font-primary);
+  font-family: var(--type-hero-title-font);
   font-size: var(--type-hero-title-size);
-  font-weight: var(--fw-bold);
-  line-height: 1.2;
+  font-weight: var(--type-hero-title-weight);
+  line-height: var(--type-hero-title-lh);
+  letter-spacing: var(--type-hero-title-ls);
   margin-bottom: 0.75rem;
 }
 
 .courses-hero__desc {
-  font-size: var(--type-body-size);
-  font-family: var(--type-body-font);
-  font-weight: var(--type-body-weight);
-  line-height: var(--type-body-lh);
-  letter-spacing: var(--type-body-ls);
+  font-size: var(--type-card-subtitle-size);
+  font-family: var(--type-card-subtitle-font);
+  font-weight: var(--type-card-subtitle-weight);
+  line-height: var(--type-card-subtitle-lh);
+  letter-spacing: var(--type-card-subtitle-ls);
   color: rgba(255, 255, 255, 0.72);
   margin-bottom: 1.5rem;
   max-width: 36rem;
@@ -141,8 +142,8 @@
   font-size: var(--type-card-title-size);
   font-family: var(--type-card-title-font);
   letter-spacing: var(--type-card-title-ls);
-  font-weight: var(--fw-bold);
-  line-height: 1.1;
+  font-weight: var(--type-card-title-weight);
+  line-height: var(--type-card-title-lh);
 }
 
 .courses-hero__stat span:last-child {
@@ -156,7 +157,6 @@
 
 .courses-page {
   --featured-card-width: 15.5rem;
-  --featured-card-height: 24.5rem;
   --featured-card-image-height: 9.5rem;
   --featured-grid-gap: 16px;
   --courses-grid-width: calc(var(--featured-card-width) * 3 + var(--featured-grid-gap) * 2);
@@ -221,18 +221,18 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  font-family: var(--type-card-title-font);
-  font-size: var(--type-body-size);
-  font-weight: var(--type-card-title-weight);
-  line-height: var(--lh-snug);
-  letter-spacing: var(--type-card-title-ls);
+  font-family: var(--card-type-title-font);
+  font-size: var(--card-type-title-size);
+  font-weight: var(--card-type-title-weight);
+  line-height: var(--card-type-title-lh);
+  letter-spacing: var(--card-type-title-ls);
   color: #111827;
   margin-bottom: 0.75rem;
 }
 
 .courses-filters-card__title i {
   color: #0050d8;
-  font-size: var(--icon-md);
+  font-size: var(--card-icon-sm);
 }
 
 .courses-filters-card__list {
@@ -405,19 +405,20 @@
 
 .courses-filters-promo strong {
   display: block;
-  font-family: var(--type-card-title-font);
-  font-size: var(--type-body-size);
-  font-weight: var(--type-card-title-weight);
-  line-height: var(--lh-snug);
+  font-family: var(--card-type-title-font);
+  font-size: var(--card-type-title-size);
+  font-weight: var(--card-type-title-weight);
+  line-height: var(--card-type-title-lh);
+  letter-spacing: var(--card-type-title-ls);
   margin-bottom: 0.5rem;
   padding-inline: 1.5rem;
 }
 
 .courses-filters-promo p {
-  font-family: var(--type-small-font);
-  font-size: var(--type-small-size);
-  font-weight: var(--type-small-weight);
-  line-height: var(--type-small-lh);
+  font-family: var(--card-type-desc-font);
+  font-size: var(--card-type-desc-size);
+  font-weight: var(--card-type-desc-weight);
+  line-height: var(--card-type-desc-lh);
   color: rgba(255, 255, 255, 0.88);
   margin-bottom: 1rem;
   padding-inline: 0.5rem;
@@ -493,17 +494,17 @@
   border-radius: 0.75rem;
   background: #ffffff;
   color: #374151;
-  font-family: var(--type-caption-font);
-  font-size: var(--type-caption-size);
-  font-weight: var(--type-caption-weight);
-  line-height: var(--type-caption-lh);
-  letter-spacing: var(--type-caption-ls);
+  font-family: var(--type-label-font);
+  font-size: var(--type-label-size);
+  font-weight: var(--type-label-weight);
+  line-height: var(--type-label-lh);
+  letter-spacing: var(--type-label-ls);
   cursor: pointer;
 }
 
 .courses-page__sort-trigger i {
   flex-shrink: 0;
-  font-size: 1rem;
+  font-size: var(--type-label-size);
   line-height: 1;
   transition: transform var(--transition-fast);
 }
@@ -590,7 +591,7 @@
   max-width: none;
   min-width: 0;
   height: auto;
-  min-height: var(--featured-card-height);
+  min-height: 0;
   justify-self: stretch;
 }
 
@@ -818,7 +819,7 @@
     max-width: none;
     min-width: 0;
     height: auto;
-    min-height: var(--featured-card-height);
+    min-height: 0;
   }
 }
 
@@ -902,7 +903,7 @@
   }
 
   .courses-hero__stat strong {
-    font-size: var(--type-body-size);
+    font-size: var(--type-card-title-size);
   }
 
   .courses-page {
@@ -934,7 +935,7 @@
     max-width: none !important;
     min-width: 0;
     height: auto;
-    min-height: var(--featured-card-height);
+    min-height: 0;
     flex: unset;
   }
 }

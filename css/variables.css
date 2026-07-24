@@ -159,21 +159,77 @@
   --type-home-section-link-color: #0050d5;
 
   --type-home-card-badge-font: var(--font-primary);
-  --type-home-card-badge-size: var(--type-caption-size);
-  --type-home-card-badge-weight: var(--fw-semibold);
-  --type-home-card-badge-lh: 1;
+  --type-home-card-badge-size: var(--card-type-badge-size);
+  --type-home-card-badge-weight: var(--card-type-badge-weight);
+  --type-home-card-badge-lh: var(--card-type-badge-lh);
 
   --type-home-card-stat-font: var(--font-primary);
-  --type-home-card-stat-size: var(--type-small-size);
-  --type-home-card-stat-weight: var(--fw-regular);
+  --type-home-card-stat-size: var(--card-type-meta-size);
+  --type-home-card-stat-weight: var(--card-type-meta-weight);
 
   --type-home-card-meta-font: var(--font-primary);
-  --type-home-card-meta-size: var(--type-small-size);
-  --type-home-card-meta-weight: var(--fw-medium);
+  --type-home-card-meta-size: var(--card-type-meta-size);
+  --type-home-card-meta-weight: var(--card-type-meta-weight);
 
   --type-home-card-price-font: var(--font-primary);
-  --type-home-card-price-size: var(--type-label-size);
-  --type-home-card-price-weight: var(--fw-bold);
+  --type-home-card-price-size: var(--card-type-price-size);
+  --type-home-card-price-weight: var(--card-type-price-weight);
+
+  --card-type-title-font: var(--font-primary);
+  --card-type-title-size: 1rem;
+  --card-type-title-weight: var(--fw-semibold);
+  --card-type-title-lh: var(--lh-snug);
+  --card-type-title-ls: var(--ls-normal);
+
+  --card-type-subtitle-font: var(--font-primary);
+  --card-type-subtitle-size: 0.875rem;
+  --card-type-subtitle-weight: var(--fw-regular);
+  --card-type-subtitle-lh: var(--lh-normal);
+  --card-type-subtitle-ls: var(--ls-normal);
+
+  --card-type-desc-font: var(--font-primary);
+  --card-type-desc-size: 0.8125rem;
+  --card-type-desc-weight: var(--fw-regular);
+  --card-type-desc-lh: var(--lh-relaxed);
+  --card-type-desc-ls: var(--ls-normal);
+
+  --card-type-meta-font: var(--font-primary);
+  --card-type-meta-size: 0.75rem;
+  --card-type-meta-weight: var(--fw-medium);
+  --card-type-meta-lh: var(--lh-normal);
+  --card-type-meta-ls: var(--ls-normal);
+
+  --card-type-caption-font: var(--font-primary);
+  --card-type-caption-size: 0.75rem;
+  --card-type-caption-weight: var(--fw-regular);
+  --card-type-caption-lh: var(--lh-normal);
+  --card-type-caption-ls: var(--ls-normal);
+
+  --card-type-button-font: var(--font-primary);
+  --card-type-button-size: 0.8125rem;
+  --card-type-button-weight: var(--fw-semibold);
+  --card-type-button-lh: var(--lh-normal);
+  --card-type-button-ls: var(--ls-normal);
+
+  --card-type-badge-font: var(--font-primary);
+  --card-type-badge-size: 0.75rem;
+  --card-type-badge-weight: var(--fw-semibold);
+  --card-type-badge-lh: 1;
+  --card-type-badge-ls: var(--ls-normal);
+
+  --card-type-price-font: var(--font-primary);
+  --card-type-price-size: 0.875rem;
+  --card-type-price-weight: var(--fw-bold);
+  --card-type-price-lh: var(--lh-snug);
+  --card-type-price-ls: var(--ls-normal);
+  --card-type-price-lg-size: 1rem;
+
+  --card-icon-meta: 0.875rem;
+  --card-icon-sm: 1rem;
+  --card-icon-action: 1.125rem;
+
+  --card-btn-height: 2.25rem;
+  --card-btn-padding-x: 0.875rem;
 
   --type-subsection-title-font: var(--font-primary);
   --type-subsection-title-size: var(--type-card-title-size);
@@ -337,14 +393,14 @@
   --dash-title-size-sm: var(--type-page-title-size);
   --dash-subtitle-size: var(--type-card-subtitle-size);
   --dash-section-title-size: var(--type-section-title-size);
-  --dash-card-title-size: var(--type-card-title-size);
+  --dash-card-title-size: var(--card-type-title-size);
   --dash-body-size: var(--type-body-size);
   --dash-meta-size: var(--type-small-size);
   --dash-label-size: var(--type-label-size);
   --dash-icon-size: 1.125rem;
   --dash-icon-sm: 1rem;
-  --dash-stat-value-size: var(--type-card-title-size);
-  --dash-stat-label-size: var(--type-small-size);
+  --dash-stat-value-size: var(--type-section-title-size);
+  --dash-stat-label-size: var(--card-type-meta-size);
 
 
 
