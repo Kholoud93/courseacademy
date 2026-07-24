@@ -32,6 +32,16 @@ body {
   direction: rtl;
 }
 
+body[data-layout="home"],
+body[data-layout="main"] {
+  padding-top: var(--home-nav-height);
+}
+
+html:has(body[data-layout="home"]),
+html:has(body[data-layout="main"]) {
+  scroll-padding-top: var(--home-nav-height);
+}
+
 img,
 picture,
 video,
