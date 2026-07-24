@@ -1260,7 +1260,7 @@ body[data-open-drawer="mobile-menu"] .home-nav__hamburger span:nth-child(3) {
   width: 100%;
   max-width: var(--home-nav-container-max);
   margin-inline: auto;
-  padding-inline: clamp(1.25rem, 4vw, 3rem);
+  padding-inline: var(--container-padding);
   box-sizing: border-box;
 }
 
@@ -1436,10 +1436,6 @@ body[data-open-drawer="mobile-menu"] .home-nav__hamburger span:nth-child(3) {
     padding-block: 3.25rem 1.75rem;
   }
 
-  .home-footer > .container {
-    padding-inline: 1.5rem;
-  }
-
   .home-footer__grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 2rem 1.75rem;
@@ -1462,7 +1458,6 @@ body[data-open-drawer="mobile-menu"] .home-nav__hamburger span:nth-child(3) {
 
   .home-footer > .container {
     max-width: 100%;
-    padding-inline: 1.25rem;
     overflow-x: clip;
   }
 
@@ -1540,10 +1535,6 @@ body[data-open-drawer="mobile-menu"] .home-nav__hamburger span:nth-child(3) {
 }
 
 @media (max-width: 380px) {
-  .home-footer > .container {
-    padding-inline: 1rem;
-  }
-
   .home-footer__grid {
     gap: 1.25rem;
   }

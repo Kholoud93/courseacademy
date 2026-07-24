@@ -133,7 +133,6 @@
   background: #f8fafc;
 }
 .blog-page__container {
-  max-width: 75rem;
   min-width: 0;
 }
 .blog-section__title {
@@ -790,26 +789,7 @@
   }
 }
 
-@media (max-width: 1199.98px) {
-  .blog-hero > .container,
-  .blog-page > .container {
-    padding-inline: 1.5rem;
-  }
-}
-
-@media (max-width: 767.98px) {
-  .blog-hero > .container,
-  .blog-page > .container {
-    padding-inline: 1.25rem;
-  }
-}
-
 @media (max-width: 380px) {
-  .blog-hero > .container,
-  .blog-page > .container {
-    padding-inline: 1rem;
-  }
-
   .blog-page__grid {
     gap: 0.875rem;
   }
@@ -842,7 +822,6 @@
   flex-direction: column;
   align-items: flex-start;
   width: 100%;
-  max-width: 71.25rem;
   margin-inline: auto;
   text-align: right;
 }
@@ -996,11 +975,9 @@
 }
 .blog-detail-body.cd-body > .container,
 .blog-detail-body > .container {
-  max-width: 71.25rem;
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  padding-inline: clamp(1.5rem, 4vw, 2.5rem);
   box-sizing: border-box;
 }
 .blog-detail-body .courses-filters-card {
@@ -1773,7 +1750,6 @@
   background: #f8fafc;
 }
 .blog-related__container {
-  max-width: 75rem;
   min-width: 0;
 }
 @media (max-width: 1199px) {
@@ -1792,12 +1768,6 @@
 
   .blog-detail-hero__breadcrumb {
     margin-bottom: 2.5rem;
-  }
-
-  .blog-detail-hero > .container,
-  .blog-detail-body.cd-body > .container,
-  .blog-detail-body > .container {
-    padding-inline: 1.5rem;
   }
 
   .blog-detail-body .cd-layout.blog-detail-layout,
@@ -1845,11 +1815,6 @@
 
   .blog-detail-hero__title {
     margin-bottom: 1.25rem;
-  }
-
-  .blog-detail-body.cd-body > .container,
-  .blog-detail-body > .container {
-    padding-inline: 1.25rem;
   }
 
   .blog-detail-body .cd-layout.blog-detail-layout,
@@ -1964,12 +1929,6 @@
 
   .blog-detail-body {
     padding-block: 1.25rem 2rem;
-  }
-
-  .blog-detail-hero > .container,
-  .blog-detail-body.cd-body > .container,
-  .blog-detail-body > .container {
-    padding-inline: 1.25rem;
   }
 
   .blog-detail-author-wrap {
@@ -2093,13 +2052,5 @@
   .blog-related .blog-page__grid .blog-card {
     flex: 0 0 min(78vw, 14.5rem);
     width: min(78vw, 14.5rem);
-  }
-}
-
-@media (max-width: 380px) {
-  .blog-detail-hero > .container,
-  .blog-detail-body.cd-body > .container,
-  .blog-detail-body > .container {
-    padding-inline: 1rem;
   }
 }

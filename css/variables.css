@@ -274,17 +274,17 @@
 
 
 
-  --container-max: 90rem;
+  --container-max: 72.5rem;
   --container-narrow: 40rem;
   --container-auth: 28rem;
-  --container-padding: var(--space-3);
+  --container-padding: 0.75rem;
   --section-padding-y: var(--space-6);
   --section-padding-y-lg: var(--space-10);
   --grid-gap: var(--space-2);
   --grid-gap-sm: var(--space-1);
   --navbar-height: 2.5rem;
   --home-nav-height: 87.62px;
-  --home-nav-container-max: 75rem;
+  --home-nav-container-max: var(--container-max);
   --sidebar-width: 15.5rem;
   --bottom-nav-height: 4rem;
   --dashboard-header-height: 4.5rem;
@@ -429,6 +429,13 @@
 
 
 
+@media (min-width: 576px) {
+  :root {
+    --container-padding: 1rem;
+    --section-padding-y: var(--space-6);
+  }
+}
+
 @media (min-width: 768px) {
   :root {
     --type-hero-title-size: 2.5rem;
@@ -438,7 +445,7 @@
     --type-body-size: 1rem;
     --type-small-size: 0.875rem;
 
-    --container-padding: var(--space-3);
+    --container-padding: 1.5rem;
     --section-padding-y: var(--space-8);
     --grid-gap: var(--space-3);
 
@@ -450,10 +457,9 @@
   }
 }
 
-@media (min-width: 576px) {
+@media (min-width: 1200px) {
   :root {
-    --container-padding: var(--space-3);
-    --section-padding-y: var(--space-6);
+    --container-padding: 2rem;
   }
 }
 

@@ -288,11 +288,6 @@
 
 
 @media (min-width: 992px) and (max-width: 1199.98px) {
-  .cd-hero > .container,
-  .cd-body > .container {
-    padding-inline: 1.5rem;
-  }
-
   .cd-layout {
     grid-template-columns: minmax(0, 1fr) minmax(0, 17rem);
     gap: 1.25rem;
@@ -350,11 +345,6 @@
 }
 
 @media (min-width: 768px) and (max-width: 991.98px) {
-  .cd-hero > .container,
-  .cd-body > .container {
-    padding-inline: 1.5rem;
-  }
-
   .cd-layout {
     display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(0, 15rem);
@@ -444,11 +434,6 @@
 }
 
 @media (max-width: 767.98px) {
-  .cd-hero > .container,
-  .cd-body > .container {
-    padding-inline: 1.25rem;
-  }
-
   .cd-layout {
     grid-template-columns: minmax(0, 1fr);
     gap: 1.25rem;
@@ -654,11 +639,6 @@
 }
 
 @media (max-width: 380px) {
-  .cd-hero > .container,
-  .cd-body > .container {
-    padding-inline: 1rem;
-  }
-
   .pd-course-card {
     padding: 0.75rem;
   }

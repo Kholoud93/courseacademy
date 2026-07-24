@@ -198,6 +198,7 @@
   margin-inline: auto;
   gap: 1.5rem;
   align-items: start;
+  box-sizing: border-box;
 }
 
 .courses-sidebar {
@@ -891,34 +892,9 @@
   }
 }
 
-@media (max-width: 1199.98px) {
-
-  .courses-hero>.container,
-  .courses-page>.container {
-    padding-inline: 1.5rem;
-  }
-
-  .courses-layout {
-    box-sizing: border-box;
-  }
-}
-
-@media (max-width: 767.98px) {
-
-  .courses-hero>.container,
-  .courses-page>.container {
-    padding-inline: 1.25rem;
-  }
-}
-
 @media (max-width: 380px) {
   .courses-hero {
     padding-block: 1.75rem 2rem;
-  }
-
-  .courses-hero>.container,
-  .courses-page>.container {
-    padding-inline: 1rem;
   }
 
   .courses-hero__stats {

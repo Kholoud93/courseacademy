@@ -92,7 +92,7 @@
 }
 
 .paths-page__container {
-  max-width: 75rem;
+  min-width: 0;
 }
 
 .paths-page__head {
@@ -132,7 +132,7 @@
 }
 
 .paths-why__container {
-  max-width: 75rem;
+  min-width: 0;
 }
 
 .paths-why__card {
@@ -442,29 +442,7 @@
   }
 }
 
-@media (max-width: 1199.98px) {
-  .paths-hero > .container,
-  .paths-page > .container,
-  .paths-why > .container {
-    padding-inline: 1.5rem;
-  }
-}
-
-@media (max-width: 767.98px) {
-  .paths-hero > .container,
-  .paths-page > .container,
-  .paths-why > .container {
-    padding-inline: 1.25rem;
-  }
-}
-
 @media (max-width: 380px) {
-  .paths-hero > .container,
-  .paths-page > .container,
-  .paths-why > .container {
-    padding-inline: 1rem;
-  }
-
   .paths-page__grid {
     gap: 0.875rem;
   }

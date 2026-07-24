@@ -1219,13 +1219,7 @@ body[data-layout="home"] {
 
 
 .home-tracks__container {
-
-  max-width: 88.125rem;
-
-  padding-inline: clamp(1rem, 2.5vw, 1.875rem);
-
   margin-inline: auto;
-
 }
 
 
@@ -2681,15 +2675,11 @@ body[data-layout="home"] {
 
 .home-featured {
 
-  --featured-card-width: min(286px, 100%);
-
   --featured-card-height: 418.031px;
 
   --featured-card-image-height: 161.031px;
 
-  --featured-grid-gap: 16px;
-
-  --featured-grid-width: calc(var(--featured-card-width) * 2 + var(--featured-grid-gap));
+  --featured-grid-gap: 1rem;
 
   padding-top: calc(var(--home-section-gap) + 1.5rem);
 
@@ -2715,6 +2705,8 @@ body[data-layout="home"] {
 
   z-index: 1;
 
+  min-width: 0;
+
 }
 
 
@@ -2723,9 +2715,9 @@ body[data-layout="home"] {
 
   width: 100%;
 
-  max-width: var(--featured-grid-width);
+  max-width: 100%;
 
-  margin-inline: auto;
+  margin-inline: 0;
 
   align-items: flex-end;
 
@@ -2753,9 +2745,11 @@ body[data-layout="home"] {
 
   width: 100%;
 
-  max-width: var(--featured-grid-width);
+  max-width: 100%;
 
-  margin-inline: auto;
+  margin-inline: 0;
+
+  display: grid;
 
   grid-template-columns: repeat(2, minmax(0, 1fr));
 
@@ -2769,19 +2763,25 @@ body[data-layout="home"] {
 
   align-items: stretch;
 
+  min-width: 0;
+
+  box-sizing: border-box;
+
 }
 
 
 
-.home-featured__grid .home-track-card {
+.home-featured .home-featured__grid .home-track-card {
 
   width: 100%;
 
-  max-width: var(--featured-card-width);
+  max-width: none;
 
-  justify-self: center;
+  min-width: 0;
 
-  height: var(--featured-card-height);
+  justify-self: stretch;
+
+  height: auto;
 
   min-height: var(--featured-card-height);
 
@@ -2790,6 +2790,8 @@ body[data-layout="home"] {
   z-index: 1;
 
   margin-top: 0;
+
+  box-sizing: border-box;
 
 }
 
@@ -4107,6 +4109,12 @@ body[data-layout="home"] {
 
 
 
+@media (min-width: 992px) {
+  .home-featured .home-featured__grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
 @media (min-width: 1200px) {
 
   .home-tracks__inner {
@@ -4135,34 +4143,6 @@ body[data-layout="home"] {
 
 
 
-  .home-featured {
-
-    --featured-grid-width: calc(var(--featured-card-width) * 4 + var(--featured-grid-gap) * 3);
-
-  }
-
-
-
-  .home-featured__grid {
-
-    grid-template-columns: repeat(4, var(--featured-card-width));
-
-  }
-
-
-
-  .home-featured__grid .home-track-card {
-
-    width: var(--featured-card-width);
-
-    max-width: none;
-
-    justify-self: stretch;
-
-  }
-
-
-
   .home-hero {
 
     height: min(var(--home-hero-height), calc(100vw * var(--home-hero-height) / var(--home-frame-width)));
@@ -4182,8 +4162,6 @@ body[data-layout="home"] {
     justify-content: flex-start;
 
     height: 100%;
-
-    padding-inline: 3rem;
 
   }
 
@@ -4304,8 +4282,6 @@ body[data-layout="home"] {
   .home-hero>.container {
 
     height: auto;
-
-    padding-inline: 1.5rem;
 
     overflow: visible;
 
@@ -4558,14 +4534,6 @@ body[data-layout="home"] {
 
 
 
-  .home-hero>.container {
-
-    padding-inline: 1.25rem;
-
-  }
-
-
-
   .home-hero__grid {
 
     gap: 0.75rem;
@@ -4733,14 +4701,6 @@ body[data-layout="home"] {
     min-height: var(--home-hero-height);
 
     padding-top: 1.5rem;
-
-  }
-
-
-
-  .home-hero>.container {
-
-    padding-inline: 5rem;
 
   }
 
@@ -5167,6 +5127,10 @@ body[data-layout="home"] {
 
     align-items: flex-start;
 
+    width: 100%;
+
+    max-width: 100%;
+
   }
 
 
@@ -5209,20 +5173,21 @@ body[data-layout="home"] {
 
   .home-featured {
     margin-top: 0;
-    --featured-grid-width: 100%;
   }
 
   .home-featured__container {
     max-width: 100%;
     overflow-x: clip;
+    min-width: 0;
   }
 
   .home-featured__grid {
     max-width: 100%;
     margin-top: 0;
+    min-width: 0;
   }
 
-  .home-featured__grid>.home-track-card {
+  .home-featured .home-featured__grid > .home-track-card {
     flex: 0 0 min(78vw, 16rem);
     width: min(78vw, 16rem);
     max-width: none;
@@ -5642,14 +5607,6 @@ body[data-layout="home"] {
 
 
 
-  .home-featured {
-
-    --featured-grid-width: 100%;
-
-  }
-
-
-
   .home-stats-bar {
 
     gap: 0.5rem;
@@ -5940,10 +5897,6 @@ body[data-layout="home"] {
 }
 
 @media (min-width: 768px) and (max-width: 991.98px) {
-  .home-hero>.container {
-    padding-inline: 1.25rem;
-  }
-
   .home-hero__grid {
     grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
     gap: 0.75rem;
@@ -7028,7 +6981,7 @@ body[data-layout="home"] {
     width: min(82vw, 16.5rem);
   }
 
-  .home-featured__grid>.home-track-card {
+  .home-featured .home-featured__grid > .home-track-card {
     flex-basis: min(82vw, 15rem);
     width: min(82vw, 15rem);
   }
