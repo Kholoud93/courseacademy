@@ -16,6 +16,17 @@
 .layout-dashboard {
   display: flex;
   min-height: 100vh;
+  overflow-x: hidden;
+}
+
+body.layout-dashboard,
+body[data-layout="dashboard"] {
+  --dashboard-chrome-header-height: 4.25rem;
+  --dashboard-chrome-header-gap: 1rem;
+  --dashboard-z-content: var(--z-base);
+  --dashboard-z-header: var(--z-sticky);
+  --dashboard-z-sidebar: var(--z-drawer);
+  overflow-x: hidden;
 }
 
 .layout-dashboard__sidebar {
@@ -25,25 +36,41 @@
   top: 0;
   right: 0;
   height: 100vh;
-  z-index: var(--z-sticky);
+  height: 100dvh;
+  z-index: var(--dashboard-z-sidebar);
 }
 
 .layout-dashboard__body {
+  position: relative;
+  z-index: var(--dashboard-z-content);
   flex: 1;
   margin-right: var(--sidebar-width);
+  padding-top: calc(var(--dashboard-chrome-header-height) + var(--dashboard-chrome-header-gap));
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  min-height: 100dvh;
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 .layout-dashboard__header {
-  position: sticky;
+  position: fixed;
   top: 0;
-  z-index: var(--z-sticky);
+  left: 0;
+  right: var(--sidebar-width);
+  width: auto;
+  height: var(--dashboard-chrome-header-height);
+  min-height: var(--dashboard-chrome-header-height);
+  z-index: var(--dashboard-z-header);
+  box-sizing: border-box;
 }
 
 .layout-dashboard__content {
+  position: relative;
+  z-index: var(--dashboard-z-content);
   flex: 1;
+  min-width: 0;
   padding: 0.5rem 1rem 1.25rem;
 }
 
@@ -107,6 +134,11 @@
 
 
 @media (min-width: 768px) {
+  body.layout-dashboard,
+  body[data-layout="dashboard"] {
+    --dashboard-chrome-header-height: 4.5rem;
+  }
+
   .layout-auth__sidebar {
     display: flex;
   }
@@ -133,6 +165,11 @@
 
 
 @media (max-width: 767.98px) {
+  body.layout-dashboard,
+  body[data-layout="dashboard"] {
+    --dashboard-chrome-header-height: 4rem;
+  }
+
   .layout-dashboard__sidebar {
     top: auto;
     bottom: 0;
@@ -142,7 +179,7 @@
     height: calc(var(--bottom-nav-height) + env(safe-area-inset-bottom, 0px));
     padding-bottom: env(safe-area-inset-bottom, 0px);
     transform: none;
-    z-index: var(--z-drawer);
+    z-index: var(--dashboard-z-sidebar);
   }
 
   .layout-dashboard__sidebar.is-open {
@@ -151,7 +188,14 @@
 
   .layout-dashboard__body {
     margin-right: 0;
+    padding-top: calc(var(--dashboard-chrome-header-height) + var(--dashboard-chrome-header-gap));
     padding-bottom: calc(var(--bottom-nav-height) + env(safe-area-inset-bottom, 0px));
+  }
+
+  .layout-dashboard__header {
+    left: 0;
+    right: 0;
+    width: 100%;
   }
 
   .layout-dashboard__content {

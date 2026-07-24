@@ -1833,6 +1833,16 @@ body[data-open-drawer="mobile-menu"] .home-nav__hamburger span:nth-child(3) {
   gap: 1.5rem;
 }
 
+.dashboard-header.layout-dashboard__header {
+  height: var(--dashboard-chrome-header-height, var(--dashboard-header-height));
+  min-height: var(--dashboard-chrome-header-height, var(--dashboard-header-height));
+  background: #ffffff;
+  border-bottom: none;
+  box-shadow: var(--shadow-navbar, 0 1px 3px rgba(15, 23, 42, 0.06));
+  margin-bottom: 0;
+  box-sizing: border-box;
+}
+
 .dashboard-header__toggle {
   display: none;
   width: 2.25rem;
