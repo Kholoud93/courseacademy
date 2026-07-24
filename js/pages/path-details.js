@@ -274,6 +274,29 @@ function initTabs() {
   });
 }
 
+function bindStoreActions() {
+  if (typeof Store === "undefined" || !Store.bindProduct) return;
+  const card = document.querySelector(".cd-buy-card");
+  if (!card) return;
+  const instructor =
+    Array.isArray(track.instructors) && track.instructors[0]
+      ? track.instructors[0].name
+      : "";
+  Store.bindProduct(card, {
+    id: track.id,
+    type: "path",
+    title: track.title,
+    instructor,
+    price: track.price,
+    oldPrice: track.oldPrice,
+    image: track.image,
+    href: `path-details.html?id=${track.id}`,
+    category: track.trackBadge || "مسار",
+    rating: track.rating,
+    currency: track.currency || "د.أ",
+  });
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   if (!track) return;
 
@@ -282,6 +305,7 @@ document.addEventListener("DOMContentLoaded", () => {
   renderCurriculum();
   renderReviews();
   renderSidebar();
+  bindStoreActions();
   initTabs();
   showTab("overview");
 });

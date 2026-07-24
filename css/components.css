@@ -1060,6 +1060,10 @@
   border: 1.5px solid #ffffff;
 }
 
+.home-nav__cart-badge[hidden] {
+  display: none !important;
+}
+
 .home-nav__login {
   font-family: var(--type-nav-font);
   font-size: var(--type-nav-size);
@@ -2557,6 +2561,17 @@ body[data-open-drawer="mobile-menu"] .home-nav__hamburger span:nth-child(3) {
   display: flex;
   flex-direction: column;
   gap: 0.875rem;
+}
+
+.nav-panel__empty {
+  margin: 0;
+  padding: 1.5rem 0.75rem;
+  text-align: center;
+  color: #6b7280;
+  font-family: var(--type-body-font);
+  font-size: var(--type-body-size);
+  font-weight: var(--type-body-weight);
+  line-height: var(--type-body-lh);
 }
 
 .nav-panel__item {

@@ -345,6 +345,25 @@ function initTabs() {
   });
 }
 
+function bindStoreActions() {
+  if (typeof Store === "undefined" || !Store.bindProduct) return;
+  const card = document.querySelector(".cd-buy-card");
+  if (!card) return;
+  Store.bindProduct(card, {
+    id: course.id,
+    type: "course",
+    title: course.title,
+    instructor: course.instructorName,
+    price: course.price,
+    oldPrice: course.oldPrice,
+    image: course.image,
+    href: `course-details.html?id=${course.id}`,
+    category: course.categoryName || course.category || "",
+    rating: course.rating,
+    currency: "د.أ",
+  });
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   if (!course) return;
 
@@ -354,6 +373,7 @@ document.addEventListener("DOMContentLoaded", () => {
   renderInstructor();
   renderReviews();
   renderSidebar();
+  bindStoreActions();
   initTabs();
   showTab("overview");
 });

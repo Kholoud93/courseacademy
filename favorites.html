@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
@@ -137,125 +137,10 @@
     <main class="layout-dashboard__content favs-page">
       <div class="favs-page__header">
         <h2 class="favs-page__title">المفضلة</h2>
-        <p class="favs-page__subtitle">لديك 4 دورات في المفضلة</p>
+        <p class="favs-page__subtitle" data-favs-subtitle>لا توجد عناصر في المفضلة</p>
       </div>
 
-      <div class="favs-grid">
-        <article class="fav-card">
-          <div class="fav-card__media">
-            <a href="course-details.html" class="fav-card__media-link">
-              <img src="assets/images/blog-details-hero.png" alt="إدارة المشاريع الإنشائية">
-            </a>
-            <span class="fav-card__badge">إدارة البناء</span>
-            <button type="button" class="fav-card__heart" aria-label="إزالة من المفضلة">
-              <i class="ri-heart-fill"></i>
-            </button>
-            <span class="fav-card__rating">
-              <i class="ri-star-fill"></i>
-              4.7
-            </span>
-          </div>
-          <div class="fav-card__body">
-            <h3 class="fav-card__title">
-              <a href="course-details.html">إدارة المشاريع الإنشائية</a>
-            </h3>
-            <p class="fav-card__instructor">م. خالد السعيد</p>
-            <div class="fav-card__footer">
-              <div class="fav-card__price">
-                <span class="fav-card__price-current">4,499 د.أ</span>
-                <span class="fav-card__price-old">6,999 د.أ</span>
-              </div>
-              <a href="course-details.html" class="fav-card__btn">عرض</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="fav-card">
-          <div class="fav-card__media">
-            <a href="course-details.html" class="fav-card__media-link">
-              <img src="assets/images/blog-featured.png" alt="التصميم الداخلي الحديث">
-            </a>
-            <span class="fav-card__badge">تصميم داخلي</span>
-            <button type="button" class="fav-card__heart" aria-label="إزالة من المفضلة">
-              <i class="ri-heart-fill"></i>
-            </button>
-            <span class="fav-card__rating">
-              <i class="ri-star-fill"></i>
-              4.8
-            </span>
-          </div>
-          <div class="fav-card__body">
-            <h3 class="fav-card__title">
-              <a href="course-details.html">التصميم الداخلي الحديث</a>
-            </h3>
-            <p class="fav-card__instructor">م. فاطمة العتيبي</p>
-            <div class="fav-card__footer">
-              <div class="fav-card__price">
-                <span class="fav-card__price-current">2,999 د.أ</span>
-                <span class="fav-card__price-old">4,499 د.أ</span>
-              </div>
-              <a href="course-details.html" class="fav-card__btn">عرض</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="fav-card">
-          <div class="fav-card__media">
-            <a href="course-details.html" class="fav-card__media-link">
-              <img src="assets/images/track-bim.png" alt="إتقان Revit Architecture">
-            </a>
-            <span class="fav-card__badge">BIM</span>
-            <button type="button" class="fav-card__heart" aria-label="إزالة من المفضلة">
-              <i class="ri-heart-fill"></i>
-            </button>
-            <span class="fav-card__rating">
-              <i class="ri-star-fill"></i>
-              4.8
-            </span>
-          </div>
-          <div class="fav-card__body">
-            <h3 class="fav-card__title">
-              <a href="course-details.html">إتقان Revit Architecture</a>
-            </h3>
-            <p class="fav-card__instructor">م. أحمد الشمري</p>
-            <div class="fav-card__footer">
-              <div class="fav-card__price">
-                <span class="fav-card__price-current">3,999 د.أ</span>
-                <span class="fav-card__price-old">5,999 د.أ</span>
-              </div>
-              <a href="course-details.html" class="fav-card__btn">عرض</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="fav-card">
-          <div class="fav-card__media">
-            <a href="course-details.html" class="fav-card__media-link">
-              <img src="assets/images/Container (3).png" alt="AutoCAD للمهندسين">
-            </a>
-            <span class="fav-card__badge">برامج هندسية</span>
-            <button type="button" class="fav-card__heart" aria-label="إزالة من المفضلة">
-              <i class="ri-heart-fill"></i>
-            </button>
-            <span class="fav-card__rating">
-              <i class="ri-star-fill"></i>
-              4.6
-            </span>
-          </div>
-          <div class="fav-card__body">
-            <h3 class="fav-card__title">
-              <a href="course-details.html">AutoCAD للمهندسين</a>
-            </h3>
-            <p class="fav-card__instructor">م. سارة القحطاني</p>
-            <div class="fav-card__footer">
-              <div class="fav-card__price">
-                <span class="fav-card__price-current">2,499 د.أ</span>
-                <span class="fav-card__price-old">3,999 د.أ</span>
-              </div>
-              <a href="course-details.html" class="fav-card__btn">عرض</a>
-            </div>
-          </div>
-        </article>
+      <div class="favs-grid" data-favs-grid>
       </div>
     </main>
   </div>
@@ -264,7 +149,9 @@
   <script src="js/navigation.js"></script>
   <script src="js/modal.js"></script>
   <script src="js/forms.js"></script>
+  <script src="js/store.js"></script>
   <script src="js/app.js"></script>
   <script src="js/pages/dashboard.js"></script>
+  <script src="js/pages/favorites.js"></script>
 </body>
 </html>

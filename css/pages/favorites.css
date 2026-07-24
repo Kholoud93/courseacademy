@@ -31,6 +31,20 @@
   gap: 1.25rem;
 }
 
+.favs-empty {
+  grid-column: 1 / -1;
+  padding: 2rem 1rem;
+  text-align: center;
+  background: #ffffff;
+  border-radius: 1.25rem;
+  color: #6b7280;
+  font-family: var(--type-body-font);
+  font-size: var(--type-body-size);
+  font-weight: var(--type-body-weight);
+  line-height: var(--type-body-lh);
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.06);
+}
+
 .fav-card {
   display: flex;
   flex-direction: column;
