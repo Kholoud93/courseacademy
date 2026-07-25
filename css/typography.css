@@ -198,6 +198,13 @@ p:not([class]) {
 .certificate-view__title,
 .dashboard-page__title,
 .dash-topbar__title,
+.my-courses-page__title,
+.favs-page__title,
+.certs-page__title,
+.notifs-page__title,
+.settings-page__title,
+.pay-page__title,
+.cart-page__title,
 .cd-hero__title {
   font-family: var(--type-page-title-font);
   font-size: var(--type-page-title-size);
@@ -209,7 +216,9 @@ p:not([class]) {
 .section-header__title,
 .welcome-banner__title,
 .filters__title,
-.home-section-head__title {
+.home-section-head__title,
+.dash-section-title,
+.dashboard-page__section-title {
   font-family: var(--type-section-title-font);
   font-size: var(--type-section-title-size);
   font-weight: var(--type-section-title-weight);
@@ -223,6 +232,8 @@ p:not([class]) {
 .auth-form__subtitle,
 .auth-sidebar__desc,
 .dash-topbar__subtitle,
+.favs-page__subtitle,
+.notifs-page__subtitle,
 .home-section-head__subtitle {
   font-family: var(--type-card-subtitle-font);
   font-size: var(--type-card-subtitle-size);
@@ -262,6 +273,11 @@ p:not([class]) {
 .cert-card__title,
 .my-course-card__title,
 .dash-course__title,
+.dash-actions__title,
+.dash-notif__item-title,
+.notif-card__title,
+.settings-card__title,
+.pay-table-card__title,
 .cart-item__title,
 .cart-summary__title,
 .pd-course-card__title,

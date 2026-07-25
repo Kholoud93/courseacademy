@@ -82,11 +82,8 @@
 }
 
 .cert-detail__btn i {
-  font-size: var(--type-card-title-size);
-  font-family: var(--type-card-title-font);
-  font-weight: var(--type-card-title-weight);
-  line-height: var(--type-card-title-lh);
-  letter-spacing: var(--type-card-title-ls);
+  font-size: var(--card-icon-action);
+  line-height: 1;
 }
 
 .cert-detail__btn--primary {
@@ -149,10 +146,12 @@
 
 .cert-detail__verify-title {
   margin: 0;
+  font-family: var(--type-section-title-font);
   font-size: var(--type-section-title-size);
-  font-weight: var(--fw-bold);
-  color: #1a1a2e;
+  font-weight: var(--type-section-title-weight);
   line-height: var(--type-section-title-lh);
+  letter-spacing: var(--type-section-title-ls);
+  color: #1a1a2e;
 }
 
 .cert-detail__verify-text {
@@ -163,7 +162,7 @@
   font-weight: var(--type-body-weight);
   letter-spacing: var(--type-body-ls);
   color: #6b7280;
-  line-height: 1.7;
+  line-height: var(--type-body-lh);
 }
 
 @media (min-width: 768px) {

@@ -9,6 +9,7 @@
   margin: 0 0 1.5rem;
   font-size: var(--type-page-title-size);
   font-weight: var(--type-page-title-weight);
+  letter-spacing: var(--type-page-title-ls);
   color: #1a1a2e;
   line-height: var(--type-page-title-lh);
 }

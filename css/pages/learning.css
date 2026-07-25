@@ -438,19 +438,16 @@
   .player-video__play {
     width: 3.75rem;
     height: 3.75rem;
-    font-size: var(--type-hero-title-size);
-    font-family: var(--type-hero-title-font);
-    font-weight: var(--type-hero-title-weight);
-    line-height: var(--type-hero-title-lh);
-    letter-spacing: var(--type-hero-title-ls);
+    font-size: var(--icon-xl);
+    line-height: 1;
   }
 
   .player-video__label {
-    font-size: var(--type-card-subtitle-size);
-    font-family: var(--type-card-subtitle-font);
-    font-weight: var(--type-card-subtitle-weight);
-    line-height: var(--type-card-subtitle-lh);
-    letter-spacing: var(--type-card-subtitle-ls);
+    font-family: var(--card-type-title-font);
+    font-size: var(--card-type-title-size);
+    font-weight: var(--card-type-title-weight);
+    line-height: var(--card-type-title-lh);
+    letter-spacing: var(--card-type-title-ls);
   }
 
   .player-info {

@@ -41,6 +41,7 @@
   font-size: var(--type-card-subtitle-size);
   font-weight: var(--type-card-subtitle-weight);
   line-height: var(--type-card-subtitle-lh);
+  letter-spacing: var(--type-card-subtitle-ls);
   color: #6b7280;
 }
 
@@ -194,22 +195,22 @@
 
 .dash-notif__item-title {
   margin: 0;
-  font-size: var(--type-body-size);
-  font-family: var(--type-body-font);
-  letter-spacing: var(--type-body-ls);
-  font-weight: var(--fw-bold);
+  font-family: var(--card-type-title-font);
+  font-size: var(--card-type-title-size);
+  font-weight: var(--card-type-title-weight);
+  line-height: var(--card-type-title-lh);
+  letter-spacing: var(--card-type-title-ls);
   color: #1a1a2e;
-  line-height: var(--lh-snug);
 }
 
 .dash-notif__item-text {
   margin: 0.25rem 0 0;
-  font-size: var(--type-small-size);
-  font-family: var(--type-small-font);
-  font-weight: var(--type-small-weight);
-  letter-spacing: var(--type-small-ls);
+  font-family: var(--card-type-desc-font);
+  font-size: var(--card-type-desc-size);
+  font-weight: var(--card-type-desc-weight);
+  letter-spacing: var(--card-type-desc-ls);
   color: #6b7280;
-  line-height: var(--type-small-lh);
+  line-height: var(--card-type-desc-lh);
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
@@ -335,7 +336,7 @@
 
 .dash-section-title {
   font-family: var(--type-section-title-font);
-  font-size: var(--dash-section-title-size);
+  font-size: var(--type-section-title-size);
   font-weight: var(--type-section-title-weight);
   line-height: var(--type-section-title-lh);
   letter-spacing: var(--type-section-title-ls);
@@ -768,15 +769,15 @@
   }
 
   .dash-stat__value {
-    font-size: var(--card-type-price-lg-size);
-    font-family: var(--card-type-title-font);
-    font-weight: var(--fw-bold);
-    line-height: var(--lh-snug);
-    letter-spacing: var(--card-type-title-ls);
+    font-family: var(--type-section-title-font);
+    font-size: var(--dash-stat-value-size);
+    font-weight: var(--type-section-title-weight);
+    line-height: var(--type-section-title-lh);
+    letter-spacing: var(--type-section-title-ls);
   }
 
   .dash-stat__label {
-    font-size: var(--card-type-meta-size);
+    font-size: var(--dash-stat-label-size);
     font-family: var(--card-type-meta-font);
     font-weight: var(--card-type-meta-weight);
     line-height: var(--card-type-meta-lh);
@@ -847,19 +848,19 @@
   }
 
   .dash-notif__item-title {
-    font-size: var(--type-small-size);
-    font-family: var(--type-small-font);
-    font-weight: var(--type-small-weight);
-    line-height: var(--type-small-lh);
-    letter-spacing: var(--type-small-ls);
+    font-family: var(--card-type-title-font);
+    font-size: var(--card-type-title-size);
+    font-weight: var(--card-type-title-weight);
+    line-height: var(--card-type-title-lh);
+    letter-spacing: var(--card-type-title-ls);
   }
 
   .dash-notif__item-text {
-    font-size: var(--type-caption-size);
-    font-family: var(--type-caption-font);
-    font-weight: var(--type-caption-weight);
-    line-height: var(--type-caption-lh);
-    letter-spacing: var(--type-caption-ls);
+    font-family: var(--card-type-desc-font);
+    font-size: var(--card-type-desc-size);
+    font-weight: var(--card-type-desc-weight);
+    line-height: var(--card-type-desc-lh);
+    letter-spacing: var(--card-type-desc-ls);
   }
 
   .dash-notif__footer {

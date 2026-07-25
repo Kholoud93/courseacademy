@@ -3150,18 +3150,20 @@ body[data-open-drawer="mobile-menu"] .home-nav__hamburger span:nth-child(3) {
 
 
 .dashboard-page__title {
-  font-family: var(--type-section-title-font);
-  font-size: var(--type-section-title-size);
-  font-weight: var(--type-section-title-weight);
-  line-height: var(--type-section-title-lh);
+  font-family: var(--type-page-title-font);
+  font-size: var(--type-page-title-size);
+  font-weight: var(--type-page-title-weight);
+  line-height: var(--type-page-title-lh);
+  letter-spacing: var(--type-page-title-ls);
   margin-bottom: var(--space-6);
 }
 
 .dashboard-page__section-title {
-  font-family: var(--type-subsection-title-font);
-  font-size: var(--type-subsection-title-size);
-  font-weight: var(--type-subsection-title-weight);
-  line-height: var(--type-subsection-title-lh);
+  font-family: var(--type-section-title-font);
+  font-size: var(--type-section-title-size);
+  font-weight: var(--type-section-title-weight);
+  line-height: var(--type-section-title-lh);
+  letter-spacing: var(--type-section-title-ls);
   margin-bottom: var(--space-4);
 }
 
