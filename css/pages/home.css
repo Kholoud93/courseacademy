@@ -2779,9 +2779,11 @@ body[data-layout="home"] {
 
 .home-featured {
 
-  --featured-card-image-height: 161.031px;
+  --featured-card-width: min(364px, 100%);
 
-  --featured-grid-gap: 1rem;
+  --featured-card-image-height: 160px;
+
+  --featured-grid-gap: 1.25rem;
 
   padding-top: calc(var(--home-section-gap) + 1.5rem);
 
@@ -2845,15 +2847,17 @@ body[data-layout="home"] {
 
 .home-featured__grid {
 
-  width: 100%;
+  width: max-content;
 
   max-width: 100%;
 
-  margin-inline: 0;
+  margin-inline: auto;
 
   display: grid;
 
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(2, var(--featured-card-width));
+
+  justify-content: center;
 
   gap: var(--featured-grid-gap);
 
@@ -2875,13 +2879,13 @@ body[data-layout="home"] {
 
 .home-featured .home-featured__grid .home-track-card {
 
-  width: 100%;
+  width: var(--featured-card-width);
 
-  max-width: none;
+  max-width: var(--featured-card-width);
 
   min-width: 0;
 
-  justify-self: stretch;
+  justify-self: center;
 
   height: auto;
 
@@ -4217,7 +4221,16 @@ body[data-layout="home"] {
 
 @media (min-width: 1200px) {
   .home-featured .home-featured__grid {
+    width: 100%;
+    max-width: 100%;
+    margin-inline: 0;
     grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .home-featured .home-featured__grid .home-track-card {
+    width: 100%;
+    max-width: none;
+    justify-self: stretch;
   }
 
   .home-tracks__inner {
@@ -5926,7 +5939,9 @@ body[data-layout="home"] {
     margin-inline: 0.875rem;
   }
 
-  padding: 0 var(--testimonial-pad-x) var(--testimonial-pad-bottom);
+  .home-testimonials__controls {
+    padding: 0 var(--testimonial-pad-x) var(--testimonial-pad-bottom);
+  }
 }
 
 .home-testimonials__triangle--1 {
@@ -5948,8 +5963,6 @@ body[data-layout="home"] {
   height: 4.75rem;
 
   top: calc(10% + 4.75rem + 0.625rem);
-
-}
 
 }
 
