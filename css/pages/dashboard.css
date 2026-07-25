@@ -841,11 +841,8 @@
   .dash-notif__icon {
     width: 2.25rem;
     height: 2.25rem;
-    font-size: var(--type-card-subtitle-size);
-    font-family: var(--type-card-subtitle-font);
-    font-weight: var(--type-card-subtitle-weight);
-    line-height: var(--type-card-subtitle-lh);
-    letter-spacing: var(--type-card-subtitle-ls);
+    font-size: var(--icon-sm);
+    line-height: 1;
     flex-shrink: 0;
   }
 

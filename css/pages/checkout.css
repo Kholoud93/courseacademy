@@ -53,6 +53,31 @@
   gap: 2rem;
 }
 
+.checkout-main__back {
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-start;
+  gap: 0.25rem;
+  margin-bottom: -1rem;
+  color: #6b7280;
+  font-family: var(--type-body-font);
+  font-size: var(--type-body-size);
+  font-weight: var(--fw-medium);
+  line-height: var(--type-body-lh);
+  letter-spacing: var(--type-body-ls);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.checkout-main__back i {
+  font-size: var(--icon-md);
+  line-height: 1;
+}
+
+.checkout-main__back:hover {
+  color: #0050d8;
+}
+
 .checkout-steps {
   display: flex;
   align-items: center;
@@ -85,10 +110,8 @@
 }
 
 .checkout-steps__num i {
-  font-size: var(--type-card-subtitle-size);
-  font-family: var(--type-card-subtitle-font);
-  line-height: var(--type-card-subtitle-lh);
-  letter-spacing: var(--type-card-subtitle-ls);
+  font-size: var(--icon-sm);
+  line-height: 1;
   font-weight: normal;
 }
 
@@ -272,10 +295,14 @@
 }
 
 .checkout-coupon {
-  background: #ffffff;
+  margin-bottom: 1rem;
+}
+
+.checkout-coupon--summary {
+  padding: 0.875rem;
   border: 1px solid #e8eef8;
-  border-radius: 1.25rem;
-  padding: 1.25rem;
+  border-radius: 0.875rem;
+  background: #f8fafc;
 }
 
 .checkout-coupon__label {
@@ -293,11 +320,8 @@
 
 .checkout-coupon__label i {
   color: #0050d8;
-  font-size: var(--type-card-title-size);
-  font-family: var(--type-card-title-font);
-  font-weight: var(--type-card-title-weight);
-  line-height: var(--type-card-title-lh);
-  letter-spacing: var(--type-card-title-ls);
+  font-size: var(--icon-md);
+  line-height: 1;
 }
 
 .checkout-coupon__row {
@@ -471,11 +495,8 @@
 }
 
 .checkout-summary__guarantee i {
-  font-size: var(--type-card-title-size);
-  font-family: var(--type-card-title-font);
-  font-weight: var(--type-card-title-weight);
-  line-height: var(--type-card-title-lh);
-  letter-spacing: var(--type-card-title-ls);
+  font-size: var(--icon-md);
+  line-height: 1;
   flex-shrink: 0;
 }
 
@@ -504,11 +525,8 @@
 }
 
 .checkout-summary__cta i {
-  font-size: var(--type-card-title-size);
-  font-family: var(--type-card-title-font);
-  font-weight: var(--type-card-title-weight);
-  line-height: var(--type-card-title-lh);
-  letter-spacing: var(--type-card-title-ls);
+  font-size: var(--icon-md);
+  line-height: 1;
 }
 
 .checkout-summary__secure {
@@ -690,9 +708,9 @@
     border-top: 1px solid #eef0f3;
   }
 
-  .checkout-coupon {
-    padding: 1rem;
-    border-radius: 1rem;
+  .checkout-coupon--summary {
+    padding: 0.75rem;
+    border-radius: 0.75rem;
     width: 100%;
     box-sizing: border-box;
   }
@@ -836,8 +854,8 @@
     letter-spacing: var(--type-label-ls);
   }
 
-  .checkout-coupon {
-    padding: 0.875rem;
+  .checkout-coupon--summary {
+    padding: 0.75rem;
   }
 
   .checkout-coupon__input,

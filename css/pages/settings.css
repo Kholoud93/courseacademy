@@ -32,11 +32,11 @@
   justify-content: flex-start;
   gap: 0.5rem;
   margin: 0 0 1.375rem;
-  font-family: var(--type-card-title-font);
-  font-size: var(--type-card-title-size);
-  font-weight: var(--type-card-title-weight);
-  line-height: var(--type-card-title-lh);
-  letter-spacing: var(--type-card-title-ls);
+  font-family: var(--card-type-title-font);
+  font-size: var(--card-type-title-size);
+  font-weight: var(--card-type-title-weight);
+  line-height: var(--card-type-title-lh);
+  letter-spacing: var(--card-type-title-ls);
   color: #0f172a;
 }
 

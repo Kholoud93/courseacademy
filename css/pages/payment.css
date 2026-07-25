@@ -56,11 +56,8 @@
   height: 2.75rem;
   border-radius: 0.75rem;
   flex-shrink: 0;
-  font-size: var(--type-card-title-size);
-  font-family: var(--type-card-title-font);
-  font-weight: var(--type-card-title-weight);
-  line-height: var(--type-card-title-lh);
-  letter-spacing: var(--type-card-title-ls);
+  font-size: var(--icon-lg);
+  line-height: 1;
 }
 
 .payment-method__icon img {
@@ -268,9 +265,9 @@
 
 .payment-card__number {
   margin: 1.25rem 0;
-  font-size: var(--type-card-title-size);
-  font-family: var(--type-card-title-font);
-  line-height: var(--type-card-title-lh);
+  font-size: var(--card-type-title-size);
+  font-family: var(--card-type-title-font);
+  line-height: var(--card-type-title-lh);
   font-weight: var(--fw-semibold);
   letter-spacing: 0.12em;
   direction: ltr;
@@ -363,11 +360,8 @@
   top: 50%;
   transform: translateY(-50%);
   color: #9ca3af;
-  font-size: var(--type-card-subtitle-size);
-  font-family: var(--type-card-subtitle-font);
-  font-weight: var(--type-card-subtitle-weight);
-  line-height: var(--type-card-subtitle-lh);
-  letter-spacing: var(--type-card-subtitle-ls);
+  font-size: var(--icon-sm);
+  line-height: 1;
   pointer-events: none;
 }
 
@@ -403,6 +397,30 @@
   font-weight: var(--fw-bold);
   color: #1a1a2e;
   text-align: center;
+}
+
+.payment-summary__rows {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.payment-summary__row {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  font-size: var(--type-body-size);
+  font-family: var(--type-body-font);
+  font-weight: var(--type-body-weight);
+  line-height: var(--type-body-lh);
+  letter-spacing: var(--type-body-ls);
+  color: #6b7280;
+}
+
+.payment-summary__row--discount,
+.payment-summary__row--coupon {
+  color: #16a34a;
 }
 
 .payment-summary__amount {
@@ -450,11 +468,8 @@
 
 .payment-summary__ssl i {
   color: #16a34a;
-  font-size: var(--type-card-title-size);
-  font-family: var(--type-card-title-font);
-  font-weight: var(--type-card-title-weight);
-  line-height: var(--type-card-title-lh);
-  letter-spacing: var(--type-card-title-ls);
+  font-size: var(--icon-md);
+  line-height: 1;
   flex-shrink: 0;
 }
 
@@ -559,10 +574,10 @@
   }
 
   .payment-card__number {
-    font-size: var(--type-card-title-size);
-    font-family: var(--type-card-title-font);
-    font-weight: var(--type-card-title-weight);
-    line-height: var(--type-card-title-lh);
+    font-size: var(--card-type-title-size);
+    font-family: var(--card-type-title-font);
+    font-weight: var(--card-type-title-weight);
+    line-height: var(--card-type-title-lh);
     letter-spacing: 0.08em;
   }
 

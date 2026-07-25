@@ -27,6 +27,10 @@
 
   <main class="checkout-main">
     <div class="container checkout-main__inner">
+      <a href="cart.html" class="checkout-main__back">
+        <i class="ri-arrow-right-s-line"></i>
+        رجوع للسلة
+      </a>
       <nav class="checkout-steps" aria-label="خطوات الطلب">
         <div class="checkout-steps__item is-active">
           <span class="checkout-steps__num">1</span>
@@ -89,8 +93,11 @@
               <span class="checkout-course__price-old">6,999 د.أ</span>
             </div>
           </article>
+        </section>
 
-          <div class="checkout-coupon">
+        <aside class="checkout-summary">
+          <h2 class="checkout-summary__title">ملخص الطلب</h2>
+          <div class="checkout-coupon checkout-coupon--summary">
             <label class="checkout-coupon__label" for="coupon-code">
               <i class="ri-coupon-3-line"></i>
               كوبون خصم
@@ -108,10 +115,6 @@
             <p class="checkout-coupon__hint">جرب: COURSADEMY10</p>
             <p class="checkout-coupon__msg" data-coupon-msg hidden></p>
           </div>
-        </section>
-
-        <aside class="checkout-summary">
-          <h2 class="checkout-summary__title">ملخص الطلب</h2>
           <div class="checkout-summary__rows">
             <div class="checkout-summary__row">
               <span>السعر الأصلي</span>

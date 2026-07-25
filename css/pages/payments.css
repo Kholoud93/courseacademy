@@ -32,11 +32,11 @@ body[data-page="payments"].layout-dashboard {
 }
 
 .pay-stats .dash-stat__value {
-  font-size: var(--type-card-title-size);
-  font-family: var(--type-card-title-font);
-  font-weight: var(--type-card-title-weight);
-  line-height: var(--type-card-title-lh);
-  letter-spacing: var(--type-card-title-ls);
+  font-family: var(--type-section-title-font);
+  font-size: var(--dash-stat-value-size);
+  font-weight: var(--type-section-title-weight);
+  line-height: var(--type-section-title-lh);
+  letter-spacing: var(--type-section-title-ls);
   overflow-wrap: break-word;
   word-break: break-word;
   max-width: 100%;
@@ -44,11 +44,11 @@ body[data-page="payments"].layout-dashboard {
 }
 
 .pay-stats .dash-stat__label {
-  font-size: var(--type-body-size);
-  font-family: var(--type-body-font);
-  font-weight: var(--type-body-weight);
-  line-height: var(--type-body-lh);
-  letter-spacing: var(--type-body-ls);
+  font-family: var(--card-type-meta-font);
+  font-size: var(--dash-stat-label-size);
+  font-weight: var(--card-type-meta-weight);
+  line-height: var(--card-type-meta-lh);
+  letter-spacing: var(--card-type-meta-ls);
   color: #6b7280;
 }
 
@@ -62,11 +62,11 @@ body[data-page="payments"].layout-dashboard {
 
 .pay-table-card__title {
   margin: 0 0 1.25rem;
-  font-family: var(--type-card-title-font);
-  font-size: var(--type-card-title-size);
-  font-weight: var(--type-card-title-weight);
-  line-height: var(--type-card-title-lh);
-  letter-spacing: var(--type-card-title-ls);
+  font-family: var(--card-type-title-font);
+  font-size: var(--card-type-title-size);
+  font-weight: var(--card-type-title-weight);
+  line-height: var(--card-type-title-lh);
+  letter-spacing: var(--card-type-title-ls);
   color: #1a1a2e;
 }
 
@@ -152,11 +152,8 @@ body[data-page="payments"].layout-dashboard {
 }
 
 .pay-table__invoice i {
-  font-size: var(--type-card-subtitle-size);
-  font-family: var(--type-card-subtitle-font);
-  font-weight: var(--type-card-subtitle-weight);
-  line-height: var(--type-card-subtitle-lh);
-  letter-spacing: var(--type-card-subtitle-ls);
+  font-size: var(--icon-sm);
+  line-height: 1;
 }
 
 .pay-stats {
@@ -173,19 +170,19 @@ body[data-page="payments"].layout-dashboard {
   }
 
   .pay-stats .dash-stat__value {
-    font-size: var(--type-card-title-size);
-    font-family: var(--type-card-title-font);
-    font-weight: var(--type-card-title-weight);
-    line-height: var(--type-card-title-lh);
-    letter-spacing: var(--type-card-title-ls);
+    font-family: var(--type-section-title-font);
+    font-size: var(--dash-stat-value-size);
+    font-weight: var(--type-section-title-weight);
+    line-height: var(--type-section-title-lh);
+    letter-spacing: var(--type-section-title-ls);
   }
 
   .pay-stats .dash-stat__label {
-    font-size: var(--type-body-size);
-    font-family: var(--type-body-font);
-    font-weight: var(--type-body-weight);
-    line-height: var(--type-body-lh);
-    letter-spacing: var(--type-body-ls);
+    font-family: var(--card-type-meta-font);
+    font-size: var(--dash-stat-label-size);
+    font-weight: var(--card-type-meta-weight);
+    line-height: var(--card-type-meta-lh);
+    letter-spacing: var(--card-type-meta-ls);
   }
 }
 
@@ -201,19 +198,19 @@ body[data-page="payments"].layout-dashboard {
   }
 
   .pay-stats .dash-stat__value {
-    font-size: var(--type-card-title-size);
-    font-family: var(--type-card-title-font);
-    font-weight: var(--type-card-title-weight);
-    line-height: var(--type-card-title-lh);
-    letter-spacing: var(--type-card-title-ls);
+    font-family: var(--type-section-title-font);
+    font-size: var(--dash-stat-value-size);
+    font-weight: var(--type-section-title-weight);
+    line-height: var(--type-section-title-lh);
+    letter-spacing: var(--type-section-title-ls);
   }
 
   .pay-stats .dash-stat__label {
-    font-size: var(--type-small-size);
-    font-family: var(--type-small-font);
-    font-weight: var(--type-small-weight);
-    line-height: var(--type-small-lh);
-    letter-spacing: var(--type-small-ls);
+    font-family: var(--card-type-meta-font);
+    font-size: var(--dash-stat-label-size);
+    font-weight: var(--card-type-meta-weight);
+    line-height: var(--card-type-meta-lh);
+    letter-spacing: var(--card-type-meta-ls);
   }
 }
 
@@ -246,19 +243,15 @@ body[data-page="payments"].layout-dashboard {
   .pay-stats .dash-stat__icon {
     width: 3rem;
     height: 3rem;
-    font-size: var(--type-card-title-size);
-    font-family: var(--type-card-title-font);
-    font-weight: var(--type-card-title-weight);
-    line-height: var(--type-card-title-lh);
-    letter-spacing: var(--type-card-title-ls);
+    font-size: var(--card-icon-action);
   }
 
   .pay-stats .dash-stat__value {
-    font-size: var(--type-card-title-size);
-    font-family: var(--type-card-title-font);
-    font-weight: var(--type-card-title-weight);
-    line-height: var(--type-card-title-lh);
-    letter-spacing: var(--type-card-title-ls);
+    font-family: var(--type-section-title-font);
+    font-size: var(--dash-stat-value-size);
+    font-weight: var(--type-section-title-weight);
+    line-height: var(--type-section-title-lh);
+    letter-spacing: var(--type-section-title-ls);
   }
 
   .pay-table {

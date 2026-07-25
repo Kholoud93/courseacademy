@@ -2,6 +2,30 @@
   background: #f8f9fb;
 }
 
+.cart-page__back {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  margin-bottom: 0.75rem;
+  color: #6b7280;
+  font-family: var(--type-body-font);
+  font-size: var(--type-body-size);
+  font-weight: var(--fw-medium);
+  line-height: var(--type-body-lh);
+  letter-spacing: var(--type-body-ls);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.cart-page__back i {
+  font-size: var(--icon-md);
+  line-height: 1;
+}
+
+.cart-page__back:hover {
+  color: #0050d8;
+}
+
 .cart-page__title {
   font-family: var(--type-page-title-font);
   margin: 0 0 1.5rem;

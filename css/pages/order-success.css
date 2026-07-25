@@ -28,9 +28,7 @@
 }
 
 .order-success__badge i {
-  font-size: var(--type-section-title-size);
-  font-family: var(--type-section-title-font);
-  letter-spacing: var(--type-section-title-ls);
+  font-size: var(--icon-xl);
   font-weight: normal;
   line-height: 1;
 }
@@ -157,11 +155,11 @@
 
 .order-success__meta-row--total span:last-child {
   color: #0050d8;
-  font-size: var(--type-card-title-size);
-  font-family: var(--type-card-title-font);
-  font-weight: var(--type-card-title-weight);
-  line-height: var(--type-card-title-lh);
-  letter-spacing: var(--type-card-title-ls);
+  font-size: var(--card-type-title-size);
+  font-family: var(--card-type-title-font);
+  font-weight: var(--card-type-title-weight);
+  line-height: var(--card-type-title-lh);
+  letter-spacing: var(--card-type-title-ls);
 }
 
 .order-success__next {
@@ -194,11 +192,8 @@
   height: 2rem;
   border-radius: var(--radius-full);
   flex-shrink: 0;
-  font-size: var(--type-card-title-size);
-  font-family: var(--type-card-title-font);
-  font-weight: var(--type-card-title-weight);
-  line-height: var(--type-card-title-lh);
-  letter-spacing: var(--type-card-title-ls);
+  font-size: var(--icon-md);
+  line-height: 1;
 }
 
 .order-success__next-icon--blue {
@@ -279,11 +274,8 @@
   }
 
   .order-success__badge i {
-    font-size: var(--type-page-title-size);
-    font-family: var(--type-page-title-font);
-    font-weight: var(--type-page-title-weight);
-    line-height: var(--type-page-title-lh);
-    letter-spacing: var(--type-page-title-ls);
+    font-size: var(--icon-xl);
+    line-height: 1;
   }
 
   .order-success__card {

@@ -46,10 +46,7 @@
 }
 
 .cert-card__banner i {
-  font-size: var(--type-section-title-size);
-  font-family: var(--type-section-title-font);
-  font-weight: var(--type-section-title-weight);
-  letter-spacing: var(--type-section-title-ls);
+  font-size: var(--icon-xl);
   line-height: 1;
 }
 
@@ -212,7 +209,7 @@
   }
 
   .cert-card__banner i {
-    font-size: 1.25rem;
+    font-size: var(--icon-xl);
     line-height: 1;
   }
 
